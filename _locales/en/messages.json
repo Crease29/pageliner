@@ -1,0 +1,48 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message":     "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message":     "PageLiner",
+        "description": "Extension description."
+    },
+
+    // Popup
+    "POPUP_BY": {
+        "message":     "by",
+        "description": "Popup heading subtitle."
+    },
+    "POPUP_BY_DIGIDESK": {
+        "message":     "digidesk - media solutions",
+        "description": "Popup heading subtitle."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message":     "show/hide ledger lines",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE": {
+        "message":     "new ledger line",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message":     "vertical",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message":     "horizontal",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message":     "delete all ledger lines",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message":     "Color",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message":     "Position",
+        "description": "Popup table head."
+    }
+}

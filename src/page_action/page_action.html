@@ -1,0 +1,43 @@
+<!doctype html>
+<link rel="stylesheet" href="../../css/bootstrap.css"/>
+<link rel="stylesheet" href="page_action.css"/>
+
+<div id="wrapper">
+    <h1 class="page_action_headbar">
+        <span data-i18n="GLOBAL_APP_NAME"></span>
+        <small>
+            <span data-i18n="POPUP_BY"></span>
+            <a href="http://www.digidesk.de/" data-i18n="POPUP_BY_DIGIDESK"></a>
+        </small>
+    </h1>
+    <ul class="nav nav-pills nav-stacked page-actions">
+        <li>
+            <a href="#" class="toggle-gui" id="toggle-gui">
+                <i class="glyphicon glyphicon-eye-open"></i> <span data-i18n="POPUP_TOGGLE_HELPLINES"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="add-helpline">
+                <i class="glyphicon glyphicon-plus"></i> <span data-i18n="POPUP_NEW_HELPLINE"></span>
+                <div class="btn-group btn-group-xs pull-right">
+                    <button type="button" class="btn btn-primary has-tooltip" id="add-helpline-x" data-placement="left" title="__MSG_POPUP_NEW_HELPLINE_X__">
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                    </button>
+                    <button type="button" class="btn btn-primary has-tooltip" id="add-helpline-y" data-placement="left" title="__MSG_POPUP_NEW_HELPLINE_Y__">
+                        &nbsp;&mdash;&nbsp;
+                    </button>
+                </div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="remove-helplines" id="remove-helplines">
+                <i class="glyphicon glyphicon-remove"></i> <span data-i18n="POPUP_CLEAR_ALL_HELPLINES"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="page_action.js"></script>
