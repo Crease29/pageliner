@@ -4,7 +4,7 @@
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message":     "PageLiner",
+        "message":     "Hilfslinien auf Webseiten setzen um z.B. Fluchten zu prüfen.",
         "description": "Extension description."
     },
 
