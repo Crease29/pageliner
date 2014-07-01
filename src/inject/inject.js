@@ -205,9 +205,9 @@ oPageLiner.toggleGUI = function( blForceState )
 
     localStorage.setItem( 'pglnr-ext-blIsActive', blState );
 
-    if( $( '.pglnr-ext-ruler' ).length > 0 && blForceState !== false )
+    if( $( '.pglnr-ext-ruler' ).length > 0 )
     {
-        $( '.pglnr-ext-ruler, .pglnr-ext-helpline' ).toggle();
+        $( '.pglnr-ext-ruler, .pglnr-ext-helpline' ).toggle( blState );
     }
     else
     {
