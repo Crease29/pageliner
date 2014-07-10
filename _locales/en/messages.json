@@ -18,11 +18,11 @@
         "description": "Popup heading subtitle."
     },
     "POPUP_TOGGLE_HELPLINES": {
-        "message":     "show/hide ledger lines",
+        "message":     "show/hide guides",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE": {
-        "message":     "new ledger line",
+        "message":     "new guide",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
@@ -34,7 +34,7 @@
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message":     "delete all ledger lines",
+        "message":     "delete all guides",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
