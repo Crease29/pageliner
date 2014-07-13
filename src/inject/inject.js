@@ -35,6 +35,7 @@ oPageLiner.init = function()
         debug( '[PageLiner] Helplines found! Rendering...' );
 
         this.showRulers();
+        this.updatePopUp();
 
         // if helplines are to be displayed, render them!
         if( aHelpLines && aHelpLines.length > 0 )
@@ -58,6 +59,11 @@ oPageLiner.init = function()
 oPageLiner.getAllHelpLines = function()
 {
     return JSON.parse( localStorage.getItem( 'pglnr-ext-aHelpLines' ) );
+};
+
+oPageLiner.setAllHelpLines = function( oAllHelpLines )
+{
+    return localStorage.setItem( 'pglnr-ext-aHelpLines', JSON.stringify( oAllHelpLines ) );
 };
 
 /**
@@ -86,6 +92,8 @@ oPageLiner.addHelpLine = function( posX, posY, sColor )
 
     iHelplineIndex = this.addHelpLineToLocalStorage( posX, posY, sColor );
     this.addHelpLineToDOM( posX, posY, sColor, iHelplineIndex );
+
+    this.updatePopUp();
 };
 
 /**
@@ -103,7 +111,7 @@ oPageLiner.addHelpLineToLocalStorage = function( posX, posY, sColor, iHelplineIn
             {
                 posX: typeof posX != 'undefined' ? posX : 0,
                 posY: typeof posY != 'undefined' ? posY : 0,
-                sColor: typeof sColor != 'undefined' ? sColor : '#33ffff'
+                sColor: typeof sColor != 'undefined' ? sColor : this.sDefaultColor
             },
         aHelpLines = this.getAllHelpLines(),
         iIndex = 0;
@@ -143,7 +151,7 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
     oHelpLineTooltipElem.className = 'pglnr-ext-helpline-tooltip pglnr-ext-helpline-tooltip-' + sAxis;
     oHelpLineTooltipElem.setTooltipText = function( sText )
     {
-        this.innerHTML = sText + 'px';
+        this.innerHTML = ( sText | 0 ) + 'px';
     };
 
     if( oHelpLine.posX > 0 )
@@ -188,7 +196,50 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
     ).append( oHelpLineTooltipElem );
 
     $( 'body' ).append( oHelpLineElem );
-}
+};
+
+oPageLiner.editHelpLine = function( iHelplineIndex, posX, posY, sColor )
+{
+    var oAllPageLines = this.getAllHelpLines(),
+        $oPageLine    = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + iHelplineIndex + '"]' );
+
+    if( $oPageLine.length )
+    {
+        if( posX )
+        {
+            oAllPageLines[ iHelplineIndex ].posX = posX;
+        }
+
+        if( posY )
+        {
+            oAllPageLines[ iHelplineIndex ].posY = posY;
+        }
+
+        if( sColor )
+        {
+            oAllPageLines[ iHelplineIndex ].sColor = sColor;
+            this.sDefaultColor = sColor;
+        }
+
+        $oPageLine.remove();
+        this.addHelpLineToDOM( oAllPageLines[ iHelplineIndex ].posX, oAllPageLines[ iHelplineIndex ].posY, oAllPageLines[ iHelplineIndex ].sColor, iHelplineIndex );
+        this.setAllHelpLines( oAllPageLines );
+    }
+};
+
+oPageLiner.deleteHelpline = function( iHelplineIndex )
+{
+    var oAllPageLines = this.getAllHelpLines(),
+        $oPageLine    = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + iHelplineIndex + '"]' );
+
+    if( $oPageLine.length )
+    {
+        delete oAllPageLines.splice( iHelplineIndex, 1 );
+        this.setAllHelpLines( oAllPageLines );
+        $( '.pglnr-ext-helpline' ).remove();
+        this.init();
+    }
+};
 
 oPageLiner.toggleGUI = function( blForceState )
 {
@@ -213,14 +264,16 @@ oPageLiner.toggleGUI = function( blForceState )
     {
         this.init();
     }
-}
+};
 
 oPageLiner.removeAllHelpLines = function()
 {
     $( '.pglnr-ext-helpline' ).remove();
     this.toggleGUI( false );
     localStorage.setItem( 'pglnr-ext-aHelpLines', "[]" );
-}
+    this.sDefaultColor = '#33ffff';
+    this.updatePopUp();
+};
 
 oPageLiner.showRulers = function()
 {
@@ -255,7 +308,6 @@ oPageLiner.showRulers = function()
             oRulerTopMeasure.appendChild( oMeasurementElem );
         }
         oRulerTopElem.appendChild( oRulerTopMeasure );
-
 
         // Create measurement for oRulerLeftElem
         for( var i = 0; i <= Math.ceil( iDocumentHeight / 100 ); i++ )
@@ -294,18 +346,9 @@ oPageLiner.showRulers = function()
 
 oPageLiner.updatePopUp = function()
 {
-    // ToDo
-    /*chrome.runtime.sendMessage(
-        {
-            sAction: "updatePopUp",
-            localStorage: localStorage
-        },
-        function(response)
-        {
-        }
-    );*/
+    debug( '[PageLiner] Setting count badge...' );
+    chrome.extension.sendMessage( null, { sAction: 'updatePopUp', oAllHelpLines: this.getAllHelpLines() } );
 };
-
 
 // Init PageLiner object
 oPageLiner.init();

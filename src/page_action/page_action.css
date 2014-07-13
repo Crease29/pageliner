@@ -47,6 +47,8 @@ body {
     font-size:13px;
 }
 
+.nav-divider { background-color:#A5A5A5!important; }
+
 #wrapper,
 .page_action_headbar {
     background: #f8f9f8;
@@ -92,4 +94,18 @@ body {
     font-size:11px;
     font-weight:normal;
     font-style:normal;
+}
+
+.page-actions .add-helpline .btn-group { width:100%; }
+.page-actions .add-helpline .btn-group .btn { width:50%; }
+
+#helpline-actions .row {
+    margin-left:0;
+    margin-right:0;
+}
+
+#helpline-actions .delete {
+    margin-left:10px;
+    font-size:16px;
+    cursor:pointer;
 }

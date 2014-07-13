@@ -1,5 +1,5 @@
 <!doctype html>
-<link rel="stylesheet" href="../../css/bootstrap.css"/>
+<link rel="stylesheet" href="../../css/bootstrap.min.css"/>
 <link rel="stylesheet" href="page_action.css"/>
 
 <div id="wrapper">
@@ -18,13 +18,12 @@
         </li>
         <li>
             <a href="#" class="add-helpline">
-                <i class="glyphicon glyphicon-plus"></i> <span data-i18n="POPUP_NEW_HELPLINE"></span>
-                <div class="btn-group btn-group-xs pull-right">
-                    <button type="button" class="btn btn-primary has-tooltip" id="add-helpline-x" data-placement="left" title="__MSG_POPUP_NEW_HELPLINE_X__">
-                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                <div class="btn-group btn-group-xs">
+                    <button type="button" class="btn btn-primary" id="add-helpline-x" title="__MSG_POPUP_NEW_HELPLINE_X__">
+                        | <span data-i18n="POPUP_NEW_HELPLINE_X"></span>
                     </button>
-                    <button type="button" class="btn btn-primary has-tooltip" id="add-helpline-y" data-placement="left" title="__MSG_POPUP_NEW_HELPLINE_Y__">
-                        &nbsp;&mdash;&nbsp;
+                    <button type="button" class="btn btn-primary" id="add-helpline-y" title="__MSG_POPUP_NEW_HELPLINE_Y__">
+                        &mdash; <span data-i18n="POPUP_NEW_HELPLINE_Y"></span>
                     </button>
                 </div>
                 <div class="clearfix"></div>
@@ -34,6 +33,17 @@
             <a href="#" class="remove-helplines" id="remove-helplines">
                 <i class="glyphicon glyphicon-remove"></i> <span data-i18n="POPUP_CLEAR_ALL_HELPLINES"></span>
             </a>
+        </li>
+        <li id="helpline-actions-divider" class="nav-divider hidden"></li>
+        <li id="helpline-actions" class="hidden">
+            <div class="row">
+                <div class="col-xs-12">
+                    <strong>
+                        <span data-i18n="POPUP_ALL_HELPLINES_HEADING"></span>
+                    </strong>
+                </div>
+            </div>
+            <div class="listing"></div>
         </li>
     </ul>
 </div>

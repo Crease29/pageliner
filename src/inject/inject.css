@@ -38,6 +38,7 @@
     height:18px;
     top:0;
     z-index:2147483500; /* max. z-index is 2147483647 */
+    /*cursor:row-resize;*/ /* ToDo */
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-top ul {
@@ -68,7 +69,7 @@
     height:100%;
     top:18px;
     z-index:2147483400; /* max. z-index is 2147483647 */
-    cursor:col-resize;
+    /*cursor:col-resize;*/ /* ToDo */
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-left ul {

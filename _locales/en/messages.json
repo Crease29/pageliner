@@ -21,10 +21,6 @@
         "message":     "show/hide guides",
         "description": "Popup action."
     },
-    "POPUP_NEW_HELPLINE": {
-        "message":     "new guide",
-        "description": "Popup action."
-    },
     "POPUP_NEW_HELPLINE_X": {
         "message":     "vertical",
         "description": "Popup action."
@@ -37,12 +33,16 @@
         "message":     "delete all guides",
         "description": "Popup action."
     },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message":     "All guides",
+        "description": "Popup table head."
+    },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
         "message":     "Color",
-        "description": "Popup table head."
+        "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
         "message":     "Position",
-        "description": "Popup table head."
+        "description": "Popup table positions."
     }
 }

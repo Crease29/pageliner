@@ -11,5 +11,3 @@
  * @author      Kai
  * @version     SVN: $Id$
  */
-
-console.log( 'background.js' );

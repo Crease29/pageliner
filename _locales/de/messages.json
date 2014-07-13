@@ -21,10 +21,6 @@
         "message":     "Hilfslinien anzeigen/ausblenden",
         "description": "Popup action."
     },
-    "POPUP_NEW_HELPLINE": {
-        "message":     "neue Hilfslinie",
-        "description": "Popup action."
-    },
     "POPUP_NEW_HELPLINE_X": {
         "message":     "vertikal",
         "description": "Popup action."
@@ -37,12 +33,16 @@
         "message":     "alle Hilfslinien löschen",
         "description": "Popup action."
     },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message":     "alle Hilfslinien",
+        "description": "Popup table head."
+    },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
         "message":     "Farbe",
-        "description": "Popup table head."
+        "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
         "message":     "Position",
-        "description": "Popup table head."
+        "description": "Popup table positions."
     }
 }
