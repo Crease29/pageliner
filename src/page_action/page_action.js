@@ -121,22 +121,12 @@ $( function()
                                 oRowElem.className = 'row';
                                 oRowElem.setAttribute( 'data-id', x );
 
-                                oCol1Elem.className = 'col-xs-6';
+                                oCol1Elem.className = 'col-xs-4';
                                 oCol1Elem.innerHTML = '#' + ( x + 1 );
 
-                                oCol2Elem.className    = 'col-xs-6 text-right';
-                                oColorPickerElem.type  = 'color';
-                                oColorPickerElem.value = y.sColor;
-                                oColorPickerElem.setAttribute( 'data-id', x );
-                                oCol2Elem.appendChild( oColorPickerElem );
+                                oCol2Elem.className    = 'col-xs-8 text-right';
 
-                                $( oColorPickerElem ).change( function()
-                                    {
-                                        injectScriptCode( 'oPageLiner.editHelpLine( ' + this.getAttribute( 'data-id' ) + ', null, null, "' + this.value + '" )', null );
-                                    }
-                                );
-
-                                oDeleteElem.className = 'delete text-danger';
+                                oDeleteElem.className = 'delete text-danger pull-right';
                                 oDeleteElem.innerHTML = '&times;';
                                 oDeleteElem.setAttribute( 'data-id', x );
                                 oCol2Elem.appendChild( oDeleteElem );
@@ -144,6 +134,38 @@ $( function()
                                     {
                                         injectScriptCode( 'oPageLiner.deleteHelpline( ' + this.getAttribute( 'data-id' ) + ' )', null );
                                         refreshHelpLineListing();
+                                    }
+                                );
+
+                                oColorPickerElem.type  = 'text';
+                                oColorPickerElem.className  = 'form-control input-sm pull-right color';
+                                oColorPickerElem.value = y.sColor;
+                                oColorPickerElem.style.borderColor = y.sColor;
+                                oColorPickerElem.setAttribute( 'data-id', x );
+                                oCol2Elem.appendChild( oColorPickerElem );
+
+                                $( oColorPickerElem ).ColorPicker(
+                                    {
+                                        color: y.sColor,
+                                        onChange: function( hsb, hex, rgb )
+                                        {
+                                            oColorPickerElem.value = '#' + hex;
+                                            oColorPickerElem.style.borderColor = oColorPickerElem.value;
+                                            injectScriptCode( 'oPageLiner.editHelpLine( ' + oColorPickerElem.getAttribute( 'data-id' ) + ', null, null, "#' + hex + '" )', null );
+                                        }
+                                    }
+                                ).bind( 'keyup', function()
+                                    {
+                                        $( this ).ColorPickerSetColor( this.value );
+
+                                        if( this.value.substr( 0, 1 ) != '#' )
+                                        {
+                                            this.value = '#' + this.value;
+                                        }
+
+                                        this.style.borderColor = this.value;
+
+                                        injectScriptCode( 'oPageLiner.editHelpLine( ' + this.getAttribute( 'data-id' ) + ', null, null, "' + this.value + '" )', null );
                                     }
                                 );
 

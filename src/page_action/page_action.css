@@ -62,7 +62,7 @@ body {
 }
 
 #wrapper {
-    width:250px;
+    width:380px;
     height:auto;
     max-height:600px;
     overflow:auto;
@@ -102,10 +102,21 @@ body {
 #helpline-actions .row {
     margin-left:0;
     margin-right:0;
+    margin-bottom:3px;
+}
+
+#helpline-actions .color {
+    width:70px;
 }
 
 #helpline-actions .delete {
     margin-left:10px;
     font-size:16px;
     cursor:pointer;
+    font-weight:bold;
+}
+
+.colorpicker {
+    left:inherit!important;
+    right: 13px;
 }

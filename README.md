@@ -5,6 +5,8 @@ Google Chrome extension to create guide lines on a website.
 [View in Chrome Web Store](https://chrome.google.com/webstore/detail/pageliner/nepakmljodobhlbbkpobblnifmhclemh)
 
 ## Changelog
+- **v1.1.1 (2014-07-14)**
+    - *Fixed*: Implemented jQuery Color Picker because the behaviour of HTML 5 color-input isn't that reliable on all operating systems.
 - **v1.1.0 (2014-07-13)**
     - *Fixed*: When zooming in a document the positions in tooltips are float numbers.
     - *Done*: The number of guide lines is now shown in the plugin icon.
