@@ -81,7 +81,7 @@ $( function()
 
         $( '#add-helpline-y' ).click( function()
             {
-                injectScriptCode( 'oPageLiner.addHelpLine( 0, 100 )', null );
+                injectScriptCode( 'oPageLiner.addHelpLine( 0, ( parseInt( $( window ).scrollTop() ) + 100 ) )', null );
                 refreshHelpLineListing();
             }
         );

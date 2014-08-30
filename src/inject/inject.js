@@ -149,9 +149,10 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
     oHelpLineElem.setAttribute( 'data-pglnr-ext-helpline-index', iHelplineIndex );
 
     oHelpLineTooltipElem.className = 'pglnr-ext-helpline-tooltip pglnr-ext-helpline-tooltip-' + sAxis;
+    oHelpLineTooltipElem.iHelplineIndex = iHelplineIndex;
     oHelpLineTooltipElem.setTooltipText = function( sText )
     {
-        this.innerHTML = ( sText | 0 ) + 'px';
+        this.innerHTML = '#' + ( this.iHelplineIndex + 1 ) + ': ' + ( sText | 0 ) + 'px';
     };
 
     if( oHelpLine.posX > 0 )

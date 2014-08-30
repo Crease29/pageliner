@@ -5,6 +5,10 @@ Google Chrome extension to create guide lines on a website.
 [View in Chrome Web Store](https://chrome.google.com/webstore/detail/pageliner/nepakmljodobhlbbkpobblnifmhclemh)
 
 ## Changelog
+- **v1.1.2 (2014-08-30)**
+    - *Done*: Horizontal guide lines are now placed in viewport when you have scrolled down.
+    - *Done*: The ID of every guide line is now shown in it's tooltip which is referenced to the ID in the extension popup.
+    - *Done*: Changed default locale to "en"
 - **v1.1.1 (2014-07-14)**
     - *Fixed*: Implemented jQuery Color Picker because the behaviour of HTML 5 color-input isn't that reliable on all operating systems.
 - **v1.1.0 (2014-07-13)**

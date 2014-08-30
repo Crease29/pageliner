@@ -175,6 +175,7 @@
     color:#333;
     font-size:10px;
     opacity:0.65;
+    white-space:nowrap;
 }
 
 .pglnr-ext-helpline-tooltip::after {
@@ -194,7 +195,7 @@
 
 .pglnr-ext-helpline-tooltip-x {
     top:25px;
-    left:-20px;
+    left:-25px;
 }
 
 .pglnr-ext-helpline-tooltip-x::after {

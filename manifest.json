@@ -1,6 +1,6 @@
 {
     "name":             "__MSG_GLOBAL_APP_NAME__",
-    "version":          "1.1.1",
+    "version":          "1.1.2",
     "manifest_version": 2,
     "description":      "__MSG_GLOBAL_APP_DESCRIPTION__",
     "icons":            {
@@ -8,7 +8,7 @@
         "48":  "icons/icon_pl_48x48.png",
         "128": "icons/icon_pl_128x128.png"
     },
-    "default_locale":   "de",
+    "default_locale":   "en",
     "background":       {
         "scripts":    [
             "src/bg/background.js"
