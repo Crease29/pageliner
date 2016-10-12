@@ -1,18 +1,4 @@
 /**
- *
- *     |o     o    |          |
- * ,---|.,---..,---|,---.,---.|__/
- * |   |||   |||   ||---'`---.|  \
- * `---'``---|``---'`---'`---'`   `
- *       `---'    [media solutions]
- *
- * @copyright   (c) digidesk - media solutions
- * @link        http://www.digidesk.de
- * @author      Kai
- * @version     SVN: $Id$
- */
-
-/**
  * Shortcut for executing script code in the inject/inject.js
  * @param sCode
  */
@@ -35,7 +21,19 @@ $( function()
          */
         $( '[data-i18n]' ).each( function()
             {
-                $( this ).text( chrome.i18n.getMessage( this.getAttribute( 'data-i18n' ) ) );
+                var sIdent       = this.getAttribute( 'data-i18n' ),
+                    sTranslation = '';
+
+                if( sIdent == 'VERSION' )
+                {
+                    sTranslation = chrome.runtime.getManifest().version;
+                }
+                else
+                {
+                    sTranslation = chrome.i18n.getMessage( this.getAttribute( 'data-i18n' ) )
+                }
+
+                $( this ).text( sTranslation );
             }
         );
 
@@ -68,6 +66,7 @@ $( function()
 
         $( '#toggle-gui' ).click( function()
             {
+                toggleGUIButton();
                 injectScriptCode( 'oPageLiner.toggleGUI()', null );
             }
         );
@@ -75,6 +74,7 @@ $( function()
         $( '#add-helpline-x' ).click( function()
             {
                 injectScriptCode( 'oPageLiner.addHelpLine( 100, 0 )', null );
+                toggleGUIButton( true );
                 refreshHelpLineListing();
             }
         );
@@ -82,6 +82,7 @@ $( function()
         $( '#add-helpline-y' ).click( function()
             {
                 injectScriptCode( 'oPageLiner.addHelpLine( 0, ( parseInt( $( window ).scrollTop() ) + 100 ) )', null );
+                toggleGUIButton( true );
                 refreshHelpLineListing();
             }
         );
@@ -93,6 +94,21 @@ $( function()
             }
         );
 
+        function toggleGUIButton( forceShow )
+        {
+            var $oIcon    = $( '#toggle-gui' ).find( '.glyphicon' ),
+                forceShow = forceShow || false;
+
+            if ( !$oIcon.hasClass( 'glyphicon-eye-open' ) || forceShow )
+            {
+                $oIcon.removeClass( 'glyphicon-eye-close' ).addClass( 'glyphicon-eye-open' );
+            }
+            else
+            {
+                $oIcon.removeClass( 'glyphicon-eye-open' ).addClass( 'glyphicon-eye-close' );
+            }
+        }
+
         function refreshHelpLineListing()
         {
             injectScriptCode( 'oPageLiner.getAllHelpLines()', function( oAllHelpLines )
@@ -100,10 +116,10 @@ $( function()
                     var $oHelpLineActions        = $( '#helpline-actions' ),
                         $oHelpLineActionsDivider = $( '#helpline-actions-divider' );
 
-                    oAllHelpLines = oAllHelpLines[ 0 ];
-
-                    if( oAllHelpLines.length > 0 )
+                    if( typeof oAllHelpLines == 'object' && oAllHelpLines.length > 0 && oAllHelpLines[ 0 ].length > 0 )
                     {
+                        oAllHelpLines = oAllHelpLines[ 0 ];
+
                         var $oHelpLineListing = $oHelpLineActions.find( '.listing' );
 
                         $oHelpLineActionsDivider.removeClass( 'hidden' );
@@ -174,7 +190,7 @@ $( function()
 
                                 $oHelpLineActions.find( '.listing' ).append( oRowElem );
                             }
-                        )
+                        );
                     }
                     else
                     {
@@ -184,6 +200,20 @@ $( function()
                 }
             );
         }
+
+        function getGuiStatus() {
+            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                chrome.tabs.sendMessage( tabs[0].id, { sAction: 'getGuiStatus' }, function ( response )
+                {
+                    if( response.localStorage && response.localStorage[ 'pglnr-ext-blIsActive' ] && response.localStorage[ 'pglnr-ext-blIsActive' ] === 'false' )
+                    {
+                        toggleGUIButton( false );
+                    }
+                });
+            });
+        }
+
         refreshHelpLineListing();
+        getGuiStatus();
     }
 );

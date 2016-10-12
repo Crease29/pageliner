@@ -9,14 +9,6 @@
     },
 
     // Popup
-    "POPUP_BY": {
-        "message":     "by",
-        "description": "Popup heading subtitle."
-    },
-    "POPUP_BY_DIGIDESK": {
-        "message":     "digidesk - media solutions",
-        "description": "Popup heading subtitle."
-    },
     "POPUP_TOGGLE_HELPLINES": {
         "message":     "show/hide guides",
         "description": "Popup action."

@@ -4,215 +4,214 @@
 .pglnr-ext-ruler li,
 .pglnr-ext-helpline,
 .pglnr-ext-helpline-tooltip {
-    background:none;
-    width:auto;
-    height:auto;
-    padding:0;
-    margin:0;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    border-radius:0;
-    -webkit-transition:none;
-    -moz-transition:none;
-    -ms-transition:none;
-    -o-transition:none;
-    transition:none;
+    background: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
     -webkit-user-select: none;
-    -webkit-appearance:none;
-    appearance:none;
-    -webkit-box-sizing:border-box;
-    opacity:1;
-    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-box-sizing: border-box;
+    opacity: 1;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* [Section]: Rulers */
 .pglnr-ext-ruler {
-    background-color:rgba( 255, 255, 255, 0.5 );
-    position:fixed;
-    left:0;
-    overflow:hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    left: 0;
+    overflow: hidden;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-top {
-    width:100%;
-    height:18px;
-    top:0;
-    z-index:2147483500; /* max. z-index is 2147483647 */
-    /*cursor:row-resize;*/ /* ToDo */
+    width: 100%;
+    height: 18px;
+    top: 0;
+    z-index: 2147483500; /* max. z-index is 2147483647 */
+    cursor:row-resize;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-top ul {
-    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAPCAYAAAHR3KxUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUeNpiZGBg+A8EjAxYABMDHgAQQIxAXQwk6QIIIEZ8duECWE1jZGT8j08MIIBwuo0kW2ijgZDbYQAggMgKLZp7g2qWEB0MpAQXrX0CEEAkp6uhFSejlgwOS6ieN5CLRnrkE4AAo0vZNWzifdQjox7Bl5mw5OjBpI5pKDoam7phk7QAld4xR8OisHAAAAAASUVORK5CYII=');
-    background-repeat:repeat-x;
-    background-position:left bottom;
-    height:100%;
-    list-style-type:none;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAPCAYAAAHR3KxUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUeNpiZGBg+A8EjAxYABMDHgAQQIxAXQwk6QIIIEZ8duECWE1jZGT8j08MIIBwuo0kW2ijgZDbYQAggMgKLZp7g2qWEB0MpAQXrX0CEEAkp6uhFSejlgwOS6ieN5CLRnrkE4AAo0vZNWzifdQjox7Bl5mw5OjBpI5pKDoam7phk7QAld4xR8OisHAAAAAASUVORK5CYII=');
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    height: 100%;
+    list-style-type: none;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-top li {
-    width:100px;
-    height:16px;
-    display:block;
-    padding:2px 0 0 4px;
+    width: 100px;
+    height: 16px;
+    display: block;
+    padding: 2px 0 0 4px;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-top li,
 .pglnr-ext-ruler.pglnr-ext-ruler-left li {
-    float:left;
+    float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size:8px;
-    text-align:left;
+    font-size: 8px;
+    text-align: left;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-left {
-    width:18px;
-    height:100%;
-    top:18px;
-    z-index:2147483400; /* max. z-index is 2147483647 */
-    /*cursor:col-resize;*/ /* ToDo */
+    width: 18px;
+    height: 100%;
+    top: 18px;
+    z-index: 2147483400; /* max. z-index is 2147483647 */
+    cursor:col-resize;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-left ul {
-    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAyCAYAAAH0NbGvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJdJREFUeNpi/P//PwMIMDFAAUkMgABixK2dASr1H48agACCS4E5jIz/UQRQjSNPAGQoQABh2EKpoYNJACCAMEIM3fdMDAQA+QpAxuNVAHQbI2VWDClHAgQQ3rjAq5sFn8vJN5Z8yVEHjToIAgACjAWfTry5gZjCh6L8RjPNLMT6j2zNsEJnNMBGA2w0wEYDjAYBhiswiAEA2WFVvmymn9oAAAAASUVORK5CYII=');
-    background-repeat:repeat-y;
-    background-position:right -17px;
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    list-style-type:none;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAyCAYAAAH0NbGvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJdJREFUeNpi/P//PwMIMDFAAUkMgABixK2dASr1H48agACCS4E5jIz/UQRQjSNPAGQoQABh2EKpoYNJACCAMEIM3fdMDAQA+QpAxuNVAHQbI2VWDClHAgQQ3rjAq5sFn8vJN5Z8yVEHjToIAgACjAWfTry5gZjCh6L8RjPNLMT6j2zNsEJnNMBGA2w0wEYDjAYBhiswiAEA2WFVvmymn9oAAAAASUVORK5CYII=');
+    background-repeat: repeat-y;
+    background-position: right -17px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style-type: none;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-left li {
-    width:7px;
-    height:100px;
-    display:block;
-    float:none;
-    padding:4px 0 0 2px;
-    word-wrap:break-word;
-    line-height:7px;
+    width: 7px;
+    height: 100px;
+    display: block;
+    float: none;
+    padding: 4px 0 0 2px;
+    word-wrap: break-word;
+    line-height: 7px;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-left li:first-child {
-    height:81px;
+    height: 81px;
 }
-
 
 /* [Section]: Helplines */
 .pglnr-ext-helpline {
-    z-index:2147483600; /* max. z-index is 2147483647 */
+    z-index: 2147483600; /* max. z-index is 2147483647 */
 }
 
 .pglnr-ext-helpline-x {
-    width:1px;
-    height:100%;
-    position:fixed;
-    top:0;
-    cursor:col-resize;
+    width: 1px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    cursor: col-resize;
 }
 
 .pglnr-ext-helpline-x::before {
-    width:2px;
-    height:100%;
-    display:block;
-    content:" ";
-    position:absolute;
-    top:0;
-    left:-2px;
-    cursor:col-resize;
+    width: 2px;
+    height: 100%;
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    cursor: col-resize;
 }
 
 .pglnr-ext-helpline-x::after {
-    width:2px;
-    height:100%;
-    display:block;
-    content:" ";
-    position:absolute;
-    top:0;
-    left:1px;
-    cursor:col-resize;
+    width: 2px;
+    height: 100%;
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    cursor: col-resize;
 }
 
 .pglnr-ext-helpline-y {
-    width:100%;
-    height:1px;
-    position:absolute!important;
-    left:0;
-    cursor:row-resize;
+    width: 100%;
+    height: 1px;
+    position: absolute !important;
+    left: 0;
+    cursor: row-resize;
 }
 
 .pglnr-ext-helpline-y::before {
-    width:100%;
-    height:2px;
-    display:block;
-    content:" ";
-    position:absolute;
-    top:-2px;
-    left:0;
-    cursor:row-resize;
+    width: 100%;
+    height: 2px;
+    display: block;
+    content: " ";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    cursor: row-resize;
 }
 
 .pglnr-ext-helpline-y::after {
-    width:100%;
-    height:2px;
-    display:block;
-    content:" ";
-    position:absolute;
-    top:1px;
-    left:0;
-    cursor:row-resize;
+    width: 100%;
+    height: 2px;
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    cursor: row-resize;
 }
 
 /* [Section]: Helpline-Tooltips */
 .pglnr-ext-helpline-tooltip {
-    border:1px solid rgba( 0, 0, 0, 0.3 );
-    background-color:#FFF;
-    display:none;
-    padding:5px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    color:#333;
-    font-size:10px;
-    opacity:0.65;
-    white-space:nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: #FFF;
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #333;
+    font-size: 10px;
+    opacity: 0.65;
+    white-space: nowrap;
 }
 
 .pglnr-ext-helpline-tooltip::after {
-    border-color:transparent;
-    border-width:4px;
-    border-style:solid;
-    width:0;
-    height:0;
-    display:block;
-    content:" ";
-    position:absolute;
+    border-color: transparent;
+    border-width: 4px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    display: block;
+    content: " ";
+    position: absolute;
 }
 
 .pglnr-ext-helpline:hover .pglnr-ext-helpline-tooltip {
-    display:block!important;
+    display: block !important;
 }
 
 .pglnr-ext-helpline-tooltip-x {
-    top:25px;
-    left:-25px;
+    top: 25px;
+    left: -25px;
 }
 
 .pglnr-ext-helpline-tooltip-x::after {
-    border-bottom-color:rgba( 0, 0, 0, 0.6 );
-    left:50%;
-    bottom:100%;
-    margin-left:-4px;
+    border-bottom-color: rgba(0, 0, 0, 0.6);
+    left: 50%;
+    bottom: 100%;
+    margin-left: -4px;
 }
 
 .pglnr-ext-helpline-tooltip-y {
-    top:-12px;
-    left:25px;
+    top: -12px;
+    left: 25px;
 }
 
 .pglnr-ext-helpline-tooltip-y::after {
-    border-right-color:rgba( 0, 0, 0, 0.6 );
-    right:100%;
-    top:50%;
-    margin-top:-4px;
+    border-right-color: rgba(0, 0, 0, 0.6);
+    right: 100%;
+    top: 50%;
+    margin-top: -4px;
 }

@@ -20,37 +20,53 @@ function debug( sMsg )
 {
     if( localStorage.getItem( 'pglnr-ext-blDebug' ) == "true" )
     {
-        console.debug( sMsg );
+        console.log( sMsg );
     }
 }
+
+chrome.runtime.onMessage.addListener(
+    function( request, sender, sendResponse )
+    {
+        if( request.sAction == 'getGuiStatus' )
+        {
+            sendResponse( { 'localStorage': localStorage } );
+        }
+    }
+);
 
 oPageLiner.init = function()
 {
     debug( '[PageLiner] Initializing extension...' );
 
-    if( localStorage.getItem( 'pglnr-ext-blIsActive' ) == 'true' )
+    var aHelpLines = this.getAllHelpLines();
+
+    if( typeof aHelpLines !== 'undefined')
     {
-        var aHelpLines = this.getAllHelpLines();
-
-        debug( '[PageLiner] Helplines found! Rendering...' );
-
-        this.showRulers();
+        debug( '[PageLiner] Helplines found! Updating badge...' );
         this.updatePopUp();
 
-        // if helplines are to be displayed, render them!
-        if( aHelpLines && aHelpLines.length > 0 )
+        if( localStorage.getItem( 'pglnr-ext-blIsActive' ) == 'true')
         {
-            // add all existing helplines to the DOM
-            $.each( aHelpLines, function( iIndex )
-                {
-                    oPageLiner.addHelpLineToDOM( this.posX, this.posY, this.sColor, iIndex );
-                }
-            );
+            debug( '[PageLiner] Rendering helplines...' );
+
+            this.drawRulers();
+            this.updatePopUp();
+
+            // if helplines are to be displayed, render them!
+            if( aHelpLines && aHelpLines.length > 0 )
+            {
+                // add all existing helplines to the DOM
+                $.each( aHelpLines, function( iIndex )
+                        {
+                            oPageLiner.addHelpLineToDOM( this.posX, this.posY, this.sColor, iIndex );
+                        }
+                );
+            }
         }
-    }
-    else
-    {
-        debug( '[PageLiner] No helplines to render.' );
+        else
+        {
+            debug( '[PageLiner] No helplines to render.' );
+        }
     }
 
     debug( '[PageLiner] Initializing done.' );
@@ -69,14 +85,12 @@ oPageLiner.setAllHelpLines = function( oAllHelpLines )
 /**
  * Adds a helpline
  *
- * @param double posX   Position of the helpline on the horizontal axis
- * @param double posY   Position of the helpline on the vertical axis
- * @param string sColor HEX color code of the helplines color
+ * @param posX   double  Position of the helpline on the horizontal axis
+ * @param posY   double  Position of the helpline on the vertical axis
+ * @param sColor string  HEX color code of the helplines color
  */
 oPageLiner.addHelpLine = function( posX, posY, sColor )
 {
-    var iHelplineIndex = 0;
-
     // Check if localStorage dataset exists for this URL
     if( localStorage.getItem( 'pglnr-ext-aHelpLines' ) === null )
     {
@@ -90,18 +104,20 @@ oPageLiner.addHelpLine = function( posX, posY, sColor )
         this.init();
     }
 
-    iHelplineIndex = this.addHelpLineToLocalStorage( posX, posY, sColor );
-    this.addHelpLineToDOM( posX, posY, sColor, iHelplineIndex );
+    var oHelpLine = this.addHelpLineToDOM( posX, posY, sColor, this.addHelpLineToLocalStorage( posX, posY, sColor ) );
 
     this.updatePopUp();
+
+    return oHelpLine;
 };
 
 /**
  * Adds a helpline to the local storage
  *
- * @param double posX   Position of the helpline on the horizontal axis
- * @param double posY   Position of the helpline on the vertical axis
- * @param string sColor HEX color code of the helplines color
+ * @param  posX           doublePosition of the helpline on the horizontal axis
+ * @param  posY           doublePosition of the helpline on the vertical axis
+ * @param  sColor         stringHEX color code of the helplines color
+ * @param  iHelplineIndex number of the helpline
  *
  * @return int iIndex
  */
@@ -109,8 +125,8 @@ oPageLiner.addHelpLineToLocalStorage = function( posX, posY, sColor, iHelplineIn
 {
     var oHelpLine =
             {
-                posX: typeof posX != 'undefined' ? posX : 0,
-                posY: typeof posY != 'undefined' ? posY : 0,
+                posX:   typeof posX   != 'undefined' ? posX : 0,
+                posY:   typeof posY   != 'undefined' ? posY : 0,
                 sColor: typeof sColor != 'undefined' ? sColor : this.sDefaultColor
             },
         aHelpLines = this.getAllHelpLines(),
@@ -136,19 +152,19 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
 {
     var oHelpLine =
             {
-                posX: typeof posX != 'undefined' && typeof posY != 'undefined' ? posX : 0,
-                posY: typeof posY != 'undefined' || !posX ? posY : 0,
+                posX:   typeof posX   != 'undefined' && typeof posY != 'undefined' ? posX : 0,
+                posY:   typeof posY   != 'undefined' || !posX ? posY : 0,
                 sColor: typeof sColor != 'undefined' ? sColor : this.sDefaultColor
             },
-        oHelpLineElem = document.createElement( 'div' ),
+        oHelpLineElem        = document.createElement( 'div' ),
         oHelpLineTooltipElem = document.createElement( 'div' ),
-        sAxis = ( oHelpLine.posX > 0 ? 'x' : 'y' );
+        sAxis                = ( oHelpLine.posX > 0 ? 'x' : 'y' );
 
-    oHelpLineElem.className = 'pglnr-ext-helpline pglnr-ext-helpline-' + sAxis;
+    oHelpLineElem.className             = 'pglnr-ext-helpline pglnr-ext-helpline-' + sAxis;
     oHelpLineElem.style.backgroundColor = oHelpLine.sColor;
     oHelpLineElem.setAttribute( 'data-pglnr-ext-helpline-index', iHelplineIndex );
 
-    oHelpLineTooltipElem.className = 'pglnr-ext-helpline-tooltip pglnr-ext-helpline-tooltip-' + sAxis;
+    oHelpLineTooltipElem.className      = 'pglnr-ext-helpline-tooltip pglnr-ext-helpline-tooltip-' + sAxis;
     oHelpLineTooltipElem.iHelplineIndex = iHelplineIndex;
     oHelpLineTooltipElem.setTooltipText = function( sText )
     {
@@ -158,13 +174,13 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
     if( oHelpLine.posX > 0 )
     {
         oHelpLineElem.style.position = "fixed";
-        oHelpLineElem.style.left = oHelpLine.posX + "px";
+        oHelpLineElem.style.left     = oHelpLine.posX + "px";
         oHelpLineTooltipElem.setTooltipText( oHelpLine.posX );
     }
     else
     {
         oHelpLineElem.style.position = "absolute";
-        oHelpLineElem.style.top = oHelpLine.posY + "px";
+        oHelpLineElem.style.top      = oHelpLine.posY + "px";
         oHelpLineTooltipElem.setTooltipText( oHelpLine.posY );
     }
 
@@ -197,6 +213,8 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
     ).append( oHelpLineTooltipElem );
 
     $( 'body' ).append( oHelpLineElem );
+
+    return oHelpLineElem;
 };
 
 oPageLiner.editHelpLine = function( iHelplineIndex, posX, posY, sColor )
@@ -223,7 +241,12 @@ oPageLiner.editHelpLine = function( iHelplineIndex, posX, posY, sColor )
         }
 
         $oPageLine.remove();
-        this.addHelpLineToDOM( oAllPageLines[ iHelplineIndex ].posX, oAllPageLines[ iHelplineIndex ].posY, oAllPageLines[ iHelplineIndex ].sColor, iHelplineIndex );
+        this.addHelpLineToDOM(
+            oAllPageLines[ iHelplineIndex ].posX,
+            oAllPageLines[ iHelplineIndex ].posY,
+            oAllPageLines[ iHelplineIndex ].sColor,
+            iHelplineIndex
+        );
         this.setAllHelpLines( oAllPageLines );
     }
 };
@@ -252,7 +275,7 @@ oPageLiner.toggleGUI = function( blForceState )
     }
     else
     {
-        blState = localStorage.getItem( 'pglnr-ext-blIsActive' ) == 'false' ? true : false;
+        blState = localStorage.getItem( 'pglnr-ext-blIsActive' ) == 'false';
     }
 
     localStorage.setItem( 'pglnr-ext-blIsActive', blState );
@@ -276,7 +299,7 @@ oPageLiner.removeAllHelpLines = function()
     this.updatePopUp();
 };
 
-oPageLiner.showRulers = function()
+oPageLiner.drawRulers = function()
 {
     var $oRulerTop  = $( '.pglnr-ext-ruler.pglnr-ext-ruler-top' ),
         $oRulerLeft = $( '.pglnr-ext-ruler.pglnr-ext-ruler-left' );
@@ -293,7 +316,8 @@ oPageLiner.showRulers = function()
             oRulerTopMeasure  = document.createElement( 'ul' ),
             oRulerLeftMeasure = document.createElement( 'ul' ),
             iDocumentWidth    = $( document ).width(),
-            iDocumentHeight   = $( document ).height();
+            iDocumentHeight   = $( document ).height(),
+            $window           = $( window );
 
         oRulerTopElem.className  = 'pglnr-ext-ruler pglnr-ext-ruler-top';
         oRulerLeftElem.className = 'pglnr-ext-ruler pglnr-ext-ruler-left';
@@ -308,6 +332,30 @@ oPageLiner.showRulers = function()
             oMeasurementElem.innerText = ( i > 0 ? i * 100 : " " );
             oRulerTopMeasure.appendChild( oMeasurementElem );
         }
+
+        // Add drag event to create new helplines from ruler
+        $( oRulerTopElem ).draggable(
+            {
+                axis:  "y",
+                cursorAt: "bottom",
+                distance: 20,
+                helper: function ( event )
+                        {
+                            var $oHelpLine = $( oPageLiner.addHelpLine( 0, event.clientY + $window.scrollTop() ) );
+                            this.iHelplineIndex = $oHelpLine.data('pglnr-ext-helpline-index');
+
+                            $oHelpLine.show();
+
+                            return $oHelpLine[ 0 ];
+                        },
+                stop:  function ( event, ui )
+                       {
+                           oPageLiner.editHelpLine( this.iHelplineIndex, 0, event.clientY + $window.scrollTop() );
+                           oPageLiner.init();
+                       }
+            }
+        );
+
         oRulerTopElem.appendChild( oRulerTopMeasure );
 
         // Create measurement for oRulerLeftElem
@@ -317,6 +365,33 @@ oPageLiner.showRulers = function()
             oMeasurementElem.innerText = ( i > 0 ? i * 100 : " " );
             oRulerLeftMeasure.appendChild( oMeasurementElem );
         }
+
+        // Add drag event to create new helplines from ruler
+        $( oRulerLeftElem ).draggable(
+            {
+                axis:  "x",
+                cursorAt: { left: 0 },
+                distance: 10,
+                helper: function ( event )
+                       {
+                           var $oHelpLine = $( oPageLiner.addHelpLine( event.clientX, 0 ) );
+                           this.iHelplineIndex = $oHelpLine.data('pglnr-ext-helpline-index');
+
+                           $oHelpLine.show();
+
+                           return $oHelpLine[ 0 ];
+                       },
+                drag:  function( event, ui )
+                       {
+                       },
+                stop:  function ( event, ui )
+                       {
+                           oPageLiner.editHelpLine( this.iHelplineIndex, event.clientX, 0 );
+                           oPageLiner.init();
+                       }
+            }
+        );
+
         oRulerLeftElem.appendChild( oRulerLeftMeasure );
 
         $( 'body' ).append( oRulerTopElem, oRulerLeftElem );
@@ -336,9 +411,11 @@ oPageLiner.showRulers = function()
                 for( var i = 0; i <= Math.ceil( iDocumentHeight / 100 ); i++ )
                 {
                     var oMeasurementElem = document.createElement( 'li' );
+
                     oMeasurementElem.innerText = ( i > 0 ? i * 100 : " " );
                     oRulerLeftMeasure.appendChild( oMeasurementElem );
                 }
+
                 oRulerLeftElem.appendChild( oRulerLeftMeasure );
             }
         );
@@ -348,8 +425,9 @@ oPageLiner.showRulers = function()
 oPageLiner.updatePopUp = function()
 {
     debug( '[PageLiner] Setting count badge...' );
-    chrome.extension.sendMessage( null, { sAction: 'updatePopUp', oAllHelpLines: this.getAllHelpLines() } );
+    chrome.extension.sendMessage( chrome.runtime.id, { sAction: 'updatePopUp', oAllHelpLines: this.getAllHelpLines() } );
 };
 
 // Init PageLiner object
 oPageLiner.init();
+

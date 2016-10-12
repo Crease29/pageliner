@@ -1,55 +1,60 @@
 <!doctype html>
-<link rel="stylesheet" href="../../css/bootstrap.min.css"/>
-<link rel="stylesheet" href="../../css/colorpicker.css"/>
-<link rel="stylesheet" href="page_action.css"/>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../../css/colorpicker.css"/>
+        <link rel="stylesheet" href="page_action.css"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1 class="page_action_headbar">
+                <span data-i18n="GLOBAL_APP_NAME"></span>
+            </h1>
+            <ul class="nav nav-pills nav-stacked page-actions">
+                <li>
+                    <a href="#" class="toggle-gui" id="toggle-gui">
+                        <i class="glyphicon glyphicon-eye-open"></i> <span data-i18n="POPUP_TOGGLE_HELPLINES"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="add-helpline">
+                        <div class="btn-group btn-group-xs">
+                            <button type="button" class="btn btn-primary" id="add-helpline-x" title="__MSG_POPUP_NEW_HELPLINE_X__">
+                                | <span data-i18n="POPUP_NEW_HELPLINE_X"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" id="add-helpline-y" title="__MSG_POPUP_NEW_HELPLINE_Y__">
+                                &mdash; <span data-i18n="POPUP_NEW_HELPLINE_Y"></span>
+                            </button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="remove-helplines" id="remove-helplines">
+                        <i class="glyphicon glyphicon-remove"></i> <span data-i18n="POPUP_CLEAR_ALL_HELPLINES"></span>
+                    </a>
+                </li>
+                <li id="helpline-actions-divider" class="nav-divider hidden"></li>
+                <li id="helpline-actions" class="hidden">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <strong>
+                                <span data-i18n="POPUP_ALL_HELPLINES_HEADING"></span>
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="listing"></div>
+                </li>
+            </ul>
 
-<div id="wrapper">
-    <h1 class="page_action_headbar">
-        <span data-i18n="GLOBAL_APP_NAME"></span>
-        <small>
-            <span data-i18n="POPUP_BY"></span>
-            <a href="http://www.digidesk.de/" data-i18n="POPUP_BY_DIGIDESK"></a>
-        </small>
-    </h1>
-    <ul class="nav nav-pills nav-stacked page-actions">
-        <li>
-            <a href="#" class="toggle-gui" id="toggle-gui">
-                <i class="glyphicon glyphicon-eye-open"></i> <span data-i18n="POPUP_TOGGLE_HELPLINES"></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="add-helpline">
-                <div class="btn-group btn-group-xs">
-                    <button type="button" class="btn btn-primary" id="add-helpline-x" title="__MSG_POPUP_NEW_HELPLINE_X__">
-                        | <span data-i18n="POPUP_NEW_HELPLINE_X"></span>
-                    </button>
-                    <button type="button" class="btn btn-primary" id="add-helpline-y" title="__MSG_POPUP_NEW_HELPLINE_Y__">
-                        &mdash; <span data-i18n="POPUP_NEW_HELPLINE_Y"></span>
-                    </button>
-                </div>
-                <div class="clearfix"></div>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="remove-helplines" id="remove-helplines">
-                <i class="glyphicon glyphicon-remove"></i> <span data-i18n="POPUP_CLEAR_ALL_HELPLINES"></span>
-            </a>
-        </li>
-        <li id="helpline-actions-divider" class="nav-divider hidden"></li>
-        <li id="helpline-actions" class="hidden">
-            <div class="row">
-                <div class="col-xs-12">
-                    <strong>
-                        <span data-i18n="POPUP_ALL_HELPLINES_HEADING"></span>
-                    </strong>
-                </div>
-            </div>
-            <div class="listing"></div>
-        </li>
-    </ul>
-</div>
+            <footer>
+                <a href="https://github.com/Crease29/pageliner/blob/master/README.md#changelog" target="_blank">Changelog</a><span class="spacer">·</span>v<span data-i18n="VERSION"></span>
+            </footer>
+        </div>
 
-<script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../../js/colorpicker.js"></script>
-<script type="text/javascript" src="page_action.js"></script>
+        <script src="../../js/jquery/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/colorpicker.js"></script>
+        <script src="page_action.js"></script>
+    </body>
+</html>
