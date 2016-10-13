@@ -7,6 +7,8 @@ Google Chrome extension to create guide lines on a website.
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
 
 ## Changelog
+- **v1.2.2 (2016-10-13)**
+    - Fixed bug with double rendered guide lines
 - **v1.2.1 (2016-10-13)**
     - Fixed encoding error.
 - **v1.2.0 (2016-10-13)**
