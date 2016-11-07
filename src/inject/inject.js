@@ -341,7 +341,7 @@ oPageLiner.drawRulers = function()
                 distance: 20,
                 helper: function ( event )
                         {
-                            var $oHelpLine = $( oPageLiner.addHelpLine( 0, event.clientY + $window.scrollTop() ) );
+                            var $oHelpLine = $( oPageLiner.addHelpLine( 0, event.clientY + $window.scrollTop() ) ).addClass( 'pglnr-ext-helpline-dummy' );
                             this.iHelplineIndex = $oHelpLine.data('pglnr-ext-helpline-index');
 
                             $oHelpLine.show();
@@ -351,7 +351,7 @@ oPageLiner.drawRulers = function()
                 stop:  function ( event, ui )
                        {
                            oPageLiner.editHelpLine( this.iHelplineIndex, 0, event.clientY + $window.scrollTop() );
-                           oPageLiner.init();
+                           $( '.pglnr-ext-helpline-dummy' ).remove();
                        }
             }
         );
@@ -374,20 +374,17 @@ oPageLiner.drawRulers = function()
                 distance: 10,
                 helper: function ( event )
                        {
-                           var $oHelpLine = $( oPageLiner.addHelpLine( event.clientX, 0 ) );
-                           this.iHelplineIndex = $oHelpLine.data('pglnr-ext-helpline-index');
+                           var $oHelpLine = $( oPageLiner.addHelpLine( event.clientX, 0 ) ).addClass( 'pglnr-ext-helpline-dummy' );
+                           this.iHelplineIndex = $oHelpLine.data( 'pglnr-ext-helpline-index' );
 
                            $oHelpLine.show();
 
                            return $oHelpLine[ 0 ];
                        },
-                drag:  function( event, ui )
-                       {
-                       },
                 stop:  function ( event, ui )
                        {
                            oPageLiner.editHelpLine( this.iHelplineIndex, event.clientX, 0 );
-                           oPageLiner.init();
+                           $( '.pglnr-ext-helpline-dummy' ).remove();
                        }
             }
         );
