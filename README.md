@@ -11,7 +11,7 @@ If you have any suggestions or bugs, please create an issue or use the support f
 
 ## Changelog
 - **v1.2.3 (2016-11-07)**
-    - Added a little donate button for people that would like to support this awesome extension.
+    - Added a small donate button for people that would like to support this awesome extension.
 - **v1.2.2 (2016-10-13)**
     - Fixed bug with double rendered guide lines
 - **v1.2.1 (2016-10-13)**
