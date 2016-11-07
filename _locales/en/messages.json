@@ -36,5 +36,9 @@
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
         "message":     "Position",
         "description": "Popup table positions."
+    },
+    "POPUP_DONATE": {
+        "message":     "Buy me a beer",
+        "description": "Donate link."
     }
 }

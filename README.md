@@ -1,6 +1,6 @@
 # PageLiner
 
-If this extension helps you, buy me a beer :beer: :grin:
+If you like this extension, I would be glad if you buy me a beer :beer: :grin:
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Crease29&url=https%3A%2F%2Fgithub.com%2FCrease29%2Fpageliner%2F&title=PageLiner&language=en_GB&tags=github&category=software) [![Donate via PayPal](https://github.com/Crease29/pageliner/blob/master/images/donate_paypal.png)](https://www.paypal.me/koi)
 
 Google Chrome extension to create guide lines on a website.
@@ -10,6 +10,8 @@ Google Chrome extension to create guide lines on a website.
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
 
 ## Changelog
+- **v1.2.3 (2016-11-07)**
+    - Added a little donate button for people that would like to support this awesome extension.
 - **v1.2.2 (2016-10-13)**
     - Fixed bug with double rendered guide lines
 - **v1.2.1 (2016-10-13)**
