@@ -40,5 +40,13 @@
     "POPUP_DONATE": {
         "message":     "Buy me a beer",
         "description": "Donate link."
+    },
+    "POPUP_NEW": {
+        "message":     "NEU",
+        "description": "Neu"
+    },
+    "POPUP_FEATURE_DISTANCE_LINES": {
+        "message":     "Schließe dieses Overlay, fahre mit der Maus über eine Hilfslinie und halte Strg gedrückt. 😍",
+        "description": "Neues Feature."
     }
 }

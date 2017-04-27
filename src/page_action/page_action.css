@@ -104,6 +104,10 @@ body {
     color: darkred;
 }
 
+.page-actions .list-padding {
+    padding: 0 15px;
+}
+
 .page-actions .add-helpline .btn-group {
     width: 100%;
 }

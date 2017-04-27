@@ -46,7 +46,7 @@
     width: 100%;
     height: 18px;
     top: 0;
-    z-index: 2147483500; /* max. z-index is 2147483647 */
+    z-index: 2147483499; /* max. z-index is 2147483647 */
     cursor:row-resize;
 }
 
@@ -227,18 +227,94 @@
 
 /* [Section]: Distance lines */
 .pglnr-ext-distanceline {
-    background-color: #FF1493;
+    z-index: 2147483645;  /* max. z-index is 2147483647 */
+}
+
+/* Distance line from left to right */
+.pglnr-ext-distanceline-x {
+    border-top: 1px dashed #ffc4ea;
+    height: 1px;
+    top: 95px;
+    position: fixed;
+}
+
+.pglnr-ext-distanceline-x:before,
+.pglnr-ext-distanceline-x:after,
+.pglnr-ext-distanceline-y:before,
+.pglnr-ext-distanceline-y:after{
+    border-bottom: 1px solid #ffc4ea;
+    border-left: 1px solid #ffc4ea;
+    width: 6px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    content: ' ';
+    transform-origin: center center;
+}
+
+.pglnr-ext-distanceline-x:before {
+    top: -4px;
+    left: 1px;
+    transform: rotate(45deg);
+}
+
+.pglnr-ext-distanceline-x:after {
+    top: -4px;
+    right: 1px;
+    transform: rotate(225deg);
+}
+
+.pglnr-ext-distanceline-y:before {
+    left: -4px;
+    top: 1px;
+    transform: rotate(135deg);
+}
+
+.pglnr-ext-distanceline-y:after {
+    right: -3px;
+    bottom: 1px;
+    transform: rotate(-45deg);
+}
+
+/* Distance line from top to bottom */
+.pglnr-ext-distanceline-y {
+    border-left: 1px dashed #ffc4ea;
+    width: 1px;
+    left: 95px;
     position: absolute;
 }
 
-/* From left to right */
-.pglnr-ext-distanceline-x {
-    height: 1px;
-    top: 95px;
+.pglnr-ext-distanceline span {
+    background-color: #FFF;
+    width: auto;
+    display: inline-block;
+    padding: 0 2px;
+    border-radius: 3px;
+    position: absolute;
+    color: #ffc4ea;
+    font-size: 10px;
 }
 
-/* From top to bottom */
-.pglnr-ext-distanceline-y {
-    width: 1px;
-    left: 95px;
+/* Distance line from left to right */
+.pglnr-ext-distanceline-x span {
+    top: 3px;
+    right: 8px;
+}
+
+/* Distance line from left to right */
+.pglnr-ext-distanceline-x:last-of-type span {
+    right: inherit;
+    left: 8px;
+}
+
+/* Distance line from top to bottom */
+.pglnr-ext-distanceline-y span {
+    left: 3px;
+    bottom: 8px;
+}
+
+/* Distance line from top to bottom */
+.pglnr-ext-distanceline-y:last-of-type span {
+    bottom: inherit;
+    top: 8px;
 }

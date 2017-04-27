@@ -7,7 +7,8 @@
  */
 
 var oPageLiner = {
-    sDefaultColor: '#33ffff'
+    sDefaultColor: '#33ffff',
+    blAltKeyReleased: true
 };
 
 function debug( sMsg )
@@ -205,15 +206,19 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
                     oHelpLineTooltipElem.style.display = 'none';
                 }
         }
-    ).mouseenter(function()
+    ).on( 'mouseenter', function( e )
         {
-            $window.on( 'keydown', {iHelplineIndex: iHelplineIndex}, oPageLiner.drawDistanceLines);
+            $window.on( 'keydown', {iHelplineIndex: iHelplineIndex, mouseX: e.clientX, mouseY: e.clientY}, oPageLiner.drawDistanceLines);
             $window.on( 'keyup', oPageLiner.removeDistanceLines);
         }
-    ).mouseleave(function()
+    ).on( 'mouseleave', function( e )
         {
+            oPageLiner.removeDistanceLines();
             $window.unbind( 'keydown', oPageLiner.drawDistanceLines );
             $window.unbind( 'keyup', oPageLiner.removeDistanceLines );
+        }
+    ).on( 'drag', function()
+        {
             oPageLiner.removeDistanceLines();
         }
     ).append( oHelpLineTooltipElem );
@@ -427,39 +432,38 @@ oPageLiner.drawRulers = function()
 
 oPageLiner.drawDistanceLines = function( event )
 {
-    if( event.keyCode !== 18 )
+    if ( !oPageLiner.blAltKeyReleased || event.keyCode !== 17 )
     {
         return;
     }
 
-    var $body            = $( 'body' ),
-        $oPageLine       = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]' ),
-        isHorizontal     = $oPageLine.hasClass( 'pglnr-ext-helpline-y' ),
-        sOrigin          = isHorizontal ? 'top' : 'left',
-        sScaleOrigin     = isHorizontal ? 'height' : 'width',
-        sModifierClass   = isHorizontal ? 'pglnr-ext-distanceline-y' : 'pglnr-ext-distanceline-x',
-        iCloserLowestPos = oPageLiner.getLowerClosestHelpLine( parseInt( $oPageLine.css( sOrigin ) ), isHorizontal ),
-        iCloserUpperPos  = oPageLiner.getUpperClosestHelpLine( parseInt( $oPageLine.css( sOrigin ) ), isHorizontal );
+    oPageLiner.blAltKeyReleased = false;
 
-    $body.append(
-        $( '<div>',
-            {
-                'class': 'pglnr-ext-distanceline ' + sModifierClass,
-                'style': sOrigin + ': ' + iCloserLowestPos + 'px; ' +
-                         sScaleOrigin + ': ' + ( parseInt( $oPageLine.css( sOrigin ) ) - iCloserLowestPos ) + 'px;'
-            }
-        )
-    );
+    var $body                  = $( 'body' ),
+        $oPageLine             = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]' ),
+        blHorizontal           = $oPageLine.hasClass( 'pglnr-ext-helpline-y' ),
+        sOrigin                = blHorizontal ? 'top' : 'left',
+        sScaleOrigin           = blHorizontal ? 'height' : 'width',
+        sModifierClass         = blHorizontal ? 'pglnr-ext-distanceline-y' : 'pglnr-ext-distanceline-x',
+        iClosestLowerPos       = oPageLiner.getLowerClosestHelpLine( parseInt( $oPageLine.css( sOrigin ) ), blHorizontal ),
+        iClosestUpperPos       = oPageLiner.getUpperClosestHelpLine( parseInt( $oPageLine.css( sOrigin ) ), blHorizontal ),
+        iClosestLowerDimension = parseInt( $oPageLine.css( sOrigin ) ) - iClosestLowerPos,
+        iClosestUpperDimension = iClosestUpperPos - parseInt( $oPageLine.css( sOrigin ) ) - 1,
+        iDimensionLineLeftPos  = ( blHorizontal ? 'left: ' + ( event.data.mouseX + 20 ) + 'px;' : '' ),
+        $oLowerDistanceLine    = $( '<div></div>', {
+                                     'class': 'pglnr-ext-distanceline ' + sModifierClass,
+                                     'style': sOrigin + ': ' + ( iClosestLowerPos + 1 ) + 'px; ' +
+                                              sScaleOrigin + ': ' + ( iClosestLowerDimension - 1 ) + 'px;' +
+                                              iDimensionLineLeftPos
+                                 } ).html('<span>' + ( iClosestLowerDimension ) + 'px</span>'),
+        $oUpperDistanceLine    = $( '<div></div>', {
+                                     'class': 'pglnr-ext-distanceline ' + sModifierClass,
+                                     'style': sOrigin + ': ' + ( parseInt( $oPageLine.css( sOrigin ) ) + 1)  + 'px; ' +
+                                              sScaleOrigin + ': ' + ( iClosestUpperDimension - 1 ) + 'px;' +
+                                              iDimensionLineLeftPos
+                                 } ).html('<span>' + ( iClosestUpperDimension + 1 ) + 'px</span>');
 
-    $body.append(
-        $( '<div>',
-            {
-                'class': 'pglnr-ext-distanceline ' + sModifierClass,
-                'style': sOrigin + ': ' + ( parseInt( $oPageLine.css( sOrigin ) ) + 1)  + 'px; ' +
-                         sScaleOrigin + ': ' + ( iCloserUpperPos - parseInt( $oPageLine.css( sOrigin ) ) - 1 ) + 'px;'
-            }
-        )
-    );
+    $body.append( $oLowerDistanceLine, $oUpperDistanceLine );
 };
 
 /**
@@ -509,8 +513,10 @@ oPageLiner.getLowerClosestHelpLine = function( iPos, blOnYAxis )
  */
 oPageLiner.getUpperClosestHelpLine = function( iPos, blOnYAxis )
 {
-    var aHelpLines = this.getAllHelpLines(),
-        iClosestHelplinePos   = blOnYAxis ? $(window).height() : $(window).width();
+    var aHelpLines          = this.getAllHelpLines(),
+        $window             = $(window),
+        iClosestHelplinePos = parseInt(blOnYAxis ? ( $window.height() + $window.scrollTop() ) : $window.width());
+
     blOnYAxis = blOnYAxis || false;
 
     $.each( aHelpLines, function( iHelplineIndex, oHelpline )
@@ -538,9 +544,13 @@ oPageLiner.getUpperClosestHelpLine = function( iPos, blOnYAxis )
 /**
  * Removes all distance lines from DOM.
  */
-oPageLiner.removeDistanceLines = function()
+oPageLiner.removeDistanceLines = function( event )
 {
-    $( 'body > .pglnr-ext-distanceline' ).remove();
+    if ( !oPageLiner.blAltKeyReleased )
+    {
+        $( 'body > .pglnr-ext-distanceline' ).remove();
+        oPageLiner.blAltKeyReleased = true;
+    }
 };
 
 oPageLiner.updatePopUp = function()
