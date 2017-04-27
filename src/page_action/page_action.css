@@ -1,15 +1,9 @@
 /**
+ * PageLiner
  *
- *     |o     o    |          |
- * ,---|.,---..,---|,---.,---.|__/
- * |   |||   |||   ||---'`---.|  \
- * `---'``---|``---'`---'`---'`   `
- *       `---'    [media solutions]
- *
- * @copyright   (c) digidesk - media solutions
- * @link        http://www.digidesk.de
- * @author      Kai
- * @version     SVN: $Id$
+ * @copyright   Kai Neuwerth - 2017
+ * @link        http://www.neuland-netz.de
+ * @author      Kai Neuwerth
  */
 @font-face {
     font-family: 'Open Sans';

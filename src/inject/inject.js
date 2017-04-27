@@ -1,15 +1,9 @@
 /**
+ * PageLiner
  *
- *     |o     o    |          |
- * ,---|.,---..,---|,---.,---.|__/
- * |   |||   |||   ||---'`---.|  \
- * `---'``---|``---'`---'`---'`   `
- *       `---'    [media solutions]
- *
- * @copyright   (c) digidesk - media solutions
- * @link        http://www.digidesk.de
- * @author      Kai
- * @version     SVN: $Id$
+ * @copyright   Kai Neuwerth - 2017
+ * @link        http://www.neuland-netz.de
+ * @author      Kai Neuwerth
  */
 
 var oPageLiner = {
@@ -150,7 +144,8 @@ oPageLiner.addHelpLineToLocalStorage = function( posX, posY, sColor, iHelplineIn
 
 oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
 {
-    var oHelpLine =
+    var $window   = $( window ),
+        oHelpLine =
             {
                 posX:   typeof posX   != 'undefined' && typeof posY != 'undefined' ? posX : 0,
                 posY:   typeof posY   != 'undefined' || !posX ? posY : 0,
@@ -209,6 +204,17 @@ oPageLiner.addHelpLineToDOM = function( posX, posY, sColor, iHelplineIndex )
 
                     oHelpLineTooltipElem.style.display = 'none';
                 }
+        }
+    ).mouseenter(function()
+        {
+            $window.on( 'keydown', {iHelplineIndex: iHelplineIndex}, oPageLiner.drawDistanceLines);
+            $window.on( 'keyup', oPageLiner.removeDistanceLines);
+        }
+    ).mouseleave(function()
+        {
+            $window.unbind( 'keydown', oPageLiner.drawDistanceLines );
+            $window.unbind( 'keyup', oPageLiner.removeDistanceLines );
+            oPageLiner.removeDistanceLines();
         }
     ).append( oHelpLineTooltipElem );
 
@@ -417,6 +423,38 @@ oPageLiner.drawRulers = function()
             }
         );
     }
+};
+
+oPageLiner.drawDistanceLines = function( event )
+{
+    if( event.keyCode !== 18 )
+    {
+        return;
+    }
+
+    var $body = $( 'body' ),
+        $oPageLine = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]' ),
+        isHorizontal = $oPageLine.hasClass( 'pglnr-ext-helpline-y' );
+
+    if ( isHorizontal ) {
+        // ToDo: Implement position calculation of distance lines
+        $body.append(
+            $( '<div>',
+                {
+                    'class': 'pglnr-ext-distanceline pglnr-ext-distanceline-y',
+                    'style': 'left: 50px;'
+                }
+            )
+        );
+    }
+};
+
+/**
+ * Removes all distance lines from DOM.
+ */
+oPageLiner.removeDistanceLines = function()
+{
+    $( 'body > .pglnr-ext-distanceline' ).remove();
 };
 
 oPageLiner.updatePopUp = function()

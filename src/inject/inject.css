@@ -1,9 +1,18 @@
+/**
+ * PageLiner
+ *
+ * @copyright   Kai Neuwerth 2017
+ * @link        http://www.neuland-netz.de
+ * @author      Kai Neuwerth
+ */
+
 /* [Section]: General overrides */
 .pglnr-ext-ruler,
 .pglnr-ext-ruler ul,
 .pglnr-ext-ruler li,
 .pglnr-ext-helpline,
-.pglnr-ext-helpline-tooltip {
+.pglnr-ext-helpline-tooltip,
+.pglnr-ext-distanceline {
     background: none;
     width: auto;
     height: auto;
@@ -214,4 +223,21 @@
     right: 100%;
     top: 50%;
     margin-top: -4px;
+}
+
+/* [Section]: Distance lines */
+.pglnr-ext-distanceline {
+    background-color: #FF1493;
+    position: absolute;
+}
+
+/* From left to right */
+.pglnr-ext-distanceline-x {
+    height: 1px;
+}
+
+/* From top to bottom */
+.pglnr-ext-distanceline-y {
+    width: 1px;
+    height: 100%;
 }

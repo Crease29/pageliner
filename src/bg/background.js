@@ -1,8 +1,10 @@
 /**
- * Shortcut for injecting a script file in the current tab
- * @param sFile
+ * PageLiner
+ *
+ * @copyright   Kai Neuwerth 2017
+ * @link        http://www.neuland-netz.de
+ * @author      Kai Neuwerth
  */
-
 chrome.extension.onMessage.addListener(
     function( request, sender, sendResponse )
     {

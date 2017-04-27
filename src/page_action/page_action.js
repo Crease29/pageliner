@@ -1,4 +1,12 @@
 /**
+ * PageLiner
+ *
+ * @copyright   Kai Neuwerth 2017
+ * @link        http://www.neuland-netz.de
+ * @author      Kai Neuwerth
+ */
+
+/**
  * Shortcut for executing script code in the inject/inject.js
  * @param sCode
  */
