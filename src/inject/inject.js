@@ -432,21 +432,107 @@ oPageLiner.drawDistanceLines = function( event )
         return;
     }
 
-    var $body = $( 'body' ),
-        $oPageLine = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]' ),
-        isHorizontal = $oPageLine.hasClass( 'pglnr-ext-helpline-y' );
+    var $body            = $( 'body' ),
+        $oPageLine       = $( '.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]' ),
+        isHorizontal     = $oPageLine.hasClass( 'pglnr-ext-helpline-y' ),
+        sOrigin          = isHorizontal ? 'top' : 'left',
+        sScaleOrigin     = isHorizontal ? 'height' : 'width',
+        sModifierClass   = isHorizontal ? 'pglnr-ext-distanceline-y' : 'pglnr-ext-distanceline-x',
+        iCloserLowestPos = oPageLiner.getLowerClosestHelpLine( parseInt( $oPageLine.css( sOrigin ) ), isHorizontal ),
+        iCloserUpperPos  = oPageLiner.getUpperClosestHelpLine( parseInt( $oPageLine.css( sOrigin ) ), isHorizontal );
 
-    if ( isHorizontal ) {
-        // ToDo: Implement position calculation of distance lines
-        $body.append(
-            $( '<div>',
+    $body.append(
+        $( '<div>',
+            {
+                'class': 'pglnr-ext-distanceline ' + sModifierClass,
+                'style': sOrigin + ': ' + iCloserLowestPos + 'px; ' +
+                         sScaleOrigin + ': ' + ( parseInt( $oPageLine.css( sOrigin ) ) - iCloserLowestPos ) + 'px;'
+            }
+        )
+    );
+
+    $body.append(
+        $( '<div>',
+            {
+                'class': 'pglnr-ext-distanceline ' + sModifierClass,
+                'style': sOrigin + ': ' + ( parseInt( $oPageLine.css( sOrigin ) ) + 1)  + 'px; ' +
+                         sScaleOrigin + ': ' + ( iCloserUpperPos - parseInt( $oPageLine.css( sOrigin ) ) - 1 ) + 'px;'
+            }
+        )
+    );
+};
+
+/**
+ * Finds the lower closest help line by a given position
+ *
+ * @param iPos int
+ * @param blOnYAxis bool
+ *
+ * @return int
+ */
+oPageLiner.getLowerClosestHelpLine = function( iPos, blOnYAxis )
+{
+    var aHelpLines          = this.getAllHelpLines(),
+        iClosestHelplinePos = 0;
+
+    blOnYAxis = blOnYAxis || false;
+
+    $.each( aHelpLines, function( iHelplineIndex, oHelpline )
+        {
+            if ( blOnYAxis )
+            {
+                if( oHelpline.posY < iPos && oHelpline.posY > iClosestHelplinePos )
                 {
-                    'class': 'pglnr-ext-distanceline pglnr-ext-distanceline-y',
-                    'style': 'left: 50px;'
+                    iClosestHelplinePos = oHelpline.posY;
                 }
-            )
-        );
-    }
+            }
+            else
+            {
+                if( oHelpline.posX < iPos && oHelpline.posX > iClosestHelplinePos )
+                {
+                    iClosestHelplinePos = oHelpline.posX;
+                }
+            }
+        }
+    );
+
+    return iClosestHelplinePos;
+};
+
+/**
+ * Finds the upper closest help line by a given position
+ *
+ * @param iPos int
+ * @param blOnYAxis bool
+ *
+ * @return int
+ */
+oPageLiner.getUpperClosestHelpLine = function( iPos, blOnYAxis )
+{
+    var aHelpLines = this.getAllHelpLines(),
+        iClosestHelplinePos   = blOnYAxis ? $(window).height() : $(window).width();
+    blOnYAxis = blOnYAxis || false;
+
+    $.each( aHelpLines, function( iHelplineIndex, oHelpline )
+        {
+            if ( blOnYAxis )
+            {
+                if( oHelpline.posY > iPos && oHelpline.posY < iClosestHelplinePos )
+                {
+                    iClosestHelplinePos = oHelpline.posY;
+                }
+            }
+            else
+            {
+                if( oHelpline.posX > iPos && oHelpline.posX < iClosestHelplinePos )
+                {
+                    iClosestHelplinePos = oHelpline.posX;
+                }
+            }
+        }
+    );
+
+    return iClosestHelplinePos;
 };
 
 /**

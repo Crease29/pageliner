@@ -234,10 +234,11 @@
 /* From left to right */
 .pglnr-ext-distanceline-x {
     height: 1px;
+    top: 95px;
 }
 
 /* From top to bottom */
 .pglnr-ext-distanceline-y {
     width: 1px;
-    height: 100%;
+    left: 95px;
 }
