@@ -4,36 +4,36 @@
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message":     "Create guidelines on websites to check alignment for example.",
+        "message":     "Hulplijnen voor webpagina's. Bijvoorbeeld om richtlijnen te controleren.",
         "description": "Extension description."
     },
 
     "POPUP_TOGGLE_HELPLINES": {
-        "message":     "show/hide guides",
+        "message":     "Hulplijnen tonen/verbergen",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
-        "message":     "vertical",
+        "message":     "vertikaal",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_Y": {
-        "message":     "horizontal",
+        "message":     "horizontaal",
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message":     "delete all guides",
+        "message":     "alle hulplijnen verwijderen",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_HEADING": {
-        "message":     "All guides",
+        "message":     "alle hulplijnen",
         "description": "Popup table head."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
-        "message":     "Color",
+        "message":     "Kleur",
         "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
-        "message":     "Position",
+        "message":     "Positie",
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
@@ -41,11 +41,11 @@
         "description": "Donate link."
     },
     "POPUP_NEW": {
-        "message":     "NEW",
-        "description": "New"
+        "message":     "NIEUW",
+        "description": "Neu"
     },
     "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Close this overlay, hover a guideline and hold down the Ctrl key. 😍",
+        "message":     "Sluit deze overlay, ga met de muis over een hulplijn en houd Ctrl ingedrukt. ??",
         "description": "Neues Feature."
     }
 }

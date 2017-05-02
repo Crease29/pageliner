@@ -8,7 +8,6 @@
         "description": "Extension description."
     },
 
-    // Popup
     "POPUP_TOGGLE_HELPLINES": {
         "message":     "показать / спрятать все линии",
         "description": "Popup action."
