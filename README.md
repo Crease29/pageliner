@@ -13,6 +13,7 @@ If you have any suggestions or bugs, please create an issue or use the support f
 - **v1.3.1 (2017-05-02)**
     - Added Russian translations. Thanks to [@vanilla-thunder](https://github.com/vanilla-thunder)
     - Added Dutch translations. Thanks to [@hoekiesda](https://github.com/hoekiesda)
+    - Adjusted color of distance lines
 - **v1.3.0 (2017-04-27)**
     - Added functionality to see distances between guide lines (Hover over guide line and press the CTRL key)
 - **v1.2.3 (2016-11-07)**
