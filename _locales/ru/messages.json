@@ -1,0 +1,52 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message":     "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message":     "Размещение направляющих линий на веб страницах.",
+        "description": "Extension description."
+    },
+
+    // Popup
+    "POPUP_TOGGLE_HELPLINES": {
+        "message":     "показать / спрятать все линии",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message":     "вертикальная",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message":     "горизонтальная",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message":     "удалить все линии",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message":     "все линии",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message":     "цвет",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message":     "положение",
+        "description": "Popup table positions."
+    },
+    "POPUP_DONATE": {
+        "message":     "пожертвовать программисту на водку",
+        "description": "Donate link."
+    },
+    "POPUP_NEW": {
+        "message":     "НОВИНКА",
+        "description": "Neu"
+    },
+    "POPUP_FEATURE_DISTANCE_LINES": {
+        "message":     "наведи мышку на линию и нажми Ctrl. 😍",
+        "description": "Neues Feature."
+    }
+}
