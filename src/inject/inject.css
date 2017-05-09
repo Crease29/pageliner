@@ -232,7 +232,7 @@
 
 /* Distance line from left to right */
 .pglnr-ext-distanceline-x {
-    border-top: 1px dashed #ffc4ea;
+    border-top: 1px dashed #ff7aeb;
     height: 1px;
     top: 95px;
     position: fixed;
@@ -242,8 +242,8 @@
 .pglnr-ext-distanceline-x:after,
 .pglnr-ext-distanceline-y:before,
 .pglnr-ext-distanceline-y:after{
-    border-bottom: 1px solid #ffc4ea;
-    border-left: 1px solid #ffc4ea;
+    border-bottom: 1px solid #ff7aeb;
+    border-left: 1px solid #ff7aeb;
     width: 6px;
     height: 6px;
     display: block;
@@ -278,7 +278,7 @@
 
 /* Distance line from top to bottom */
 .pglnr-ext-distanceline-y {
-    border-left: 1px dashed #ffc4ea;
+    border-left: 1px dashed #ff7aeb;
     width: 1px;
     left: 95px;
     position: absolute;
@@ -291,7 +291,7 @@
     padding: 0 2px;
     border-radius: 3px;
     position: absolute;
-    color: #ffc4ea;
+    color: #ff7aeb;
     font-size: 10px;
 }
 
