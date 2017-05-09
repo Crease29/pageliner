@@ -10,6 +10,10 @@ Google Chrome extension to create guide lines on a website.
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
 
 ## Changelog
+- **v1.3.2 (2017-05-09)**
+    - Added Spanish translations.
+    - Added French translations.
+    - Removed unused jQuery click event from page action
 - **v1.3.1 (2017-05-02)**
     - Added Russian translations. Thanks to [@vanilla-thunder](https://github.com/vanilla-thunder)
     - Added Dutch translations. Thanks to [@hoekiesda](https://github.com/hoekiesda)

@@ -65,13 +65,6 @@ $( function()
         /*
          * GUI events
          */
-        $( '.page_action_headbar small a' ).click( function()
-            {
-                chrome.tabs.create( { url: 'http://www.digidesk.de/' } );
-                return false;
-            }
-        );
-
         $( '#toggle-gui' ).click( function()
             {
                 toggleGUIButton();

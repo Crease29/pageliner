@@ -1,0 +1,51 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message":     "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message":     "Implantar líneas auxiliares en la página web (por ejemplo para controllar puntos de alineamiento)",
+        "description": "Extension description."
+    },
+
+    "POPUP_TOGGLE_HELPLINES": {
+        "message":     "mostrar/ocultar las líneas auxiliares",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message":     "vertical",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message":     "horizontal",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message":     "borrar todas líneas auxiliares",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message":     "Todas líneas auxiliares",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message":     "Color",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message":     "Posición",
+        "description": "Popup table positions."
+    },
+    "POPUP_DONATE": {
+        "message":     "Comprarme una cerveza",
+        "description": "Donate link."
+    },
+    "POPUP_NEW": {
+        "message":     "NUEVO",
+        "description": "New"
+    },
+    "POPUP_FEATURE_DISTANCE_LINES": {
+        "message":     "Cerrar este superposición, pasar el ratón sobre una línea auxiliar y mantener presionar la tecla „CTRL“. 😍",
+        "description": "New feature"
+    }
+}
