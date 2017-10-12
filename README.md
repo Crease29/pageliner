@@ -10,6 +10,10 @@ Google Chrome extension to create guide lines on a website.
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
 
 ## Changelog
+- **v1.3.3 (2017-10-12)**
+    - Fixed bug that caused guide lines to jump when the user isn't at the top of the page. Thanks to [@boxmein](https://github.com/boxmein) for reporting this issue.
+    - Updated jQuery and jQuery UI
+    - Cleaned up repository
 - **v1.3.2 (2017-05-09)**
     - Added Spanish translations.
     - Added French translations.
