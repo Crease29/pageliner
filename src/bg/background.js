@@ -6,20 +6,17 @@
  * @author      Kai Neuwerth
  */
 chrome.extension.onMessage.addListener(
-    function( request, sender, sendResponse )
-    {
-        if( request.sAction == 'updatePopUp' )
-        {
+    function (request, sender, sendResponse) {
+        if (request.sAction === 'updatePopUp') {
             chrome.tabs.query(
                 {
                     active: true,
                     currentWindow: true
                 },
-                function( aTabs ) {
+                function (aTabs) {
                     var iTabId = aTabs[0].id;
 
-                    if( request.oAllHelpLines )
-                    {
+                    if (request.oAllHelpLines) {
                         var iHelpLinesCount = request.oAllHelpLines.length;
 
                         chrome.browserAction.setBadgeText(
@@ -37,7 +34,7 @@ chrome.extension.onMessage.addListener(
                         );
                     }
 
-                    sendResponse( {} );
+                    sendResponse({});
                 }
             );
         }

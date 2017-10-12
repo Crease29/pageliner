@@ -14,6 +14,7 @@ If you have any suggestions or bugs, please create an issue or use the support f
     - Fixed bug that caused guide lines to jump when the user isn't at the top of the page. Thanks to [@boxmein](https://github.com/boxmein) for reporting this issue.
     - Updated jQuery and jQuery UI
     - Cleaned up repository
+    - Reformatted code
 - **v1.3.2 (2017-05-09)**
     - Added Spanish translations.
     - Added French translations.
