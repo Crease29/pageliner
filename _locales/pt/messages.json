@@ -1,0 +1,51 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message":     "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message":     "criar linhas guia  em sites para checar alinhamento.",
+        "description": "Extension description."
+    },
+
+    "POPUP_TOGGLE_HELPLINES": {
+        "message":     "mostrar/ocultar guias",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message":     "vertical",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message":     "horizontal",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message":     "excluir todas as guias",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message":     "todas as guias",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message":     "cor",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message":     "posição",
+        "description": "Popup table positions."
+    },
+    "POPUP_DONATE": {
+        "message":     "compre-me uma cerveja",
+        "description": "Donate link."
+    },
+    "POPUP_NEW": {
+        "message":     "novo",
+        "description": "New"
+    },
+    "POPUP_FEATURE_DISTANCE_LINES": {
+        "message":     "feche essa aba, paire sobre uma guia e mantenha pressionada a tecla Ctrl. 😍",
+        "description": "Neues Feature."
+    }
+}
