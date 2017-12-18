@@ -10,6 +10,9 @@ Google Chrome extension to create guide lines on a website.
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
 
 ## Changelog
+- **v1.3.4 (2017-12-18)**
+    - Added touch support with "[jQuery UI Touch Punch](https://github.com/furf/jquery-ui-touch-punch)" by [@furf](https://github.com/furf) 
+    - Added Portuguese translations. Thanks to [@Tainan404](https://github.com/Tainan404)
 - **v1.3.3 (2017-10-12)**
     - Fixed bug that caused guide lines to jump when the user isn't at the top of the page. Thanks to [@boxmein](https://github.com/boxmein) for reporting this issue.
     - Updated jQuery and jQuery UI
