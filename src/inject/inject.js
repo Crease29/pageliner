@@ -17,6 +17,42 @@ function debug(sMsg) {
     }
 }
 
+/**
+ * Convert a rgb color to hex value
+ * @param {string} rgb
+ *
+ * @return {string}
+ *
+ * @link https://stackoverflow.com/a/3627747/1754123
+ */
+function rgb2Hex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    function hex(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
+
+/**
+ * Convert a hex color to a rgb/rgba value
+ *
+ * @param {string} hex
+ * @param {?number} opacity
+ *
+ * @return {string}
+ *
+ * @link https://jsfiddle.net/subodhghulaxe/t568u/
+ */
+function hexToRgba(hex, opacity) {
+    hex = hex.replace('#', '');
+    r = parseInt(hex.substring(0, 2), 16);
+    g = parseInt(hex.substring(2, 4), 16);
+    b = parseInt(hex.substring(4, 6), 16);
+
+    result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+    return result;
+}
+
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
         if (request.sAction === 'getGuiStatus') {
@@ -28,7 +64,8 @@ chrome.runtime.onMessage.addListener(
 oPageLiner.init = function () {
     debug('[PageLiner] Initializing extension...');
 
-    var aHelpLines = this.getAllHelpLines();
+    var aHelpLines = this.getAllHelpLines(),
+        $window = $(window);
 
     if (typeof aHelpLines !== 'undefined') {
         debug('[PageLiner] Helplines found! Updating badge...');
@@ -48,11 +85,21 @@ oPageLiner.init = function () {
                     }
                 );
             }
+
+            $('body').click(function (e) {
+                if (!$(e.target).hasClass('pglnr-ext-helpline')) {
+                    $('.pglnr-ext-helpline').css('box-shadow', 'none');
+                    $(this).unbind('keydown', oPageLiner.moveWithKeyboard);
+                }
+            });
         }
         else {
             debug('[PageLiner] No helplines to render.');
         }
     }
+
+   $window.unbind('keydown', oPageLiner.addHelpLineWithShortcuts);
+   $window.on('keydown', oPageLiner.addHelpLineWithShortcuts);
 
     debug('[PageLiner] Initializing done.');
 };
@@ -195,12 +242,33 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
     ).on('drag', function () {
             oPageLiner.removeDistanceLines();
         }
-    ).append(oHelpLineTooltipElem);
+    ).on('click', function (e) {
+        var $this = $(this);
+        $('.pglnr-ext-helpline').css('box-shadow', 'none');
+        $this.css('box-shadow', '0 0 5px 0 ' + hexToRgba(rgb2Hex($this.css('background-color')), 70));
+
+        $('body').unbind('keydown', oPageLiner.moveWithKeyboard)
+            .on('keydown', {iHelplineIndex: iHelplineIndex}, oPageLiner.moveWithKeyboard);
+    }).append(oHelpLineTooltipElem);
 
     $('body').append(oHelpLineElem);
 
     return oHelpLineElem;
 };
+
+oPageLiner.addHelpLineWithShortcuts = function (e) {
+    if (!e.altKey) {
+        return;
+    }
+
+    if (e.keyCode === 72) {
+        debug('add horizontal helpline');
+        oPageLiner.addHelpLine(0, 100, '#33ffff');
+    } else if (e.keyCode === 86) {
+        debug('add vertical helpline');
+        oPageLiner.addHelpLine(100, 0, '#33ffff');
+    }
+}
 
 oPageLiner.editHelpLine = function (iHelplineIndex, posX, posY, sColor) {
     var oAllPageLines = this.getAllHelpLines(),
@@ -412,6 +480,51 @@ oPageLiner.drawDistanceLines = function (event) {
         }).html('<span>' + ( iClosestUpperDimension + 1 ) + 'px</span>');
 
     $body.append($oLowerDistanceLine, $oUpperDistanceLine);
+};
+
+oPageLiner.moveWithKeyboard = function (event) {
+    if ($.inArray(event.keyCode, [37, 38, 39, 40]) === -1) {
+        return;
+    }
+
+    var $oPageLine = $('.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]'),
+        blHorizontal = $oPageLine.hasClass('pglnr-ext-helpline-y');
+
+    if (blHorizontal) {
+        if ($.inArray(event.keyCode, [38, 40]) === -1) {
+            return;
+        }
+
+        var newPos = parseInt($oPageLine.css('top'));
+
+        if (event.keyCode === 38) {
+            newPos--;
+        } else {
+            newPos++;
+        }
+
+        $oPageLine.css('top', newPos + 'px');
+        $oPageLine.find('.pglnr-ext-helpline-tooltip')[0].setTooltipText(newPos);
+
+        oPageLiner.addHelpLineToLocalStorage(0, newPos, rgb2Hex($oPageLine.css('background-color')), event.data.iHelplineIndex)
+    } else {
+        if ($.inArray(event.keyCode, [37, 39]) === -1) {
+            return;
+        }
+
+        var newPos = parseInt($oPageLine.css('left'));
+
+        if (event.keyCode === 37) {
+            newPos--;
+        } else {
+            newPos++;
+        }
+
+        $oPageLine.css('left', newPos + 'px');
+        $oPageLine.find('.pglnr-ext-helpline-tooltip')[0].setTooltipText(newPos);
+
+        oPageLiner.addHelpLineToLocalStorage(newPos, 0, rgb2Hex($oPageLine.css('background-color')), event.data.iHelplineIndex)
+    }
 };
 
 /**

@@ -45,7 +45,7 @@
         "description": "New"
     },
     "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Close this overlay, hover a guideline and hold down the Ctrl key. 😍",
+        "message":     "Insert new guides with Alt+H and Alt+V. Move a guide line with the arrow keys, after clicking on it.",
         "description": "Neues Feature."
     }
 }

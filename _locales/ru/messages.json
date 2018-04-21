@@ -45,7 +45,7 @@
         "description": "Neu"
     },
     "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "наведи мышку на линию и нажми Ctrl. 😍",
+        "message":     "Insert new guides with Alt+H and Alt+V. Move a guide line with the arrow keys, after clicking on it.",
         "description": "Neues Feature."
     }
 }

@@ -45,7 +45,7 @@
         "description": "Neu"
     },
     "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Schließe dieses Overlay, fahre mit der Maus über eine Hilfslinie und halte Strg gedrückt. 😍",
+        "message":     "Füge neue Hilfslinien mit Alt+H und Alt+V ein. Verschiebe eine Hilfslinie mit den Pfeiltasten, indem du sie anklickst.",
         "description": "Neues Feature."
     }
 }

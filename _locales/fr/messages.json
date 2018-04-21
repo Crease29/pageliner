@@ -45,7 +45,7 @@
         "description": "New"
     },
     "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Ferme cette superposition, dirige ta souris vers les lignes supplémentaire et maintenir appuyez sur la touche „CTRL“. 😍",
+        "message":     "Insert new guides with Alt+H and Alt+V. Move a guide line with the arrow keys, after clicking on it.",
         "description": "New feature"
     }
 }
