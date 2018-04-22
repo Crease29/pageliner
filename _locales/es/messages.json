@@ -1,51 +1,42 @@
 {
     "GLOBAL_APP_NAME": {
-        "message":     "PageLiner",
+        "message": "PageLiner",
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message":     "Implantar líneas auxiliares en la página web (por ejemplo para controllar puntos de alineamiento)",
+        "message": "Implantar líneas auxiliares en la página web (por ejemplo para controllar puntos de alineamiento)",
         "description": "Extension description."
     },
-
     "POPUP_TOGGLE_HELPLINES": {
-        "message":     "mostrar/ocultar las líneas auxiliares",
+        "message": "mostrar/ocultar las líneas auxiliares",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
-        "message":     "vertical",
+        "message": "vertical",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_Y": {
-        "message":     "horizontal",
+        "message": "horizontal",
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message":     "borrar todas líneas auxiliares",
+        "message": "borrar todas líneas auxiliares",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_HEADING": {
-        "message":     "Todas líneas auxiliares",
+        "message": "Todas líneas auxiliares",
         "description": "Popup table head."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
-        "message":     "Color",
+        "message": "Color",
         "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
-        "message":     "Posición",
+        "message": "Posición",
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message":     "Comprarme una cerveza",
+        "message": "Comprarme una cerveza",
         "description": "Donate link."
-    },
-    "POPUP_NEW": {
-        "message":     "NUEVO",
-        "description": "New"
-    },
-    "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Insert new guides with Alt+H and Alt+V. Move a guide line with the arrow keys, after clicking on it.",
-        "description": "New feature"
     }
 }

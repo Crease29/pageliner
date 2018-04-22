@@ -1,51 +1,42 @@
 {
     "GLOBAL_APP_NAME": {
-        "message":     "PageLiner",
+        "message": "PageLiner",
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message":     "Hilfslinien auf Webseiten setzen um z.B. Fluchten zu prüfen.",
+        "message": "Hilfslinien auf Webseiten setzen um z.B. Fluchten zu prüfen.",
         "description": "Extension description."
     },
-
     "POPUP_TOGGLE_HELPLINES": {
-        "message":     "Hilfslinien anzeigen/ausblenden",
+        "message": "Hilfslinien anzeigen/ausblenden",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
-        "message":     "vertikal",
+        "message": "vertikal",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_Y": {
-        "message":     "horizontal",
+        "message": "horizontal",
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message":     "alle Hilfslinien löschen",
+        "message": "alle Hilfslinien löschen",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_HEADING": {
-        "message":     "alle Hilfslinien",
+        "message": "alle Hilfslinien",
         "description": "Popup table head."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
-        "message":     "Farbe",
+        "message": "Farbe",
         "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
-        "message":     "Position",
+        "message": "Position",
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message":     "Buy me a beer",
+        "message": "Buy me a beer",
         "description": "Donate link."
-    },
-    "POPUP_NEW": {
-        "message":     "NEU",
-        "description": "Neu"
-    },
-    "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Füge neue Hilfslinien mit Alt+H und Alt+V ein. Verschiebe eine Hilfslinie mit den Pfeiltasten, indem du sie anklickst.",
-        "description": "Neues Feature."
     }
 }

@@ -1,9 +1,9 @@
 /**
  * PageLiner
  *
- * @copyright   Kai Neuwerth - 2017
- * @link        http://www.neuland-netz.de
+ * @copyright   2018 Kai Neuwerth
  * @author      Kai Neuwerth
+ * @link        https://kai.neuwerth.me
  */
 @font-face {
     font-family: 'Open Sans';
@@ -34,9 +34,15 @@
 }
 
 @keyframes bounce {
-    0%, 4%, 10%, 16%, 20% {transform: translateX(0);}
-    8% {transform: translateX(4px);}
-    12% {transform: translateX(2px);}
+    0%, 4%, 10%, 16%, 20% {
+        transform: translateX(0);
+    }
+    8% {
+        transform: translateX(4px);
+    }
+    12% {
+        transform: translateX(2px);
+    }
 
 }
 

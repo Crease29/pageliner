@@ -1,51 +1,42 @@
 {
     "GLOBAL_APP_NAME": {
-        "message":     "PageLiner",
+        "message": "PageLiner",
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message":     "Размещение направляющих линий на веб страницах.",
+        "message": "Размещение направляющих линий на веб страницах.",
         "description": "Extension description."
     },
-
     "POPUP_TOGGLE_HELPLINES": {
-        "message":     "показать / спрятать все линии",
+        "message": "показать / спрятать все линии",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
-        "message":     "вертикальная",
+        "message": "вертикальная",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_Y": {
-        "message":     "горизонтальная",
+        "message": "горизонтальная",
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message":     "удалить все линии",
+        "message": "удалить все линии",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_HEADING": {
-        "message":     "все линии",
+        "message": "все линии",
         "description": "Popup table head."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
-        "message":     "цвет",
+        "message": "цвет",
         "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
-        "message":     "положение",
+        "message": "положение",
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message":     "пожертвовать программисту на водку",
+        "message": "пожертвовать программисту на водку",
         "description": "Donate link."
-    },
-    "POPUP_NEW": {
-        "message":     "НОВИНКА",
-        "description": "Neu"
-    },
-    "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Insert new guides with Alt+H and Alt+V. Move a guide line with the arrow keys, after clicking on it.",
-        "description": "Neues Feature."
     }
 }

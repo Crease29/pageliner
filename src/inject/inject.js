@@ -1,9 +1,9 @@
 /**
  * PageLiner
  *
- * @copyright   Kai Neuwerth - 2017
- * @link        http://www.neuland-netz.de
+ * @copyright   2018 Kai Neuwerth
  * @author      Kai Neuwerth
+ * @link        https://kai.neuwerth.me
  */
 
 var oPageLiner = {
@@ -27,9 +27,11 @@ function debug(sMsg) {
  */
 function rgb2Hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
     function hex(x) {
         return ("0" + parseInt(x).toString(16)).slice(-2);
     }
+
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
@@ -98,8 +100,8 @@ oPageLiner.init = function () {
         }
     }
 
-   $window.unbind('keydown', oPageLiner.addHelpLineWithShortcuts);
-   $window.on('keydown', oPageLiner.addHelpLineWithShortcuts);
+    $window.unbind('keydown', oPageLiner.addHelpLineWithShortcuts);
+    $window.on('keydown', oPageLiner.addHelpLineWithShortcuts);
 
     debug('[PageLiner] Initializing done.');
 };
@@ -182,7 +184,7 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
             },
         oHelpLineElem = document.createElement('div'),
         oHelpLineTooltipElem = document.createElement('div'),
-        sAxis = ( oHelpLine.posX > 0 ? 'x' : 'y' );
+        sAxis = (oHelpLine.posX > 0 ? 'x' : 'y');
 
     oHelpLineElem.className = 'pglnr-ext-helpline pglnr-ext-helpline-' + sAxis;
     oHelpLineElem.style.backgroundColor = oHelpLine.sColor;
@@ -191,7 +193,7 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
     oHelpLineTooltipElem.className = 'pglnr-ext-helpline-tooltip pglnr-ext-helpline-tooltip-' + sAxis;
     oHelpLineTooltipElem.iHelplineIndex = iHelplineIndex;
     oHelpLineTooltipElem.setTooltipText = function (sText) {
-        this.innerHTML = '#' + ( this.iHelplineIndex + 1 ) + ': ' + ( sText | 0 ) + 'px';
+        this.innerHTML = '#' + (this.iHelplineIndex + 1) + ': ' + (sText | 0) + 'px';
     };
 
     if (oHelpLine.posX > 0) {
@@ -212,7 +214,7 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
                 oHelpLineTooltipElem.style.display = 'block';
             },
             drag: function (event, ui) {
-                oHelpLineTooltipElem.setTooltipText(( sAxis === 'x' ? ui.position.left : ui.position.top ));
+                oHelpLineTooltipElem.setTooltipText((sAxis === 'x' ? ui.position.left : ui.position.top));
             },
             stop: function (event, ui) {
                 // Updating helpline position in localstorage
@@ -261,14 +263,22 @@ oPageLiner.addHelpLineWithShortcuts = function (e) {
         return;
     }
 
+    var $oHelpLine = null;
+
     if (e.keyCode === 72) {
         debug('add horizontal helpline');
-        oPageLiner.addHelpLine(0, 100, '#33ffff');
+        $oHelpLine = $(oPageLiner.addHelpLine(0, 100 + window.pageYOffset, '#33ffff'));
     } else if (e.keyCode === 86) {
         debug('add vertical helpline');
-        oPageLiner.addHelpLine(100, 0, '#33ffff');
+        $oHelpLine = $(oPageLiner.addHelpLine(100, 0, '#33ffff'));
     }
-}
+
+    if ($oHelpLine === null) {
+        return;
+    }
+
+    $oHelpLine.trigger('click');
+};
 
 oPageLiner.editHelpLine = function (iHelplineIndex, posX, posY, sColor) {
     var oAllPageLines = this.getAllHelpLines(),
@@ -353,8 +363,7 @@ oPageLiner.drawRulers = function () {
             oRulerTopMeasure = document.createElement('ul'),
             oRulerLeftMeasure = document.createElement('ul'),
             iDocumentWidth = $(document).width(),
-            iDocumentHeight = $(document).height(),
-            $window = $(window);
+            iDocumentHeight = $(document).height();
 
         oRulerTopElem.className = 'pglnr-ext-ruler pglnr-ext-ruler-top';
         oRulerLeftElem.className = 'pglnr-ext-ruler pglnr-ext-ruler-left';
@@ -365,7 +374,7 @@ oPageLiner.drawRulers = function () {
         // Create measurement for oRulerTopElem
         for (var i = 0; i <= Math.ceil(iDocumentWidth / 100); i++) {
             var oMeasurementElem = document.createElement('li');
-            oMeasurementElem.innerText = ( i > 0 ? i * 100 : " " );
+            oMeasurementElem.innerText = (i > 0 ? i * 100 : " ");
             oRulerTopMeasure.appendChild(oMeasurementElem);
         }
 
@@ -376,7 +385,7 @@ oPageLiner.drawRulers = function () {
                 cursorAt: "bottom",
                 distance: 20,
                 helper: function (event) {
-                    var $oHelpLine = $(oPageLiner.addHelpLine(0, event.clientY + $window.scrollTop())).addClass('pglnr-ext-helpline-dummy');
+                    var $oHelpLine = $(oPageLiner.addHelpLine(0, event.clientY + window.pageYOffset)).addClass('pglnr-ext-helpline-dummy');
                     this.iHelplineIndex = $oHelpLine.data('pglnr-ext-helpline-index');
 
                     $oHelpLine.show();
@@ -384,7 +393,7 @@ oPageLiner.drawRulers = function () {
                     return $oHelpLine[0];
                 },
                 stop: function (event, ui) {
-                    oPageLiner.editHelpLine(this.iHelplineIndex, 0, event.clientY + $window.scrollTop());
+                    oPageLiner.editHelpLine(this.iHelplineIndex, 0, event.clientY + window.pageYOffset);
                     $('.pglnr-ext-helpline-dummy').remove();
                 }
             }
@@ -395,7 +404,7 @@ oPageLiner.drawRulers = function () {
         // Create measurement for oRulerLeftElem
         for (var i = 0; i <= Math.ceil(iDocumentHeight / 100); i++) {
             var oMeasurementElem = document.createElement('li');
-            oMeasurementElem.innerText = ( i > 0 ? i * 100 : " " );
+            oMeasurementElem.innerText = (i > 0 ? i * 100 : " ");
             oRulerLeftMeasure.appendChild(oMeasurementElem);
         }
 
@@ -430,7 +439,7 @@ oPageLiner.drawRulers = function () {
                 $(oRulerLeftMeasure).css(
                     {
                         height: iDocumentHeight,
-                        top: $(this).scrollTop() * -1
+                        top: window.pageYOffset * -1
                     }
                 ).children().remove();
 
@@ -438,7 +447,7 @@ oPageLiner.drawRulers = function () {
                 for (var i = 0; i <= Math.ceil(iDocumentHeight / 100); i++) {
                     var oMeasurementElem = document.createElement('li');
 
-                    oMeasurementElem.innerText = ( i > 0 ? i * 100 : " " );
+                    oMeasurementElem.innerText = (i > 0 ? i * 100 : " ");
                     oRulerLeftMeasure.appendChild(oMeasurementElem);
                 }
 
@@ -465,19 +474,19 @@ oPageLiner.drawDistanceLines = function (event) {
         iClosestUpperPos = oPageLiner.getUpperClosestHelpLine(parseInt($oPageLine.css(sOrigin)), blHorizontal),
         iClosestLowerDimension = parseInt($oPageLine.css(sOrigin)) - iClosestLowerPos,
         iClosestUpperDimension = iClosestUpperPos - parseInt($oPageLine.css(sOrigin)) - 1,
-        iDimensionLineLeftPos = ( blHorizontal ? 'left: ' + ( event.data.mouseX + 20 ) + 'px;' : '' ),
+        iDimensionLineLeftPos = (blHorizontal ? 'left: ' + (event.data.mouseX + 20) + 'px;' : ''),
         $oLowerDistanceLine = $('<div></div>', {
             'class': 'pglnr-ext-distanceline ' + sModifierClass,
-            'style': sOrigin + ': ' + ( iClosestLowerPos + 1 ) + 'px; ' +
-            sScaleOrigin + ': ' + ( iClosestLowerDimension - 1 ) + 'px;' +
+            'style': sOrigin + ': ' + (iClosestLowerPos + 1) + 'px; ' +
+            sScaleOrigin + ': ' + (iClosestLowerDimension - 1) + 'px;' +
             iDimensionLineLeftPos
-        }).html('<span>' + ( iClosestLowerDimension ) + 'px</span>'),
+        }).html('<span>' + (iClosestLowerDimension) + 'px</span>'),
         $oUpperDistanceLine = $('<div></div>', {
             'class': 'pglnr-ext-distanceline ' + sModifierClass,
-            'style': sOrigin + ': ' + ( parseInt($oPageLine.css(sOrigin)) + 1) + 'px; ' +
-            sScaleOrigin + ': ' + ( iClosestUpperDimension - 1 ) + 'px;' +
+            'style': sOrigin + ': ' + (parseInt($oPageLine.css(sOrigin)) + 1) + 'px; ' +
+            sScaleOrigin + ': ' + (iClosestUpperDimension - 1) + 'px;' +
             iDimensionLineLeftPos
-        }).html('<span>' + ( iClosestUpperDimension + 1 ) + 'px</span>');
+        }).html('<span>' + (iClosestUpperDimension + 1) + 'px</span>');
 
     $body.append($oLowerDistanceLine, $oUpperDistanceLine);
 };
@@ -486,6 +495,8 @@ oPageLiner.moveWithKeyboard = function (event) {
     if ($.inArray(event.keyCode, [37, 38, 39, 40]) === -1) {
         return;
     }
+
+    event.preventDefault();
 
     var $oPageLine = $('.pglnr-ext-helpline[data-pglnr-ext-helpline-index="' + event.data.iHelplineIndex + '"]'),
         blHorizontal = $oPageLine.hasClass('pglnr-ext-helpline-y');
@@ -499,8 +510,16 @@ oPageLiner.moveWithKeyboard = function (event) {
 
         if (event.keyCode === 38) {
             newPos--;
+
+            if (event.shiftKey) {
+                newPos -= 9;
+            }
         } else {
             newPos++;
+
+            if (event.shiftKey) {
+                newPos += 9;
+            }
         }
 
         $oPageLine.css('top', newPos + 'px');
@@ -516,8 +535,16 @@ oPageLiner.moveWithKeyboard = function (event) {
 
         if (event.keyCode === 37) {
             newPos--;
+
+            if (event.shiftKey) {
+                newPos -= 9;
+            }
         } else {
             newPos++;
+
+            if (event.shiftKey) {
+                newPos += 9;
+            }
         }
 
         $oPageLine.css('left', newPos + 'px');
@@ -568,8 +595,7 @@ oPageLiner.getLowerClosestHelpLine = function (iPos, blOnYAxis) {
  */
 oPageLiner.getUpperClosestHelpLine = function (iPos, blOnYAxis) {
     var aHelpLines = this.getAllHelpLines(),
-        $window = $(window),
-        iClosestHelplinePos = parseInt(blOnYAxis ? ( $window.height() + $window.scrollTop() ) : $window.width());
+        iClosestHelplinePos = blOnYAxis ? (window.innerHeight + window.pageYOffset) : window.innerWidth;
 
     blOnYAxis = blOnYAxis || false;
 

@@ -9,10 +9,40 @@ Google Chrome extension to create guide lines on a website.
 
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
 
+## Features
+
+### Add guide lines from the rulers
+
+Hover over one of the rulers and start dragging a new guide line from there, like you know it from Photoshop.
+
+### Add guide lines with shortcuts
+
+- <kbd>Alt</kbd>+<kbd>H</kbd> adds a *horizontal* guide line and selects it for keyboard movement.
+- <kbd>Alt</kbd>+<kbd>V</kbd> adds a *vertical* guide line and selects it for keyboard movement.
+
+### Move guide lines with keyboard
+
+1. Add a guide line.
+2. Click on it (the guide line will slightly blur then).
+3. Use your arrow keys to move the guide line.
+
+:fire: **PRO TIP**: Hold down <kbd>Shift</kbd> while using the arrow keys to move the guide line faster. :wink:
+
+### Measure the distance between guide lines / window border
+
+1. Hover over a guide line.
+2. Hold down <kbd>Ctrl</kbd>.
+
 ## Changelog
+- **v1.5.0 (2018-04-22)**
+    - Cleaned up code
+    - Guide lines that are added with shortcut are now directly selected for keyboard movement
+    - Fixed vertical movement with the keyboard which cause viewport scrolling
+    - Add faster movement with keyboard when pressing <kbd>Shift</kbd> + arrow keys
+    - Add install page after extension update
 - **v1.4.0 (2018-04-21)**
     - Added function to move a guide line with the arrow keys after clicking it. Thanks to [@Tainan404](https://github.com/Tainan404) for your suggestion!
-    - Added shortcuts Alt+H and Alt+V to add guide lines. Thanks to [@Tainan404](https://github.com/Tainan404) for your suggestion!
+    - Added shortcuts Alt+H and Alt+V to add guide lines. Have a look at the features on this page. Thanks to [@Tainan404](https://github.com/Tainan404) for your suggestion!
 - **v1.3.4 (2017-12-18)**
     - Added touch support with "[jQuery UI Touch Punch](https://github.com/furf/jquery-ui-touch-punch)" by [@furf](https://github.com/furf) 
     - Added Portuguese translations. Thanks to [@Tainan404](https://github.com/Tainan404)
@@ -30,7 +60,7 @@ If you have any suggestions or bugs, please create an issue or use the support f
     - Added Dutch translations. Thanks to [@hoekiesda](https://github.com/hoekiesda)
     - Adjusted color of distance lines
 - **v1.3.0 (2017-04-27)**
-    - Added functionality to see distances between guide lines (Hover over guide line and press the CTRL key)
+    - Added functionality to see distances between guide lines (Hover over guide line and press the <kbd>Ctrl</kbd> key). Have a look at the features on this page.
 - **v1.2.3 (2016-11-07)**
     - Added a small donate button for people that would like to support this awesome extension.
 - **v1.2.2 (2016-10-13)**
@@ -39,7 +69,7 @@ If you have any suggestions or bugs, please create an issue or use the support f
     - Fixed encoding error.
 - **v1.2.0 (2016-10-13)**
     - Removed Ad-Link
-    - Added possibility to create new guide lines by dragging from the rulers
+    - Added possibility to create new guide lines by dragging from the rulers. Have a look at the features on this page.
     - Added indicator whether guide lines are shown
 - **v1.1.2 (2014-08-30)**
     - Horizontal guide lines are now placed in viewport when you have scrolled down.

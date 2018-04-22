@@ -1,51 +1,42 @@
 {
     "GLOBAL_APP_NAME": {
-        "message":     "PageLiner",
+        "message": "PageLiner",
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message":     "Hulplijnen voor webpagina's. Bijvoorbeeld om richtlijnen te controleren.",
+        "message": "Hulplijnen voor webpagina's. Bijvoorbeeld om richtlijnen te controleren.",
         "description": "Extension description."
     },
-
     "POPUP_TOGGLE_HELPLINES": {
-        "message":     "Hulplijnen tonen/verbergen",
+        "message": "Hulplijnen tonen/verbergen",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
-        "message":     "vertikaal",
+        "message": "vertikaal",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_Y": {
-        "message":     "horizontaal",
+        "message": "horizontaal",
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message":     "alle hulplijnen verwijderen",
+        "message": "alle hulplijnen verwijderen",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_HEADING": {
-        "message":     "alle hulplijnen",
+        "message": "alle hulplijnen",
         "description": "Popup table head."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
-        "message":     "Kleur",
+        "message": "Kleur",
         "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
-        "message":     "Positie",
+        "message": "Positie",
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message":     "Buy me a beer",
+        "message": "Buy me a beer",
         "description": "Donate link."
-    },
-    "POPUP_NEW": {
-        "message":     "NIEUW",
-        "description": "Neu"
-    },
-    "POPUP_FEATURE_DISTANCE_LINES": {
-        "message":     "Insert new guides with Alt+H and Alt+V. Move a guide line with the arrow keys, after clicking on it.",
-        "description": "Neues Feature."
     }
 }

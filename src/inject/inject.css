@@ -1,9 +1,9 @@
 /**
  * PageLiner
  *
- * @copyright   Kai Neuwerth 2018
- * @link        http://kai.neuwerth.me
+ * @copyright   2018 Kai Neuwerth
  * @author      Kai Neuwerth
+ * @link        https://kai.neuwerth.me
  */
 
 /* [Section]: General overrides */
@@ -20,7 +20,7 @@
     margin: 0;
     border-radius: 0;
     transition: none;
-    appearance: none;
+    -webkit-appearance: none;
     box-sizing: border-box;
     opacity: 1;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -39,7 +39,7 @@
     height: 18px;
     top: 0;
     z-index: 2147483499; /* max. z-index is 2147483647 */
-    cursor:row-resize;
+    cursor: row-resize;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-top ul {
@@ -70,7 +70,7 @@
     height: 100%;
     top: 18px;
     z-index: 2147483400; /* max. z-index is 2147483647 */
-    cursor:col-resize;
+    cursor: col-resize;
 }
 
 .pglnr-ext-ruler.pglnr-ext-ruler-left ul {
@@ -219,7 +219,7 @@
 
 /* [Section]: Distance lines */
 .pglnr-ext-distanceline {
-    z-index: 2147483645;  /* max. z-index is 2147483647 */
+    z-index: 2147483645; /* max. z-index is 2147483647 */
 }
 
 /* Distance line from left to right */
@@ -233,7 +233,7 @@
 .pglnr-ext-distanceline-x:before,
 .pglnr-ext-distanceline-x:after,
 .pglnr-ext-distanceline-y:before,
-.pglnr-ext-distanceline-y:after{
+.pglnr-ext-distanceline-y:after {
     border-bottom: 1px solid #ff7aeb;
     border-left: 1px solid #ff7aeb;
     width: 6px;
