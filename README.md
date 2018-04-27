@@ -17,8 +17,8 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 
 ### Add guide lines with shortcuts
 
-- <kbd>Alt</kbd>+<kbd>H</kbd> adds a *horizontal* guide line and selects it for keyboard movement.
-- <kbd>Alt</kbd>+<kbd>V</kbd> adds a *vertical* guide line and selects it for keyboard movement.
+- <kbd>Alt</kbd>+<kbd>H</kbd> adds a *horizontal* guide line at your cursor position and selects it for keyboard movement.
+- <kbd>Alt</kbd>+<kbd>V</kbd> adds a *vertical* guide line at your cursor position and selects it for keyboard movement.
 
 ### Move guide lines with keyboard
 
@@ -28,12 +28,27 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 
 :fire: **PRO TIP**: Hold down <kbd>Shift</kbd> while using the arrow keys to move the guide line faster. :wink:
 
+### Remove guide lines with keyboard
+
+1. Select a guide line.
+2. Press <kbd>Del</kbd>.
+
+### Discard active guide line selection
+
+1. Select a guide line.
+2. Press <kbd>Esc</kbd>.
+
 ### Measure the distance between guide lines / window border
 
 1. Hover over a guide line.
 2. Hold down <kbd>Ctrl</kbd>.
 
 ## Changelog
+- **v1.5.1 (2018-04-27)**
+    - Add functionality to delete selected guide line by pressing <kbd>Esc</kbd>.
+    - Add functionality to discard selected guide line by pressing <kbd>Del</kbd>.
+    - Add functionality to delete guide line when moving it to the left/top window border. Thanks to [@wolv-dev](https://github.com/wolv-dev) for your suggestion!
+    - Guide lines that are added via keyboard shortcuts are now positioned at the mouse cursor position. Thanks to [@YannikSc](https://github.com/YannikSc) for your suggestion!
 - **v1.5.0 (2018-04-22)**
     - Cleaned up code
     - Guide lines that are added with shortcut are now directly selected for keyboard movement

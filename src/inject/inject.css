@@ -103,6 +103,11 @@
     z-index: 2147483600; /* max. z-index is 2147483647 */
 }
 
+.pglnr-ext-helpline-delete {
+    background-color: red !important;
+    box-shadow: rgba(255, 0, 0, .7)  0 0 5px 0 !important;
+}
+
 .pglnr-ext-helpline-x {
     width: 1px;
     height: 100%;

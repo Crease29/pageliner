@@ -8,7 +8,11 @@
 
 var oPageLiner = {
     sDefaultColor: '#33ffff',
-    blAltKeyReleased: true
+    blAltKeyReleased: true,
+    mousePosition: {
+        x: 0,
+        y: 0
+    }
 };
 
 function debug(sMsg) {
@@ -63,6 +67,11 @@ chrome.runtime.onMessage.addListener(
     }
 );
 
+$(document).bind('mousemove', function (e) {
+    oPageLiner.mousePosition.x = e.pageX;
+    oPageLiner.mousePosition.y = e.pageY;
+});
+
 oPageLiner.init = function () {
     debug('[PageLiner] Initializing extension...');
 
@@ -91,7 +100,7 @@ oPageLiner.init = function () {
             $('body').click(function (e) {
                 if (!$(e.target).hasClass('pglnr-ext-helpline')) {
                     $('.pglnr-ext-helpline').css('box-shadow', 'none');
-                    $(this).unbind('keydown', oPageLiner.moveWithKeyboard);
+                    $(this).unbind('keydown', oPageLiner.bindKeyboardEvents);
                 }
             });
         }
@@ -210,18 +219,22 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
     $(oHelpLineElem).draggable(
         {
             axis: sAxis,
-            start: function (event, ui) {
+            start: function () {
                 oHelpLineTooltipElem.style.display = 'block';
             },
-            drag: function (event, ui) {
+            drag: function (e, ui) {
                 oHelpLineTooltipElem.setTooltipText((sAxis === 'x' ? ui.position.left : ui.position.top));
             },
-            stop: function (event, ui) {
-                // Updating helpline position in localstorage
+            stop: function (e, ui) {
+                if ((sAxis === 'x' && ui.position.left < 10) || (sAxis === 'y' && ui.position.top < 10)) {
+                    oPageLiner.deleteHelpline(e.target.getAttribute('data-pglnr-ext-helpline-index'));
+
+                    return;
+                }
+
                 if (sAxis === 'x') {
                     oPageLiner.addHelpLineToLocalStorage(ui.position.left, 0, oHelpLine.sColor, iHelplineIndex)
-                }
-                else {
+                }  else {
                     oPageLiner.addHelpLineToLocalStorage(0, ui.position.top, oHelpLine.sColor, iHelplineIndex)
                 }
 
@@ -241,7 +254,12 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
             $window.unbind('keydown', oPageLiner.drawDistanceLines);
             $window.unbind('keyup', oPageLiner.removeDistanceLines);
         }
-    ).on('drag', function () {
+    ).on('drag', function (e, ui) {
+            $(this).toggleClass(
+                'pglnr-ext-helpline-delete',
+                (sAxis === 'x' && ui.position.left < 10) || (sAxis === 'y' && ui.position.top < 10)
+            );
+
             oPageLiner.removeDistanceLines();
         }
     ).on('click', function (e) {
@@ -249,8 +267,8 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
         $('.pglnr-ext-helpline').css('box-shadow', 'none');
         $this.css('box-shadow', '0 0 5px 0 ' + hexToRgba(rgb2Hex($this.css('background-color')), 70));
 
-        $('body').unbind('keydown', oPageLiner.moveWithKeyboard)
-            .on('keydown', {iHelplineIndex: iHelplineIndex}, oPageLiner.moveWithKeyboard);
+        $('body').unbind('keydown', oPageLiner.bindKeyboardEvents)
+            .on('keydown', {iHelplineIndex: iHelplineIndex}, oPageLiner.bindKeyboardEvents);
     }).append(oHelpLineTooltipElem);
 
     $('body').append(oHelpLineElem);
@@ -267,10 +285,10 @@ oPageLiner.addHelpLineWithShortcuts = function (e) {
 
     if (e.keyCode === 72) {
         debug('add horizontal helpline');
-        $oHelpLine = $(oPageLiner.addHelpLine(0, 100 + window.pageYOffset, '#33ffff'));
+        $oHelpLine = $(oPageLiner.addHelpLine(0, oPageLiner.mousePosition.y, '#33ffff'));
     } else if (e.keyCode === 86) {
         debug('add vertical helpline');
-        $oHelpLine = $(oPageLiner.addHelpLine(100, 0, '#33ffff'));
+        $oHelpLine = $(oPageLiner.addHelpLine(oPageLiner.mousePosition.x, 0, '#33ffff'));
     }
 
     if ($oHelpLine === null) {
@@ -491,7 +509,23 @@ oPageLiner.drawDistanceLines = function (event) {
     $body.append($oLowerDistanceLine, $oUpperDistanceLine);
 };
 
-oPageLiner.moveWithKeyboard = function (event) {
+oPageLiner.bindKeyboardEvents = function (event) {
+    switch (event.keyCode) {
+        case 37:
+        case 38:
+        case 39:
+        case 40:
+            oPageLiner.moveSelectedHelpLineWithKeyboard(event);
+            break;
+        case 27:
+            oPageLiner.discardSelectedHelpLine(event);
+            break;
+        case 46:
+            oPageLiner.deleteSelectedHelpLine(event);
+            break;
+    }
+};
+oPageLiner.moveSelectedHelpLineWithKeyboard = function (event) {
     if ($.inArray(event.keyCode, [37, 38, 39, 40]) === -1) {
         return;
     }
@@ -552,6 +586,15 @@ oPageLiner.moveWithKeyboard = function (event) {
 
         oPageLiner.addHelpLineToLocalStorage(newPos, 0, rgb2Hex($oPageLine.css('background-color')), event.data.iHelplineIndex)
     }
+};
+
+oPageLiner.discardSelectedHelpLine = function() {
+    $('.pglnr-ext-helpline').css('box-shadow', 'none');
+    $('body').unbind('keydown', oPageLiner.bindKeyboardEvents);
+};
+
+oPageLiner.deleteSelectedHelpLine = function(event) {
+    oPageLiner.deleteHelpline(event.data.iHelplineIndex);
 };
 
 /**
