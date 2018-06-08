@@ -278,7 +278,6 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
 
 oPageLiner.addHelpLineWithShortcuts = function (e) {
     if (!e.altKey || e.ctrlKey || e.shiftKey) {
-        console.log('aborting...')
         return;
     }
 
