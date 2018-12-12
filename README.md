@@ -1,5 +1,7 @@
 # <img src="https://github.com/Crease29/pageliner/blob/master/icons/icon_pl_48x48.png" width="24" height="24"/>&nbsp;PageLiner [![Join the chat at https://gitter.im/WebChimp-DE/pageliner](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WebChimp-DE/pageliner)
 
+![Chrome extension version](https://badgen.net/chrome-web-store/v/nepakmljodobhlbbkpobblnifmhclemh) ![Chrome extension user count](https://badgen.net/chrome-web-store/users/nepakmljodobhlbbkpobblnifmhclemh)  ![Chrome extension price](https://badgen.net/chrome-web-store/price/nepakmljodobhlbbkpobblnifmhclemh) ![Chrome extension rating count](https://badgen.net/chrome-web-store/rating-count/nepakmljodobhlbbkpobblnifmhclemh)
+
 If you like this extension, I would be glad if you buy me a beer :beer: :grin:
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Crease29&url=https%3A%2F%2Fgithub.com%2FCrease29%2Fpageliner%2F&title=PageLiner&language=en_GB&tags=github&category=software) [![Donate via PayPal](https://github.com/Crease29/pageliner/blob/master/images/donate_paypal.png)](https://www.paypal.me/koi)
 
