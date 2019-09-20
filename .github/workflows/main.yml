@@ -12,6 +12,8 @@ jobs:
         steps:
             -   name: Checkout the repository
                 uses: actions/checkout@master
+                with:
+                    fetch-depth: 1
             -   name: Create ZIP archive
                 run: zip -r pageliner.zip * -x .* -x *.md
             -   name: Chrome Addon Action

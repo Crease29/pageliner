@@ -1,4 +1,4 @@
-# <img src="https://github.com/Crease29/pageliner/blob/master/icons/icon_pl_48x48.png" width="24" height="24"/>&nbsp;PageLiner [![Join the chat at https://gitter.im/WebChimp-DE/pageliner](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WebChimp-DE/pageliner)
+# <img src="https://github.com/Crease29/pageliner/blob/master/icons/icon_pl_48x48.png" width="24" height="24"/>&nbsp;PageLiner [![Join the chat at https://gitter.im/WebChimp-DE/pageliner](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WebChimp-DE/pageliner) ![](https://github.com/Crease29/pageliner/workflows/.github/workflows/main.yml/badge.svg)
 
 ![Chrome extension version](https://badgen.net/chrome-web-store/v/nepakmljodobhlbbkpobblnifmhclemh) ![Chrome extension user count](https://badgen.net/chrome-web-store/users/nepakmljodobhlbbkpobblnifmhclemh)  ![Chrome extension price](https://badgen.net/chrome-web-store/price/nepakmljodobhlbbkpobblnifmhclemh) ![Chrome extension rating count](https://badgen.net/chrome-web-store/rating-count/nepakmljodobhlbbkpobblnifmhclemh)
 
