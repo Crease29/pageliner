@@ -17,8 +17,6 @@ jobs:
             -   name: Chrome Addon Action
                 uses: trmcnvn/chrome-addon@v1
                 with:
-                    # extension is only necessary when updating an existing addon,
-                    # omitting it will create a new addon
                     extension: nepakmljodobhlbbkpobblnifmhclemh
                     zip: pageliner.zip
                     client-id: ${{ secrets.CHROME_CLIENT_ID }}
