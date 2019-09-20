@@ -1,22 +1,26 @@
-name: CI
+name: Publish extension in Chrome Web Store
 
 on:
-  push:
-    tags:
-      - 'v*'
+    push:
+        tags:
+            - 'v*'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Chrome Addon Action
-      uses: trmcnvn/chrome-addon@v1
-      with:
-        # extension is only necessary when updating an existing addon,
-        # omitting it will create a new addon
-        extension: nepakmljodobhlbbkpobblnifmhclemh
-        zip: build/pageliner.zip
-        client-id: ${{ secrets.CHROME_CLIENT_ID }}
-        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
-        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            -   name: Checkout the repository
+                uses: actions/checkout@master
+            -   name: Create ZIP archive
+                run: zip -r pageliner.zip * -x .* -x *.md
+            -   name: Chrome Addon Action
+                uses: trmcnvn/chrome-addon@v1
+                with:
+                    # extension is only necessary when updating an existing addon,
+                    # omitting it will create a new addon
+                    extension: nepakmljodobhlbbkpobblnifmhclemh
+                    zip: pageliner.zip
+                    client-id: ${{ secrets.CHROME_CLIENT_ID }}
+                    client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+                    refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
