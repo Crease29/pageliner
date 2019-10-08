@@ -11,6 +11,10 @@
         "message": "mostrar/ocultar guias",
         "description": "Popup action."
     },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "mostrar/ocultar telêmetro",
+        "description": "Popup action."
+    },
     "POPUP_NEW_HELPLINE_X": {
         "message": "vertical",
         "description": "Popup action."
