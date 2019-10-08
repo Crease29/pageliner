@@ -24,7 +24,6 @@ function debug(sMsg) {
 /**
  * Convert a rgb color to hex value
  * @param {string} rgb
- *
  * @return {string}
  *
  * @link https://stackoverflow.com/a/3627747/1754123
@@ -82,7 +81,7 @@ oPageLiner.init = function () {
         debug('[PageLiner] Helplines found! Updating badge...');
         this.updatePopUp();
 
-        if (localStorage.getItem('pglnr-ext-blIsActive') == 'true') {
+        if (localStorage.getItem('pglnr-ext-rulerIsActive') == 'true' || localStorage.getItem('pglnr-ext-helplineIsActive') == 'true') {
             debug('[PageLiner] Rendering helplines...');
 
             this.drawRulers();
@@ -137,8 +136,13 @@ oPageLiner.addHelpLine = function (posX, posY, sColor) {
     }
 
     // Check if helplines can be displayed
-    if (!localStorage.getItem('pglnr-ext-blIsActive') || localStorage.getItem('pglnr-ext-blIsActive') == 'false') {
-        localStorage.setItem('pglnr-ext-blIsActive', true);
+    if (!localStorage.getItem('pglnr-ext-rulerIsActive') || 
+        localStorage.getItem('pglnr-ext-rulerIsActive') == 'false' ||
+        !localStorage.getItem('pglnr-ext-helplineIsActive') || 
+        localStorage.getItem('pglnr-ext-helplineIsActive') == 'false'
+    ) {
+        localStorage.setItem('pglnr-ext-rulerIsActive', true);
+        localStorage.setItem('pglnr-ext-helplineIsActive', true);
         this.init();
     }
 
@@ -339,29 +343,48 @@ oPageLiner.deleteHelpline = function (iHelplineIndex) {
     }
 };
 
-oPageLiner.toggleGUI = function (blForceState) {
+oPageLiner.toggleRulers = function (blForceState) {
     var blState = null;
 
     if (blForceState === true || blForceState === false) {
         blState = blForceState;
     }
     else {
-        blState = localStorage.getItem('pglnr-ext-blIsActive') == 'false';
+        blState = localStorage.getItem('pglnr-ext-rulerIsActive') == 'false';
     }
 
-    localStorage.setItem('pglnr-ext-blIsActive', blState);
+    localStorage.setItem('pglnr-ext-rulerIsActive', blState);
 
     if ($('.pglnr-ext-ruler').length > 0) {
-        $('.pglnr-ext-ruler, .pglnr-ext-helpline').toggle(blState);
-    }
-    else {
+        $('.pglnr-ext-ruler').toggle(blState);
+    } else {
         this.init();
     }
 };
 
+oPageLiner.toggleHelplines = function (blForceState) {
+    var blState = null;
+
+    if (blForceState === true || blForceState === false) {
+        blState = blForceState;
+    }
+    else {
+        blState = localStorage.getItem('pglnr-ext-helplineIsActive') == 'false';
+    }
+
+    localStorage.setItem('pglnr-ext-helplineIsActive', blState);
+
+    if ($('.pglnr-ext-helpline').length > 0) {
+        $('.pglnr-ext-helpline').toggle(blState);
+    } else {
+        this.init();
+    }
+}
+
 oPageLiner.removeAllHelpLines = function () {
     $('.pglnr-ext-helpline').remove();
-    this.toggleGUI(false);
+    this.toggleRulers(false);
+    this.toggleHelplines(false);
     localStorage.setItem('pglnr-ext-aHelpLines', "[]");
     this.sDefaultColor = '#33ffff';
     this.updatePopUp();

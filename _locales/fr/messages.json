@@ -8,6 +8,10 @@
         "description": "Extension description."
     },
     "POPUP_TOGGLE_HELPLINES": {
+        "message": "show/hide lines",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_RULERS": {
         "message": "afficher/masquer",
         "description": "Popup action."
     },

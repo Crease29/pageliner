@@ -11,6 +11,10 @@
         "message": "mostrar/ocultar las líneas auxiliares",
         "description": "Popup action."
     },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "mostrar/ocultar las reglas",
+        "description": "Popup action."
+    },
     "POPUP_NEW_HELPLINE_X": {
         "message": "vertical",
         "description": "Popup action."

@@ -102,11 +102,13 @@ body {
     font-style: normal;
 }
 
-#toggle-gui .glyphicon-eye-open {
+#toggle-ruler .glyphicon-eye-open,
+#toggle-helpline .glyphicon-eye-open {
     color: #52b32c;
 }
 
-#toggle-gui .glyphicon-eye-close {
+#toggle-ruler .glyphicon-eye-close,
+#toggle-helpline .glyphicon-eye-close {
     color: darkred;
 }
 

@@ -7,6 +7,10 @@
         "message": "Create guidelines on websites to check alignment for example.",
         "description": "Extension description."
     },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "show/hide rulers",
+        "description": "Popup action."
+    },
     "POPUP_TOGGLE_HELPLINES": {
         "message": "show/hide guides",
         "description": "Popup action."

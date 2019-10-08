@@ -11,6 +11,10 @@
         "message": "показать / спрятать все линии",
         "description": "Popup action."
     },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "показать / спрятать все линейки",
+        "description": "Popup action."
+    },
     "POPUP_NEW_HELPLINE_X": {
         "message": "вертикальная",
         "description": "Popup action."

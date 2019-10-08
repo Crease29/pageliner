@@ -11,6 +11,10 @@
         "message": "Hulplijnen tonen/verbergen",
         "description": "Popup action."
     },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "Regeerders tonen/verbergen",
+        "description": "Popup action."
+    },
     "POPUP_NEW_HELPLINE_X": {
         "message": "vertikaal",
         "description": "Popup action."

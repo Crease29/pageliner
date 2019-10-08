@@ -7,6 +7,10 @@
         "message": "Hilfslinien auf Webseiten setzen um z.B. Fluchten zu prüfen.",
         "description": "Extension description."
     },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "Lineale anzeigen/ausblenden",
+        "description": "Popup action."
+    },
     "POPUP_TOGGLE_HELPLINES": {
         "message": "Hilfslinien anzeigen/ausblenden",
         "description": "Popup action."

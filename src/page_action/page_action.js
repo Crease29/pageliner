@@ -66,22 +66,30 @@ $(function () {
     /*
      * GUI events
      */
-    $('#toggle-gui').click(function () {
-            toggleGUIButton();
-            injectScriptCode('oPageLiner.toggleGUI()', null);
+    $('#toggle-ruler').click(function () {
+            toggleRulerButton();
+            injectScriptCode('oPageLiner.toggleRulers()', null);
         }
     );
 
+    $('#toggle-helpline').click(function () {
+        toggleHelplineButton();
+        injectScriptCode('oPageLiner.toggleHelplines()', null);
+    }
+);
+
     $('#add-helpline-x').click(function () {
             injectScriptCode('oPageLiner.addHelpLine( 100, 0 )', null);
-            toggleGUIButton(true);
+            toggleRulerButton(true);
+            toggleHelplineButton(true);
             refreshHelpLineListing();
         }
     );
 
     $('#add-helpline-y').click(function () {
             injectScriptCode('oPageLiner.addHelpLine( 0, ( parseInt( $( window ).scrollTop() ) + 100 ) )', null);
-            toggleGUIButton(true);
+            toggleRulerButton(true);
+            toggleHelplineButton(true);
             refreshHelpLineListing();
         }
     );
@@ -92,8 +100,20 @@ $(function () {
         }
     );
 
-    function toggleGUIButton(forceShow) {
-        var $oIcon = $('#toggle-gui').find('.glyphicon'),
+    function toggleRulerButton(forceShow) {
+        var $oIcon = $('#toggle-ruler').find('.glyphicon'),
+            forceShow = forceShow || false;
+
+        if (!$oIcon.hasClass('glyphicon-eye-open') || forceShow) {
+            $oIcon.removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
+        }
+        else {
+            $oIcon.removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
+        }
+    }
+
+    function toggleHelplineButton(forceShow) {
+        var $oIcon = $('#toggle-helpline').find('.glyphicon'),
             forceShow = forceShow || false;
 
         if (!$oIcon.hasClass('glyphicon-eye-open') || forceShow) {
@@ -192,10 +212,16 @@ $(function () {
             chrome.tabs.sendMessage(tabs[0].id, {sAction: 'getGuiStatus'}, function (response) {
                 if (typeof response !== 'undefined'
                     && response.localStorage
-                    && response.localStorage['pglnr-ext-blIsActive']
-                    && response.localStorage['pglnr-ext-blIsActive'] === 'false'
+                    && response.localStorage['pglnr-ext-rulerIsActive']
+                    && response.localStorage['pglnr-ext-helplineIsActive']
                 ) {
-                    toggleGUIButton(false);
+                    if (response.localStorage['pglnr-ext-rulerIsActive'] === 'false') {
+                        toggleRulerButton(false);
+                    }
+
+                    if (response.localStorage['pglnr-ext-helplineIsActive'] === 'false') {
+                        toggleHelplineButton(false);
+                    } 
                 }
             });
         });
