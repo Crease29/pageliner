@@ -45,6 +45,10 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 1. Hover over a guide line.
 2. Hold down <kbd>Ctrl</kbd>.
 
+### Show and hide guidelines and rulers with shortcuts
+- <kbd>Alt</kbd>+<kbd>G</kbd> toggles the visibility of the guidlines.
+- <kbd>Alt</kbd>+<kbd>R</kbd> toggles the visibility of the rulers.
+
 ## Changelog
 - **v1.5.3 (2019-10-08)**
     - Toggle guides individually from menu
