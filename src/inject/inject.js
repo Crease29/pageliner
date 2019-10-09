@@ -108,8 +108,8 @@ oPageLiner.init = function () {
         }
     }
 
-    $window.unbind('keydown', oPageLiner.addHelpLineWithShortcuts);
-    $window.on('keydown', oPageLiner.addHelpLineWithShortcuts);
+    $window.unbind('keydown', oPageLiner.handleKeyboardShortcuts);
+    $window.on('keydown', oPageLiner.handleKeyboardShortcuts);
 
     debug('[PageLiner] Initializing done.');
 };
@@ -280,7 +280,7 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
     return oHelpLineElem;
 };
 
-oPageLiner.addHelpLineWithShortcuts = function (e) {
+oPageLiner.handleKeyboardShortcuts = function (e) {
     if (!e.altKey || e.ctrlKey || e.shiftKey) {
         return;
     }
