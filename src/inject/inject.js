@@ -287,12 +287,21 @@ oPageLiner.addHelpLineWithShortcuts = function (e) {
 
     var $oHelpLine = null;
 
+    // keyboard code `h`
     if (e.keyCode === 72) {
         debug('add horizontal helpline');
         $oHelpLine = $(oPageLiner.addHelpLine(0, oPageLiner.mousePosition.y, '#33ffff'));
-    } else if (e.keyCode === 86) {
+    }
+    // keyboard code `v`
+    else if (e.keyCode === 86) {
         debug('add vertical helpline');
         $oHelpLine = $(oPageLiner.addHelpLine(oPageLiner.mousePosition.x, 0, '#33ffff'));
+    } 
+    // keyboard code `a`
+    else if (e.keyCode === 65) {
+        debug('add horizontal and vertical helpline');
+        $(oPageLiner.addHelpLine(0, oPageLiner.mousePosition.y, '#33ffff'));
+        $(oPageLiner.addHelpLine(oPageLiner.mousePosition.x, 0, '#33ffff'));
     }
 
     if ($oHelpLine === null) {
