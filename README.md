@@ -50,6 +50,11 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 - <kbd>Alt</kbd>+<kbd>G</kbd> toggles the visibility of the guidlines.
 - <kbd>Alt</kbd>+<kbd>R</kbd> toggles the visibility of the rulers.
 
+## Contributing
+
+If you'd like to contribute to this repository, here is a guide on [how to set up an unpacked extension in Google Chrome](https://developer.chrome.com/extensions/getstarted#manifest).
+Please make sure to include your changes in the Changelog below and consider changing the version in the [manifest.json](manifest.json).
+
 ## Changelog
 - **v1.6.0 (2019-10-10)**
     - Add horizontal and vertical guidelines with <kbd>Alt</kbd>+<kbd>A</kbd>
