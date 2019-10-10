@@ -25,6 +25,8 @@ function injectScriptCode(sCode, callback) {
 }
 
 $(function () {
+    var shortcutsViewVisible = false;
+
     /*
      * i18n translator
      */
@@ -66,6 +68,20 @@ $(function () {
     /*
      * GUI events
      */
+    $('#toggle-view').click(function () {
+            if (shortcutsViewVisible) {
+                $('#shortcuts').hide();
+                $('#page-actions').show();
+                $('#toggle-view').text(chrome.i18n.getMessage('SHOW_SHORTCUTS'));
+            } else {
+                $('#page-actions').hide();
+                $('#shortcuts').show();
+                $('#toggle-view').text(chrome.i18n.getMessage('SHOW_HOME'));
+            }
+            shortcutsViewVisible = !shortcutsViewVisible;
+        }
+    );
+
     $('#toggle-ruler').click(function () {
             toggleRulerButton();
             injectScriptCode('oPageLiner.toggleRulers()', null);

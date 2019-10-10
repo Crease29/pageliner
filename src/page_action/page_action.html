@@ -11,7 +11,8 @@
             <h1 class="page_action_headbar">
                 <span data-i18n="GLOBAL_APP_NAME"></span>
             </h1>
-            <ul class="nav nav-pills nav-stacked page-actions">
+
+            <ul id="page-actions" class="nav nav-pills nav-stacked page-actions">
                 <li>
                     <a href="#" class="toggle-ruler" id="toggle-ruler">
                         <i class="glyphicon glyphicon-eye-open"></i> <span data-i18n="POPUP_TOGGLE_RULERS"></span>
@@ -53,16 +54,33 @@
                 </li>
             </ul>
 
+            <ul id="shortcuts" class="nav nav-pills nav-stacked" style="display: none;">
+                <li><kbd>Alt</kbd>+<kbd>H</kbd> <span data-i18n="SHORTCUT_ADD_H_LINE"></span></li>
+                <li><kbd>Alt</kbd>+<kbd>V</kbd> <span data-i18n="SHORTCUT_ADD_V_LINE"></span></li>
+                <li><kbd>Alt</kbd>+<kbd>A</kbd> <span data-i18n="SHORTCUT_ADD_LINES"></span></li>
+                <li><kbd>▲</kbd>/<kbd>▼</kbd> <span data-i18n="SHORTCUT_MOVE_H_1PX"></span></li>
+                <li><kbd>◄</kbd>/<kbd>►</kbd> <span data-i18n="SHORTCUT_MOVE_V_1PX"></span></li>
+                <li><kbd>Shift</kbd>+<kbd>▲</kbd>/<kbd>▼</kbd> <span data-i18n="SHORTCUT_MOVE_H_10PX"></span></li>
+                <li><kbd>Shift</kbd>+<kbd>◄</kbd>/<kbd>►</kbd> <span data-i18n="SHORTCUT_MOVE_V_10PX"></span></li>
+                <li><kbd>Del</kbd> <span data-i18n="SHORTCUT_DELETE_LINE"></span></li>
+                <li><kbd>Esc</kbd> <span data-i18n="SHORTCUT_DESELECT_LINE"></span></li>
+                <li><kbd>Ctrl</kbd> <span data-i18n="SHORTCUT_MEASURE_DISTANCE"></span></li>
+                <li><kbd>Alt</kbd>+<kbd>G</kbd> <span data-i18n="SHORTCUT_TOGGLE_LINES"></span></li>
+                <li><kbd>Alt</kbd>+<kbd>R</kbd> <span data-i18n="SHORTCUT_TOGGLE_RULERS"></span></li>
+            </ul>
+
             <footer>
-                <div class="row">
-                    <div class="col-xs-8">
-                        <div class="bounce">
-                            <a href="https://github.com/Crease29/pageliner/blob/master/README.md" target="_blank" class="donate" data-i18n="POPUP_DONATE"></a> 🍺 ❤️
-                        </div>
+                <div class="footer-left">
+                    <div class="bounce">
+                        <a href="https://github.com/Crease29/pageliner/blob/master/README.md" target="_blank" class="donate" data-i18n="POPUP_DONATE"></a> 🍺 ❤️
                     </div>
-                    <div class="col-xs-4 text-right">
-                        <a href="https://github.com/Crease29/pageliner/blob/master/README.md#changelog" target="_blank" class="changelog">Changelog</a><span class="spacer">&middot;</span>v<span data-i18n="VERSION"></span>
-                    </div>
+                </div>
+                <div class="footer-right">
+                    <a id="toggle-view" href="#" class="changelog" data-i18n="SHOW_SHORTCUTS"></a>
+                    <span class="spacer">&middot;</span>
+                    <a href="https://github.com/Crease29/pageliner/blob/master/README.md#changelog" target="_blank" class="changelog">Changelog</a>
+                    <span class="spacer">&middot;</span>
+                    <span>v<span data-i18n="VERSION"></span></span>
                 </div>
             </footer>
         </div>
