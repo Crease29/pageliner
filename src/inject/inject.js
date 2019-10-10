@@ -108,8 +108,8 @@ oPageLiner.init = function () {
         }
     }
 
-    $window.unbind('keydown', oPageLiner.addHelpLineWithShortcuts);
-    $window.on('keydown', oPageLiner.addHelpLineWithShortcuts);
+    $window.unbind('keydown', oPageLiner.handleKeyboardShortcuts);
+    $window.on('keydown', oPageLiner.handleKeyboardShortcuts);
 
     debug('[PageLiner] Initializing done.');
 };
@@ -280,7 +280,7 @@ oPageLiner.addHelpLineToDOM = function (posX, posY, sColor, iHelplineIndex) {
     return oHelpLineElem;
 };
 
-oPageLiner.addHelpLineWithShortcuts = function (e) {
+oPageLiner.handleKeyboardShortcuts = function (e) {
     if (!e.altKey || e.ctrlKey || e.shiftKey) {
         return;
     }
@@ -302,6 +302,16 @@ oPageLiner.addHelpLineWithShortcuts = function (e) {
         debug('add horizontal and vertical helpline');
         $(oPageLiner.addHelpLine(0, oPageLiner.mousePosition.y, '#33ffff'));
         $(oPageLiner.addHelpLine(oPageLiner.mousePosition.x, 0, '#33ffff'));
+    }
+    // keyboard code `r`
+    else if (e.keyCode === 82) {
+        debug('toggle rulers');
+        oPageLiner.toggleRulers();
+    }
+    // keyboard code `g`
+    else if (e.keyCode === 71) {
+        debug('toggle guidelines');
+        oPageLiner.toggleHelplines();
     }
 
     if ($oHelpLine === null) {
