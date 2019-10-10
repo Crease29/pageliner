@@ -51,7 +51,7 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 - <kbd>Alt</kbd>+<kbd>R</kbd> toggles the visibility of the rulers.
 
 ## Changelog
-- **v1.5.4 (2019-10-10)**
+- **v1.6.0 (2019-10-10)**
     - Add horizontal and vertical guidelines with <kbd>Alt</kbd>+<kbd>A</kbd>
     - Toggle visibility of guidelines with <kbd>Alt</kbd>+<kbd>G</kbd
     - Toggle visibility of rulers with <kbd>Alt</kbd>+<kbd>R</kbd
