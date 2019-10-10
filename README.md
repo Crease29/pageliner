@@ -47,6 +47,8 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 2. Hold down <kbd>Ctrl</kbd>.
 
 ## Changelog
+- **v1.5.4 (2019-10-10)**
+    - Add horizontal and vertical guidelines with <kbd>Alt</kbd>+<kbd>A</kbd>
 - **v1.5.3 (2019-10-08)**
     - Toggle guides individually from menu
 - **v1.5.2 (2018-06-08)**
