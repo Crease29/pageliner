@@ -432,6 +432,11 @@ oPageLiner.drawRulers = function () {
         oRulerTopElem.className = 'pglnr-ext-ruler pglnr-ext-ruler-top';
         oRulerLeftElem.className = 'pglnr-ext-ruler pglnr-ext-ruler-left';
 
+        if (localStorage.getItem('pglnr-ext-rulerIsActive') == 'false') {
+            oRulerTopElem.style.display = 'none';
+            oRulerLeftElem.style.display = 'none';
+        }
+
         oRulerTopMeasure.style.width = iDocumentWidth * 2 + "px";
         oRulerLeftMeasure.style.height = iDocumentHeight * 2 + "px";
 
