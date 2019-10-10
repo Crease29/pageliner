@@ -21,6 +21,7 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 
 - <kbd>Alt</kbd>+<kbd>H</kbd> adds a *horizontal* guide line at your cursor position and selects it for keyboard movement.
 - <kbd>Alt</kbd>+<kbd>V</kbd> adds a *vertical* guide line at your cursor position and selects it for keyboard movement.
+- <kbd>Alt</kbd>+<kbd>A</kbd> adds a *horizontal* and a *vertical* guide line at your cursor position.
 
 ### Move guide lines with keyboard
 
@@ -51,6 +52,7 @@ Hover over one of the rulers and start dragging a new guide line from there, lik
 
 ## Changelog
 - **v1.5.4 (2019-10-10)**
+    - Add horizontal and vertical guidelines with <kbd>Alt</kbd>+<kbd>A</kbd>
     - Toggle visibility of guidelines with <kbd>Alt</kbd>+<kbd>G</kbd
     - Toggle visibility of rulers with <kbd>Alt</kbd>+<kbd>R</kbd
 - **v1.5.3 (2019-10-08)**

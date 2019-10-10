@@ -296,6 +296,12 @@ oPageLiner.handleKeyboardShortcuts = function (e) {
     else if (e.keyCode === 86) {
         debug('add vertical helpline');
         $oHelpLine = $(oPageLiner.addHelpLine(oPageLiner.mousePosition.x, 0, '#33ffff'));
+    } 
+    // keyboard code `a`
+    else if (e.keyCode === 65) {
+        debug('add horizontal and vertical helpline');
+        $(oPageLiner.addHelpLine(0, oPageLiner.mousePosition.y, '#33ffff'));
+        $(oPageLiner.addHelpLine(oPageLiner.mousePosition.x, 0, '#33ffff'));
     }
     // keyboard code `r`
     else if (e.keyCode === 82) {
