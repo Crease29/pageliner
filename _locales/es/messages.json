@@ -42,5 +42,61 @@
     "POPUP_DONATE": {
         "message": "Comprarme una cerveza",
         "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Shortcuts",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Home",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "adds a horizontal guideline.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "adds a vertical guideline.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "adds horizontal and vertical guidelines.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "moves selected guideline horizontally 1px.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "moves selected guideline vertically 1px.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "moves selected guideline horizontally 10px.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "moves selected guideline vertically 10px.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "deletes selected guideline.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "deselects selected guideline.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "measures distance to hovered guideline.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "toggles visibility of guidelines.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "toggles visibility of rulers.",
+        "description": "Shortcut description for Alt+R."
     }
 }
