@@ -69,15 +69,9 @@ $(function () {
      * GUI events
      */
     $('#toggle-view').click(function () {
-            if (shortcutsViewVisible) {
-                $('#shortcuts').hide();
-                $('#page-actions').show();
-                $('#toggle-view').text(chrome.i18n.getMessage('SHOW_SHORTCUTS'));
-            } else {
-                $('#page-actions').hide();
-                $('#shortcuts').show();
-                $('#toggle-view').text(chrome.i18n.getMessage('SHOW_HOME'));
-            }
+            $('#shortcuts').toggle(!shortcutsViewVisible);
+            $('#page-actions').toggle(shortcutsViewVisible);
+            $('#toggle-view').text(chrome.i18n.getMessage(shortcutsViewVisible ? 'SHOW_SHORTCUTS' : 'SHOW_HOME'));
             shortcutsViewVisible = !shortcutsViewVisible;
         }
     );
