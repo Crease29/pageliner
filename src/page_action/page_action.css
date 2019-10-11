@@ -156,11 +156,22 @@ footer {
     background: -ms-linear-gradient(top, #f8f9f8 0%, #dfdfdf 100%);
     background: linear-gradient(to bottom, #f8f9f8 0%, #dfdfdf 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f9f8', endColorstr='#dfdfdf', GradientType=0);
-    height: 20px;
-    padding: 1px 15px 0;
+    padding: 1px 15px;
     margin-top: 5px;
     font-size: 11px;
     color: #aaaaab;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 0 0 220px;
+    text-align: right;
+    margin-bottom: 2px;
 }
 
 footer .bounce {
@@ -177,4 +188,26 @@ footer a.changelog:hover {
 
 footer .spacer {
     padding: 0 7px;
+}
+
+#shortcuts {
+    margin-top: 5px;
+}
+
+#shortcuts li {
+    padding: 5px 10px;
+}
+
+kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 11px;
+    line-height: 10px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
 }

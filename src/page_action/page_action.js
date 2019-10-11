@@ -25,6 +25,8 @@ function injectScriptCode(sCode, callback) {
 }
 
 $(function () {
+    var shortcutsViewVisible = false;
+
     /*
      * i18n translator
      */
@@ -66,6 +68,14 @@ $(function () {
     /*
      * GUI events
      */
+    $('#toggle-view').click(function () {
+            $('#shortcuts').toggle(!shortcutsViewVisible);
+            $('#page-actions').toggle(shortcutsViewVisible);
+            $('#toggle-view').text(chrome.i18n.getMessage(shortcutsViewVisible ? 'SHOW_SHORTCUTS' : 'SHOW_HOME'));
+            shortcutsViewVisible = !shortcutsViewVisible;
+        }
+    );
+
     $('#toggle-ruler').click(function () {
             toggleRulerButton();
             injectScriptCode('oPageLiner.toggleRulers()', null);
