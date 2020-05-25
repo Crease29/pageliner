@@ -1,6 +1,6 @@
 {
     "name":             "__MSG_GLOBAL_APP_NAME__",
-    "version":          "1.6.0",
+    "version":          "1.6.1",
     "manifest_version": 2,
     "description":      "__MSG_GLOBAL_APP_DESCRIPTION__",
     "icons":            {
@@ -21,9 +21,6 @@
         "default_popup": "src/page_action/page_action.html"
     },
     "permissions":      [
-        "tabs",
-        "activeTab",
-        "storage",
         "https://*/*",
         "http://*/*"
     ],

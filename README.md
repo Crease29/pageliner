@@ -56,6 +56,8 @@ If you'd like to contribute to this repository, here is a guide on [how to set u
 Please make sure to include your changes in the Changelog below and consider changing the version in the [manifest.json](manifest.json).
 
 ## Changelog
+- **v1.6.1 (2020-05-25)**
+    - Removed unnecessary rights from manifest.json
 - **v1.6.1 (2019-10-10)**
     - Hidden rulers/guides now stay hidden after reload
 - **v1.6.0 (2019-10-10)**
