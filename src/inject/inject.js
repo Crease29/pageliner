@@ -3,7 +3,7 @@
  *
  * @copyright   2018 Kai Neuwerth
  * @author      Kai Neuwerth
- * @link        https://kai.neuwerth.me
+ * @link        https://pageliner.com
  */
 
 var oPageLiner = {

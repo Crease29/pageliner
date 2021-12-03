@@ -40,7 +40,7 @@
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message": "пожертвовать программисту на водку",
+        "message": "Пожертвовать",
         "description": "Donate link."
     },
     "SHOW_SHORTCUTS": {

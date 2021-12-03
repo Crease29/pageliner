@@ -3,7 +3,7 @@
  *
  * @copyright   2018 Kai Neuwerth
  * @author      Kai Neuwerth
- * @link        https://kai.neuwerth.me
+ * @link        https://pageliner.com
  */
 
 chrome.browserAction.setBadgeText({text: ''});
@@ -50,11 +50,11 @@ chrome.runtime.onInstalled.addListener(function (details) {
             chrome.browserAction.setBadgeText({text: ''});
         },
         openChangeLogTab = function () {
-            chrome.tabs.create({'url': 'https://github.com/Crease29/pageliner#changelog'});
+            chrome.tabs.create({'url': 'https://pageliner.com/#changelog'});
             resetPopUp();
         },
         openFeaturesTab = function () {
-            chrome.tabs.create({'url': 'https://github.com/Crease29/pageliner#features'});
+            chrome.tabs.create({'url': 'https://pageliner.com/#features'});
             resetPopUp();
         };
 

@@ -40,7 +40,7 @@
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message": "Comprarme una cerveza",
+        "message": "Donar",
         "description": "Donate link."
     },
     "SHOW_SHORTCUTS": {

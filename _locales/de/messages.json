@@ -40,7 +40,7 @@
         "description": "Popup table positions."
     },
     "POPUP_DONATE": {
-        "message": "Buy me a beer",
+        "message": "Spenden",
         "description": "Donate link."
     },
     "SHOW_SHORTCUTS": {
@@ -52,51 +52,51 @@
         "description": "Show home/default view link title."
     },
     "SHORTCUT_ADD_H_LINE": {
-        "message": "adds a horizontal guideline.",
+        "message": "fügt eine horizontale Hilfslinie hinzu.",
         "description": "Shortcut description for Alt+H."
     },
     "SHORTCUT_ADD_V_LINE": {
-        "message": "adds a vertical guideline.",
+        "message": "fügt eine vertikale Hilfslinie hinzu.",
         "description": "Shortcut description for Alt+V."
     },
     "SHORTCUT_ADD_LINES": {
-        "message": "adds horizontal and vertical guidelines.",
+        "message": "fügt horizontale und vertikale Hilfslinien hinzu.",
         "description": "Shortcut description for Alt+A."
     },
     "SHORTCUT_MOVE_H_1PX": {
-        "message": "moves selected guideline horizontally 1px.",
+        "message": "bewegt die ausgewählte Hilfslinie horizontal um 1px.",
         "description": "Shortcut description for ▲/▼."
     },
     "SHORTCUT_MOVE_V_1PX": {
-        "message": "moves selected guideline vertically 1px.",
+        "message": "bewegt die ausgewählte Hilfslinie vertikal um 1px.",
         "description": "Shortcut description for ◄/►."
     },
     "SHORTCUT_MOVE_H_10PX": {
-        "message": "moves selected guideline horizontally 10px.",
+        "message": "bewegt die ausgewählte Hilfslinie horizontal um 10px.",
         "description": "Shortcut description for Shift+▲/▼."
     },
     "SHORTCUT_MOVE_V_10PX": {
-        "message": "moves selected guideline vertically 10px.",
+        "message": "bewegt die ausgewählte Hilfslinie vertikal um 10px.",
         "description": "Shortcut description for Shift+◄/►."
     },
     "SHORTCUT_DELETE_LINE": {
-        "message": "deletes selected guideline.",
+        "message": "löscht die ausgewählte Hilfslinie.",
         "description": "Shortcut description for Del."
     },
     "SHORTCUT_DESELECT_LINE": {
-        "message": "deselects selected guideline.",
+        "message": "entfernt die Auswahl einer Hilfslinie.",
         "description": "Shortcut description for Esc."
     },
     "SHORTCUT_MEASURE_DISTANCE": {
-        "message": "measures distance to hovered guideline.",
+        "message": "misst die Distanz zu einer anderen Hilfslinie.",
         "description": "Shortcut description for Ctrl."
     },
     "SHORTCUT_TOGGLE_LINES": {
-        "message": "toggles visibility of guidelines.",
+        "message": "wechselt zwischen der Sichtbarkeit der Hilfslinien.",
         "description": "Shortcut description for Alt+G."
     },
     "SHORTCUT_TOGGLE_RULERS": {
-        "message": "toggles visibility of rulers.",
+        "message": "wechselt zwischen der Sichtbarkeit der Lineale.",
         "description": "Shortcut description for Alt+R."
     }
 }
