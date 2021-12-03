@@ -139,7 +139,7 @@ $(function () {
                 var $oHelpLineActions = $('#helpline-actions'),
                     $oHelpLineActionsDivider = $('#helpline-actions-divider');
 
-                if (typeof oAllHelpLines === 'object' && oAllHelpLines.length > 0 && oAllHelpLines[0].length > 0) {
+                if (typeof oAllHelpLines === 'object' && oAllHelpLines.length > 0 && oAllHelpLines[0] && oAllHelpLines[0].length > 0) {
                     oAllHelpLines = oAllHelpLines[0];
 
                     var $oHelpLineListing = $oHelpLineActions.find('.listing');

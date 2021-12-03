@@ -69,6 +69,7 @@ Please make sure to include your changes in the Changelog below and consider cha
     - Added PageLiner to the [Microsoft Edge-Add-Ons Store](https://microsoftedge.microsoft.com/addons/detail/pageliner/kcombcinjokdchiiakigflgcangmfafp)
     - Updated external links to [pageliner.com](https://pageliner.com)
     - Updated some text snippets
+    - Fix null-pointer exception in `page_action.js`
 - **v1.6.2 (2020-05-25)**
     - Removed unnecessary rights from manifest.json
 - **v1.6.1 (2019-10-10)**
