@@ -8,7 +8,9 @@
 
 chrome.browserAction.setBadgeText({text: ''});
 
-chrome.extension.onMessage.addListener(
+const messageApi = chrome.extension.onMessage || browser.runtime.onMessage;
+
+messageApi.addListener(
     function (request, sender, sendResponse) {
         if (request.sAction === 'updatePopUp') {
             chrome.tabs.query(

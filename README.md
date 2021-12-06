@@ -16,6 +16,8 @@ Google Chrome and Edge extension to create guidelines on a website.
 
 ▶ [View in Chrome Web Store](https://chrome.google.com/webstore/detail/pageliner/nepakmljodobhlbbkpobblnifmhclemh)
 
+▶ [View in Mozilla 🦊 Firefox Add-Ons Store](https://addons.mozilla.org/de/firefox/addon/pageliner/)
+
 ▶ [View in Microsoft Edge-Add-Ons Store](https://microsoftedge.microsoft.com/addons/detail/pageliner/kcombcinjokdchiiakigflgcangmfafp)
 
 If you have any suggestions or bugs, please create an issue or use the support form in Chrome Web Store. Thank you!
@@ -67,6 +69,7 @@ Please make sure to include your changes in the Changelog below and consider cha
 ## Changelog
 - **v1.6.3 (2021-12-02)**
     - Added PageLiner to the [Microsoft Edge-Add-Ons Store](https://microsoftedge.microsoft.com/addons/detail/pageliner/kcombcinjokdchiiakigflgcangmfafp)
+    - Added PageLiner to the [Mozilla 🦊 Firefox Add-Ons Store](https://addons.mozilla.org/de/firefox/addon/pageliner/)
     - Updated external links to [pageliner.com](https://pageliner.com)
     - Updated some text snippets
     - Fix null-pointer exception in `page_action.js`

@@ -13,15 +13,10 @@
  * @param {function} callback
  */
 function injectScriptCode(sCode, callback) {
-    callback = callback || function () {
-    };
+    callback = callback || function () {};
 
-    chrome.tabs.executeScript(
-        {
-            code: sCode
-        },
-        callback
-    );
+    const tabsApi = chrome.tabs || browser.tabs;
+    tabsApi.executeScript({code: sCode}, callback);
 }
 
 $(function () {
@@ -168,10 +163,9 @@ $(function () {
                             oDeleteElem.setAttribute('data-id', x);
                             oCol2Elem.appendChild(oDeleteElem);
                             $(oDeleteElem).click(function () {
-                                    injectScriptCode('oPageLiner.deleteHelpline( ' + this.getAttribute('data-id') + ' )', null);
-                                    refreshHelpLineListing();
-                                }
-                            );
+                                injectScriptCode('oPageLiner.deleteHelpline( ' + this.getAttribute('data-id') + ' )', null);
+                                refreshHelpLineListing();
+                            });
 
                             oColorPickerElem.type = 'text';
                             oColorPickerElem.className = 'form-control input-sm pull-right color';
@@ -218,8 +212,13 @@ $(function () {
     }
 
     function getGuiStatus() {
-        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {sAction: 'getGuiStatus'}, function (response) {
+        const tabsApi = chrome.tabs || browser.tabs;
+        tabsApi.query({active: true, currentWindow: true}, function (tabs) {
+            if ((chrome.runtime || browser.runtime).lastError) {
+                console.error((chrome.runtime || browser.runtime).lastError);
+            }
+
+            tabsApi.sendMessage(tabs[0].id, {sAction: 'getGuiStatus'}, function (response) {
                 if (typeof response !== 'undefined'
                     && response.localStorage
                     && response.localStorage['pglnr-ext-rulerIsActive']

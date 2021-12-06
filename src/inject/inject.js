@@ -58,7 +58,8 @@ function hexToRgba(hex, opacity) {
     return result;
 }
 
-chrome.runtime.onMessage.addListener(
+const messageApi = chrome.runtime.onMessage || browser.runtime.onMessage;
+messageApi.addListener(
     function (request, sender, sendResponse) {
         if (request.sAction === 'getGuiStatus') {
             sendResponse({'localStorage': localStorage});
@@ -722,7 +723,9 @@ oPageLiner.removeDistanceLines = function (event) {
 
 oPageLiner.updatePopUp = function () {
     debug('[PageLiner] Setting count badge...');
-    chrome.extension.sendMessage(chrome.runtime.id, {sAction: 'updatePopUp', oAllHelpLines: this.getAllHelpLines()});
+
+    const messageApi = chrome.extension || browser.runtime;
+    messageApi.sendMessage(chrome.runtime.id, {sAction: 'updatePopUp', oAllHelpLines: this.getAllHelpLines()});
 };
 
 // Init PageLiner object
