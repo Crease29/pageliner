@@ -67,7 +67,7 @@ If you'd like to contribute to this repository, here is a guide on [how to set u
 Please make sure to include your changes in the Changelog below and consider changing the version in the [manifest.json](manifest.json).
 
 ## Changelog
-- **v1.6.3 (2021-12-02)**
+- **v1.6.3 (UPCOMING)**
     - Added PageLiner to the [Microsoft Edge-Add-Ons Store](https://microsoftedge.microsoft.com/addons/detail/pageliner/kcombcinjokdchiiakigflgcangmfafp)
     - Added PageLiner to the [Mozilla 🦊 Firefox Add-Ons Store](https://addons.mozilla.org/de/firefox/addon/pageliner/)
     - Updated external links to [pageliner.com](https://pageliner.com)
