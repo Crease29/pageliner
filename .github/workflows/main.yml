@@ -17,7 +17,7 @@ jobs:
             -   name: Create ZIP archive
                 run: zip -r pageliner.zip * -x .* -x *.md
             -   name: Chrome Addon Action
-                uses: trmcnvn/chrome-addon@v1
+                uses: trmcnvn/chrome-addon@v2
                 with:
                     extension: nepakmljodobhlbbkpobblnifmhclemh
                     zip: pageliner.zip
