@@ -52,11 +52,11 @@ chrome.runtime.onInstalled.addListener(function (details) {
             chrome.browserAction.setBadgeText({text: ''});
         },
         openChangeLogTab = function () {
-            chrome.tabs.create({'url': 'https://pageliner.com/#changelog'});
+            chrome.tabs.create({'url': 'https://pageliner.com/changelog.html'});
             resetPopUp();
         },
         openFeaturesTab = function () {
-            chrome.tabs.create({'url': 'https://pageliner.com/#features'});
+            chrome.tabs.create({'url': 'https://pageliner.com/features.html'});
             resetPopUp();
         };
 

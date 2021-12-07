@@ -1,0 +1,102 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Tạo những đường lưới để căn chỉnh website",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "Hiển thị / Ẩn thước đo",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "Hiển thị / Ẩn đường lưới",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "Thanh dọc",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "Thanh ngang",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "Xoá tất cả đường lưới",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Tất cả đường lưới",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Màu sắc",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Vị trí",
+        "description": "Popup table positions."
+    },
+    "POPUP_DONATE": {
+        "message": "Ủng hộ tác giả",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Phím tắt",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Trang chủ",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "Thêm đường lưới ngang",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "Thêm đường lưới dọc",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "Thêm đường lưới ngang và dọc",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "Di chuyển lưới ngang đang chọn lên trên hoặc xuống dưới 1px.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "Di chuyển dưới dọc đang chọn sang trái hoặc phải 1px.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "Di chuyển lưới ngang đang chọn lên trên hoặc xuống dưới 10px.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "Di chuyển lưới dọc đang chọn sang trái hoặc phải 10px.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "Xoá đường lưới đang chọn.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "Bỏ chọn đường lưới đang chọn.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "Đo khoảng cách giữa hai điểm khi dê chuột vào đường lưới",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "Bật tắt đường lưới",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "Bật tắt thước đo.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
