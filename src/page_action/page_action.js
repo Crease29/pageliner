@@ -56,11 +56,6 @@ $(function () {
     );
 
     /*
-     * tooltips
-     */
-    $('.has-tooltip').tooltip();
-
-    /*
      * GUI events
      */
     $('#toggle-view').click(function () {
