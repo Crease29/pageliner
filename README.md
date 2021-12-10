@@ -68,6 +68,7 @@ Please make sure to include your changes in the Changelog below and consider cha
 
 ## Changelog
 - **UPCOMING**
+    - Added Thai translations. Thanks to [@DerekJxy](https://github.com/DerekJxy)
     - Fixed donation link
     - Removed `js/bootstrap.min.js`, because it's not needed anymore
 - **v1.6.4 (2020-12-07)**
