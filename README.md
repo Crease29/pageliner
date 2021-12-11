@@ -69,6 +69,7 @@ Please make sure to include your changes in the Changelog below and consider cha
 ## Changelog
 - **UPCOMING**
     - Added Slovak translations. Thanks to [@github4maninder](https://github.com/github4maninder)
+- **v1.6.5 (2020-12-10)**
     - Added Thai translations. Thanks to [@DerekJxy](https://github.com/DerekJxy)
     - Fixed donation link
     - Removed `js/bootstrap.min.js`, because it's not needed anymore
