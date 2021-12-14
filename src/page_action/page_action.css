@@ -146,6 +146,45 @@ body {
     right: 13px;
 }
 
+.add-display {
+    width:320px;
+    margin: 10px auto;
+    text-align: right;
+    font-size: 11px;
+}
+
+.add-display a {
+    display: inline-block;
+    color: #aaaaab;
+}
+
+#disable-ads-modal {
+    background: #f8f9f8;
+    background: -moz-linear-gradient(top, #f8f9f8 0%, #dfdfdf 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f9f8), color-stop(100%, #dfdfdf));
+    background: -webkit-linear-gradient(top, #f8f9f8 0%, #dfdfdf 100%);
+    background: -o-linear-gradient(top, #f8f9f8 0%, #dfdfdf 100%);
+    background: -ms-linear-gradient(top, #f8f9f8 0%, #dfdfdf 100%);
+    background: linear-gradient(to bottom, #f8f9f8 0%, #dfdfdf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f9f8', endColorstr='#dfdfdf', GradientType=0);
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 37px;
+    z-index: 1;
+}
+
+#disable-ads-modal .content {
+    padding: 15px;
+    text-align: right;
+}
+
+#disable-ads-modal .content p {
+    text-align: left;
+}
+
 footer {
     border-top: 1px solid #FFF;
     background: #f8f9f8;
