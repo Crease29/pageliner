@@ -1,0 +1,118 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Skapa instruktioner på webbplatser för justering till exempel.",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "visa/dölja linjaler",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "visa/dölja guider",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "vertikal",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "horisontell",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "radera alla guider",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Alla guider",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Färg",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Position",
+        "description": "Popup table positions."
+    },
+    "POPUP_TOGGLE_ADS": {
+        "message": "Växla annonser",
+        "description": "Link to remove ads (in app purchase)"
+    },
+    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+        "message": "Jag vet att annonser kan vara irriterande, men jag ger ut det här verktyget gratis. År av utveckling och underhåll är det som hjälper dig i din dagliga verksamhet, vilket ökar din produktivitet och effektivitet i ditt arbete. Även om du kan inaktivera annonsen utan kostnad: Om det inte stör dig alltför mycket skulle jag uppskatta mycket om du bara inte inaktiverar annonsen. Det skadar inte dig och ger något tillbaka till mig. För mig låter det som ett rättvist avtal. Tack!",
+        "description": "Text that shows up, when the user wants to disable ads."
+    },
+    "POPUP_BUTTON_REMOVE_ADS": {
+        "message": "Växla annonser",
+        "description": "Button which removes ads"
+    },
+    "POPUP_BUTTON_KEEP_ADS": {
+        "message": "Behåll annonser",
+        "description": "Button which keeps ads"
+    },
+    "POPUP_DONATE": {
+        "message": "Skicka lite tips",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Kortkommando",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Startsida",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "lägger till en horisontell riktlinje.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "lägger till en vertikal riktlinje.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "lägger till horisontella och vertikala riktlinjer.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "flyttar den valda riktlinjen horisontellt 1px.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "flyttar den valda riktlinjen vertikalt 1px.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "flyttar den valda riktlinjen horisontellt 10px.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "flyttar den valda riktlinjen vertikalt 10px.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "tar bort vald riktlinje.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "avmarkerar vald riktlinje.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "mäter avståndet till svävande riktlinje.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "växlar synlighet av riktlinjer.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "växlar synlighet för linjaler.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
