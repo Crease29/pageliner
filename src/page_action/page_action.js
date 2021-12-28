@@ -26,79 +26,91 @@ $(function () {
      * i18n translator
      */
     $('[data-i18n]').each(function () {
-            var sIdent = this.getAttribute('data-i18n'),
-                sTranslation = '';
+        var sIdent = this.getAttribute('data-i18n'),
+            sTranslation = '';
 
-            if (sIdent === 'VERSION') {
-                sTranslation = chrome.runtime.getManifest().version;
-            }
-            else {
-                sTranslation = chrome.i18n.getMessage(this.getAttribute('data-i18n'))
-            }
-
-            if (!sTranslation.length) {
-                console.error('Could not find message string by ident "' + sIdent + '"!');
-                return;
-            }
-
-            $(this).text(sTranslation);
+        if (sIdent === 'VERSION') {
+            sTranslation = chrome.runtime.getManifest().version;
         }
-    );
+        else {
+            sTranslation = chrome.i18n.getMessage(this.getAttribute('data-i18n'))
+        }
+
+        if (!sTranslation.length) {
+            console.error('Could not find message string by ident "' + sIdent + '"!');
+            return;
+        }
+
+        $(this).text(sTranslation);
+    });
 
     $('*[title^="__MSG_"]').each(function () {
-            // Finding i18n string in the title attribute
-            var aI18nString = /__MSG_(.*)__/.exec(this.getAttribute('title'));
+        // Finding i18n string in the title attribute
+        var aI18nString = /__MSG_(.*)__/.exec(this.getAttribute('title'));
 
-            if (aI18nString != null) {
-                $(this).attr('title', chrome.i18n.getMessage(aI18nString[1]));
-            }
+        if (aI18nString != null) {
+            $(this).attr('title', chrome.i18n.getMessage(aI18nString[1]));
         }
-    );
+    });
 
     /*
      * GUI events
      */
     $('#toggle-view').click(function () {
-            $('#shortcuts').toggle(!shortcutsViewVisible);
-            $('#page-actions').toggle(shortcutsViewVisible);
-            $('#toggle-view').text(chrome.i18n.getMessage(shortcutsViewVisible ? 'SHOW_SHORTCUTS' : 'SHOW_HOME'));
-            shortcutsViewVisible = !shortcutsViewVisible;
-        }
-    );
+        $('#shortcuts').toggle(!shortcutsViewVisible);
+        $('#page-actions').toggle(shortcutsViewVisible);
+        $('#toggle-view').text(chrome.i18n.getMessage(shortcutsViewVisible ? 'SHOW_SHORTCUTS' : 'SHOW_HOME'));
+        shortcutsViewVisible = !shortcutsViewVisible;
+    });
 
     $('#toggle-ruler').click(function () {
-            toggleRulerButton();
-            injectScriptCode('oPageLiner.toggleRulers()', null);
-        }
-    );
+        toggleRulerButton();
+        injectScriptCode('oPageLiner.toggleRulers()', null);
+    });
 
     $('#toggle-helpline').click(function () {
         toggleHelplineButton();
         injectScriptCode('oPageLiner.toggleHelplines()', null);
-    }
-);
+    });
 
     $('#add-helpline-x').click(function () {
-            injectScriptCode('oPageLiner.addHelpLine( 100, 0 )', null);
-            toggleRulerButton(true);
-            toggleHelplineButton(true);
-            refreshHelpLineListing();
-        }
-    );
+        injectScriptCode('oPageLiner.addHelpLine( 100, 0 )', null);
+        toggleRulerButton(true);
+        toggleHelplineButton(true);
+        refreshHelpLineListing();
+    });
 
     $('#add-helpline-y').click(function () {
-            injectScriptCode('oPageLiner.addHelpLine( 0, ( parseInt( $( window ).scrollTop() ) + 100 ) )', null);
-            toggleRulerButton(true);
-            toggleHelplineButton(true);
-            refreshHelpLineListing();
-        }
-    );
+        injectScriptCode('oPageLiner.addHelpLine( 0, ( parseInt( $( window ).scrollTop() ) + 100 ) )', null);
+        toggleRulerButton(true);
+        toggleHelplineButton(true);
+        refreshHelpLineListing();
+    });
 
     $('#remove-helplines').click(function () {
-            injectScriptCode('oPageLiner.removeAllHelpLines()', null);
-            refreshHelpLineListing();
+        injectScriptCode('oPageLiner.removeAllHelpLines()', null);
+        refreshHelpLineListing();
+    });
+
+    if ((localStorage.getItem('showAds') || 'true') !== 'true') {
+        $('.add-display iframe').hide();
+    }
+
+    $('[data-toggle-remove-ads-modal="true"]').click(function () {
+        if ((localStorage.getItem('showAds') || 'true') !== 'true') {
+            localStorage.setItem('showAds', 'true');
+            $('.add-display iframe').show();
+
+            return;
         }
-    );
+
+        $('#disable-ads-modal').toggle();
+    });
+
+    $('[data-remove-ads="true"]').click(function () {
+        localStorage.setItem('showAds', 'false');
+        $('.add-display iframe').hide();
+    });
 
     function toggleRulerButton(forceShow) {
         var $oIcon = $('#toggle-ruler').find('.glyphicon'),
@@ -106,8 +118,7 @@ $(function () {
 
         if (!$oIcon.hasClass('glyphicon-eye-open') || forceShow) {
             $oIcon.removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
-        }
-        else {
+        } else {
             $oIcon.removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
         }
     }
@@ -118,8 +129,7 @@ $(function () {
 
         if (!$oIcon.hasClass('glyphicon-eye-open') || forceShow) {
             $oIcon.removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
-        }
-        else {
+        } else {
             $oIcon.removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
         }
     }
@@ -139,64 +149,60 @@ $(function () {
                     $oHelpLineListing.html('');
 
                     $.each(oAllHelpLines, function (x, y) {
-                            var oRowElem = document.createElement('div'),
-                                oCol1Elem = document.createElement('div'),
-                                oCol2Elem = document.createElement('div'),
-                                oColorPickerElem = document.createElement('input'),
-                                oDeleteElem = document.createElement('strong');
+                        var oRowElem = document.createElement('div'),
+                            oCol1Elem = document.createElement('div'),
+                            oCol2Elem = document.createElement('div'),
+                            oColorPickerElem = document.createElement('input'),
+                            oDeleteElem = document.createElement('strong');
 
-                            oRowElem.className = 'row';
-                            oRowElem.setAttribute('data-id', x);
+                        oRowElem.className = 'row';
+                        oRowElem.setAttribute('data-id', x);
 
-                            oCol1Elem.className = 'col-xs-4';
-                            oCol1Elem.innerHTML = '#' + (x + 1);
+                        oCol1Elem.className = 'col-xs-4';
+                        oCol1Elem.innerHTML = '#' + (x + 1);
 
-                            oCol2Elem.className = 'col-xs-8 text-right';
+                        oCol2Elem.className = 'col-xs-8 text-right';
 
-                            oDeleteElem.className = 'delete text-danger pull-right';
-                            oDeleteElem.innerHTML = '&times;';
-                            oDeleteElem.setAttribute('data-id', x);
-                            oCol2Elem.appendChild(oDeleteElem);
-                            $(oDeleteElem).click(function () {
-                                injectScriptCode('oPageLiner.deleteHelpline( ' + this.getAttribute('data-id') + ' )', null);
-                                refreshHelpLineListing();
-                            });
+                        oDeleteElem.className = 'delete text-danger pull-right';
+                        oDeleteElem.innerHTML = '&times;';
+                        oDeleteElem.setAttribute('data-id', x);
+                        oCol2Elem.appendChild(oDeleteElem);
+                        $(oDeleteElem).click(function () {
+                            injectScriptCode('oPageLiner.deleteHelpline( ' + this.getAttribute('data-id') + ' )', null);
+                            refreshHelpLineListing();
+                        });
 
-                            oColorPickerElem.type = 'text';
-                            oColorPickerElem.className = 'form-control input-sm pull-right color';
-                            oColorPickerElem.value = y.sColor;
-                            oColorPickerElem.style.borderColor = y.sColor;
-                            oColorPickerElem.setAttribute('data-id', x);
-                            oCol2Elem.appendChild(oColorPickerElem);
+                        oColorPickerElem.type = 'text';
+                        oColorPickerElem.className = 'form-control input-sm pull-right color';
+                        oColorPickerElem.value = y.sColor;
+                        oColorPickerElem.style.borderColor = y.sColor;
+                        oColorPickerElem.setAttribute('data-id', x);
+                        oCol2Elem.appendChild(oColorPickerElem);
 
-                            $(oColorPickerElem).ColorPicker(
-                                {
-                                    color: y.sColor,
-                                    onChange: function (hsb, hex, rgb) {
-                                        oColorPickerElem.value = '#' + hex;
-                                        oColorPickerElem.style.borderColor = oColorPickerElem.value;
-                                        injectScriptCode('oPageLiner.editHelpLine( ' + oColorPickerElem.getAttribute('data-id') + ', null, null, "#' + hex + '" )', null);
-                                    }
-                                }
-                            ).bind('keyup', function () {
-                                    $(this).ColorPickerSetColor(this.value);
+                        $(oColorPickerElem).ColorPicker({
+                            color: y.sColor,
+                            onChange: function (hsb, hex, rgb) {
+                                oColorPickerElem.value = '#' + hex;
+                                oColorPickerElem.style.borderColor = oColorPickerElem.value;
+                                injectScriptCode('oPageLiner.editHelpLine( ' + oColorPickerElem.getAttribute('data-id') + ', null, null, "#' + hex + '" )', null);
+                            }
+                        }).bind('keyup', function () {
+                            $(this).ColorPickerSetColor(this.value);
 
-                                    if (this.value.substr(0, 1) !== '#') {
-                                        this.value = '#' + this.value;
-                                    }
+                            if (this.value.substr(0, 1) !== '#') {
+                                this.value = '#' + this.value;
+                            }
 
-                                    this.style.borderColor = this.value;
+                            this.style.borderColor = this.value;
 
-                                    injectScriptCode('oPageLiner.editHelpLine( ' + this.getAttribute('data-id') + ', null, null, "' + this.value + '" )', null);
-                                }
-                            );
+                            injectScriptCode('oPageLiner.editHelpLine( ' + this.getAttribute('data-id') + ', null, null, "' + this.value + '" )', null);
+                        });
 
-                            oRowElem.appendChild(oCol1Elem);
-                            oRowElem.appendChild(oCol2Elem);
+                        oRowElem.appendChild(oCol1Elem);
+                        oRowElem.appendChild(oCol2Elem);
 
-                            $oHelpLineActions.find('.listing').append(oRowElem);
-                        }
-                    );
+                        $oHelpLineActions.find('.listing').append(oRowElem);
+                    });
                 }
                 else {
                     $oHelpLineActionsDivider.addClass('hidden');

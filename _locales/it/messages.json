@@ -4,115 +4,115 @@
         "description": "Extension name."
     },
     "GLOBAL_APP_DESCRIPTION": {
-        "message": "Размещение направляющих линий на веб страницах.",
+        "message": "Creare linee guida sui siti Web per verificare ad esempio l'allineamento.",
         "description": "Extension description."
     },
-    "POPUP_TOGGLE_HELPLINES": {
-        "message": "показать / спрятать все линии",
+    "POPUP_TOGGLE_RULERS": {
+        "message": "mostra/nascondi righelli",
         "description": "Popup action."
     },
-    "POPUP_TOGGLE_RULERS": {
-        "message": "показать / спрятать все линейки",
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "mostra/nascondi guide",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_X": {
-        "message": "вертикальная",
+        "message": "verticale",
         "description": "Popup action."
     },
     "POPUP_NEW_HELPLINE_Y": {
-        "message": "горизонтальная",
+        "message": "orizzontale",
         "description": "Popup action."
     },
     "POPUP_CLEAR_ALL_HELPLINES": {
-        "message": "удалить все линии",
+        "message": "elimina tutte le guide",
         "description": "Popup action."
     },
     "POPUP_ALL_HELPLINES_HEADING": {
-        "message": "все линии",
+        "message": "Tutte le guide",
         "description": "Popup table head."
     },
     "POPUP_ALL_HELPLINES_TABLE_COLOR": {
-        "message": "цвет",
+        "message": "Colore",
         "description": "Popup table colors."
     },
     "POPUP_ALL_HELPLINES_TABLE_POSITION": {
-        "message": "положение",
+        "message": "Posizione",
         "description": "Popup table positions."
     },
     "POPUP_TOGGLE_ADS": {
-        "message": "Toggle ads",
+        "message": "Attiva/disattiva annunci",
         "description": "Link to remove ads (in app purchase)"
     },
     "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "I know that ads can be annoying, however I'm giving this tool out for free. Years of development and maintenance are what helps you in your daily business, which increases your productivity and effectiveness in your job. Even though, you can disable the ad for no cost: If it doesn't bother you too much, I'd highly appreciate, if you just don't disable the advertisement. It doesn't hurt you and gives something back to me. For me that sounds like a fair deal. Thanks!",
+        "message": "So che gli annunci possono essere fastidiosi, tuttavia offro questo strumento gratuitamente. Anni di sviluppo e manutenzione sono ciò che ti aiuta nella tua attività quotidiana, aumentando la produttività e l'efficacia nel tuo lavoro. Anche se puoi disabilitare l'annuncio senza alcun costo: se non ti infastidisce troppo, apprezzerei molto se non disabiliti l'annuncio. Non ti fa male e mi restituisce qualcosa. Per me sembra un affare equo. Grazie!",
         "description": "Text that shows up, when the user wants to disable ads."
     },
     "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Toggle ads",
+        "message": "Attiva/disattiva annunci",
         "description": "Button which removes ads"
     },
     "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Keep ads",
+        "message": "Conserva gli annunci",
         "description": "Button which keeps ads"
     },
     "POPUP_DONATE": {
-        "message": "Пожертвовать",
+        "message": "Invia un piccolo consiglio",
         "description": "Donate link."
     },
     "SHOW_SHORTCUTS": {
-        "message": "Shortcuts",
+        "message": "Scorciatoie",
         "description": "Show shortcuts view link title."
     },
     "SHOW_HOME": {
-        "message": "Home",
+        "message": "Casa",
         "description": "Show home/default view link title."
     },
     "SHORTCUT_ADD_H_LINE": {
-        "message": "adds a horizontal guideline.",
+        "message": "aggiunge una linea guida orizzontale.",
         "description": "Shortcut description for Alt+H."
     },
     "SHORTCUT_ADD_V_LINE": {
-        "message": "adds a vertical guideline.",
+        "message": "aggiunge una linea guida verticale.",
         "description": "Shortcut description for Alt+V."
     },
     "SHORTCUT_ADD_LINES": {
-        "message": "adds horizontal and vertical guidelines.",
+        "message": "aggiunge linee guida orizzontali e verticali.",
         "description": "Shortcut description for Alt+A."
     },
     "SHORTCUT_MOVE_H_1PX": {
-        "message": "moves selected guideline horizontally 1px.",
+        "message": "sposta la linea guida selezionata orizzontalmente di 1 pixel.",
         "description": "Shortcut description for ▲/▼."
     },
     "SHORTCUT_MOVE_V_1PX": {
-        "message": "moves selected guideline vertically 1px.",
+        "message": "sposta verticalmente la linea guida selezionata di 1 pixel.",
         "description": "Shortcut description for ◄/►."
     },
     "SHORTCUT_MOVE_H_10PX": {
-        "message": "moves selected guideline horizontally 10px.",
+        "message": "sposta la linea guida selezionata orizzontalmente di 10 px.",
         "description": "Shortcut description for Shift+▲/▼."
     },
     "SHORTCUT_MOVE_V_10PX": {
-        "message": "moves selected guideline vertically 10px.",
+        "message": "sposta verticalmente la linea guida selezionata di 10 px.",
         "description": "Shortcut description for Shift+◄/►."
     },
     "SHORTCUT_DELETE_LINE": {
-        "message": "deletes selected guideline.",
+        "message": "elimina la linea guida selezionata.",
         "description": "Shortcut description for Del."
     },
     "SHORTCUT_DESELECT_LINE": {
-        "message": "deselects selected guideline.",
+        "message": "deseleziona la linea guida selezionata.",
         "description": "Shortcut description for Esc."
     },
     "SHORTCUT_MEASURE_DISTANCE": {
-        "message": "measures distance to hovered guideline.",
+        "message": "misura la distanza dalla linea guida sospesa.",
         "description": "Shortcut description for Ctrl."
     },
     "SHORTCUT_TOGGLE_LINES": {
-        "message": "toggles visibility of guidelines.",
+        "message": "alterna la visibilità delle linee guida.",
         "description": "Shortcut description for Alt+G."
     },
     "SHORTCUT_TOGGLE_RULERS": {
-        "message": "toggles visibility of rulers.",
+        "message": "attiva/disattiva la visibilità dei righelli.",
         "description": "Shortcut description for Alt+R."
     }
 }

@@ -68,7 +68,13 @@ Please make sure to include your changes in the Changelog below and consider cha
 
 ## Changelog
 - **UPCOMING**
-    - Added Japanese translations. Thanks to [@MizuhoOkimoto](https://github.com/MizuhoOkimoto)
+    -  Added Japanese translations. Thanks to [@MizuhoOkimoto](https://github.com/MizuhoOkimoto)
+    -  Added Italian translations. Thanks to [@github4maninder](https://github.com/github4maninder)
+    -  Added Swedish translations.
+- **v1.6.6 (2021-12-14)**
+    - A bit of cleanup in the code style
+    - Added advertisement
+        - A few notes on that: I know that ads can be annoying, however I'm giving this tool out for free. Years of development and maintenance are what helps you in your daily business, which increases your productivity and effectiveness in your job. Even though, you can disable the ad for no cost: If it doesn't bother you too much, I'd highly appreciate, if you just don't disable the advertisement. It doesn't hurt you and gives something back to me. For me that sounds like a fair deal. Thanks!
 - **v1.6.5 (2021-12-12)**
     - Added Slovak translations. Thanks to [@github4maninder](https://github.com/github4maninder)
     - Added Thai translations. Thanks to [@DerekJxy](https://github.com/DerekJxy)
