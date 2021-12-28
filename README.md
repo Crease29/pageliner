@@ -67,6 +67,8 @@ If you'd like to contribute to this repository, here is a guide on [how to set u
 Please make sure to include your changes in the Changelog below and consider changing the version in the [manifest.json](manifest.json).
 
 ## Changelog
+- **UPCOMING**
+    - Added Japanese translations. Thanks to [@MizuhoOkimoto](https://github.com/MizuhoOkimoto)
 - **v1.6.5 (2021-12-12)**
     - Added Slovak translations. Thanks to [@github4maninder](https://github.com/github4maninder)
     - Added Thai translations. Thanks to [@DerekJxy](https://github.com/DerekJxy)
