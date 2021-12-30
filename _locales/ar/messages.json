@@ -1,0 +1,118 @@
+{
+  "GLOBAL_APP_NAME": {
+    "message": "PageLiner",
+    "description": "Extension name."
+  },
+  "GLOBAL_APP_DESCRIPTION": {
+    "message": "ضع خطوطًا إضافية على مواقع الويب ، على سبيل المثال للتحقق من المحاذاة.",
+    "description": "Extension description."
+  },
+  "POPUP_TOGGLE_RULERS": {
+    "message": "إظهار / إخفاء المساطر",
+    "description": "Popup action."
+  },
+  "POPUP_TOGGLE_HELPLINES": {
+    "message": "إظهار / إخفاء الإرشادات",
+    "description": "Popup action."
+  },
+  "POPUP_NEW_HELPLINE_X": {
+    "message": "عمودي",
+    "description": "Popup action."
+  },
+  "POPUP_NEW_HELPLINE_Y": {
+    "message": "أفقي",
+    "description": "Popup action."
+  },
+  "POPUP_CLEAR_ALL_HELPLINES": {
+    "message": "حذف جميع الإرشادات",
+    "description": "Popup action."
+  },
+  "POPUP_ALL_HELPLINES_HEADING": {
+    "message": "جميع الإرشادات",
+    "description": "Popup table head."
+  },
+  "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+    "message": "لون",
+    "description": "Popup table colors."
+  },
+  "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+    "message": "الموقع",
+    "description": "Popup table positions."
+  },
+  "POPUP_TOGGLE_ADS": {
+    "message": "تبديل الإعلانات",
+    "description": "Link to remove ads (in app purchase)"
+  },
+  "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+    "message": "أعلم أن الإعلانات يمكن أن تكون مزعجة ، ومع ذلك ، فإنني أقدم هذه الأداة مجانًا. سنوات من التطوير والصيانة هي ما يساعدك في عملك اليومي ، مما يزيد من إنتاجيتك وفعاليتك في وظيفتك. على الرغم من ذلك ، يمكنك تعطيل الإعلان بدون تكلفة: إذا لم يزعجك كثيرًا ، سأكون ممتنًا للغاية ، إذا لم تقم بتعطيل الإعلان. لا يؤذيك ويعيد لي شيئًا. بالنسبة لي ، هذا يبدو وكأنه صفقة عادلة. شكرا!",
+    "description": "Text that shows up, when the user wants to disable ads."
+  },
+  "POPUP_BUTTON_REMOVE_ADS": {
+    "message": "تبديل الإعلانات",
+    "description": "Button which removes ads"
+  },
+  "POPUP_BUTTON_KEEP_ADS": {
+    "message": "إبقاء الإعلانات",
+    "description": "Button which keeps ads"
+  },
+  "POPUP_DONATE": {
+    "message": "أرسل إكرامية صغيرة",
+    "description": "Donate link."
+  },
+  "SHOW_SHORTCUTS": {
+    "message": "الاختصارات",
+    "description": "Show shortcuts view link title."
+  },
+  "SHOW_HOME": {
+    "message": "الصفحة الرئيسية",
+    "description": "Show home/default view link title."
+  },
+  "SHORTCUT_ADD_H_LINE": {
+    "message": "يضيف إرشادات أفقية.",
+    "description": "Shortcut description for Alt+H."
+  },
+  "SHORTCUT_ADD_V_LINE": {
+    "message": "يضيف إرشادات عمودية.",
+    "description": "Shortcut description for Alt+V."
+  },
+  "SHORTCUT_ADD_LINES": {
+    "message": "يضيف إرشادات أفقية وعمودية.",
+    "description": "Shortcut description for Alt+A."
+  },
+  "SHORTCUT_MOVE_H_1PX": {
+    "message": "تحريك الإرشاد المحدد أفقيا بمقدار 1 بكسل.",
+    "description": "Shortcut description for ▲/▼."
+  },
+  "SHORTCUT_MOVE_V_1PX": {
+    "message": "تحريك الإرشاد المحدد عموديا بمقدار 1 بكسل.",
+    "description": "Shortcut description for ◄/►."
+  },
+  "SHORTCUT_MOVE_H_10PX": {
+    "message": "تحريك الإرشاد المحدد أفقيا بمقدار 10 بكسل.",
+    "description": "Shortcut description for Shift+▲/▼."
+  },
+  "SHORTCUT_MOVE_V_10PX": {
+    "message": "تحريك الإرشاد المحدد عموديا بمقدار 10 بكسل.",
+    "description": "Shortcut description for Shift+◄/►."
+  },
+  "SHORTCUT_DELETE_LINE": {
+    "message": "حذف الإرشادات المحددة.",
+    "description": "Shortcut description for Del."
+  },
+  "SHORTCUT_DESELECT_LINE": {
+    "message": "إلغاء تحديد الإرشادات المحددة.",
+    "description": "Shortcut description for Esc."
+  },
+  "SHORTCUT_MEASURE_DISTANCE": {
+    "message": "قياس المسافة إلى الإرشاد المحدد.",
+    "description": "Shortcut description for Ctrl."
+  },
+  "SHORTCUT_TOGGLE_LINES": {
+    "message": "تبديل رؤية الإرشادات.",
+    "description": "Shortcut description for Alt+G."
+  },
+  "SHORTCUT_TOGGLE_RULERS": {
+    "message": "تبديل رؤية الخطوط.",
+    "description": "Shortcut description for Alt+R."
+  }
+}
