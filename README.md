@@ -70,6 +70,7 @@ Please make sure to include your changes in the Changelog below and consider cha
 - **UPCOMING**
     -  Added Italian translations. Thanks to [@github4maninder](https://github.com/github4maninder)
     -  Added Swedish translations.
+    -  Added Arabic translations. Thanks to [@omarelweshy](https://github.com/omarelweshy)
 - **v1.6.6 (2021-12-14)**
     - A bit of cleanup in the code style
     - Added advertisement
