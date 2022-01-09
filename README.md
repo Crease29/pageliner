@@ -68,6 +68,7 @@ Please make sure to include your changes in the Changelog below and consider cha
 
 ## Changelog
 - **UPCOMING**
+    -  Added Hungarian translations. Thanks to [@poky1084](https://github.com/poky1084)
     -  Added Japanese translations. Thanks to [@MizuhoOkimoto](https://github.com/MizuhoOkimoto)
     -  Added Italian translations. Thanks to [@github4maninder](https://github.com/github4maninder)
     -  Added Swedish translations.
