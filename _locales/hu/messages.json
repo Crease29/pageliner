@@ -104,7 +104,7 @@
         "description": "Shortcut description for Esc."
     },
     "SHORTCUT_MEASURE_DISTANCE": {
-        "message": "távolság mérése ay adott irányvonaltól az egér fölétolásával.",
+        "message": "távolság mérése az adott irányvonaltól az egér fölétolásával.",
         "description": "Shortcut description for Ctrl."
     },
     "SHORTCUT_TOGGLE_LINES": {
