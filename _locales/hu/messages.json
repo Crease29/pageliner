@@ -1,0 +1,118 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Irányelvek létrehozása a webhelyeken, például az igazítás ellenőrzéséhez.",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "Mutat/Rejt Vonalzókat",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "Mutat/Rejt Útmutatókat",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "függőleges",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "vízszintes",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "törölje az összes útmutatót",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Összes útmutató",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Szín",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Pozíció",
+        "description": "Popup table positions."
+    },
+    "POPUP_TOGGLE_ADS": {
+        "message": "Hirdetések be/kikapcsolása",
+        "description": "Link to remove ads (in app purchase)"
+    },
+    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+        "message": "Tudom, hogy a hirdetések bosszantóak lehetnek, de ezt a programot ingyenesen adom. Az évekig tartó fejlesztés és karbantartás az, ami segít téged a mindennapi üzletben, ami növeli a termelőképességet és a munka hatékonyságát. Ennek ellenére ingyenesen letilthatod a hirdetést: Ha nem nagyon zavar, persze nagyon hálás lennék, ha nem tiltod le. Nem bánt téged, és visszaad nekem valamit. Számomra ez korrekt üzletnek hangzik. Kösz!",
+        "description": "Text that shows up, when the user wants to disable ads."
+    },
+    "POPUP_BUTTON_REMOVE_ADS": {
+        "message": "Hirdetések kikapcsolása",
+        "description": "Button which removes ads"
+    },
+    "POPUP_BUTTON_KEEP_ADS": {
+        "message": "Hirdetések megtartása",
+        "description": "Button which keeps ads"
+    },
+    "POPUP_DONATE": {
+        "message": "Egy kevés borravaló küldése",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Billentyűparancsok",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Kezdőlap",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "vízszintes irányvonal hozzáadása.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "függőleges irányvonal hozzáadása.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "vízszintes és függőleges irányvonalak hozzáadása.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "a kiválasztott irányvonalat vízszintesen mozgatja, 1 pixelt.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "függőlegesen mozgatja a kiválasztott irányvonalat, 1 pixelt.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "a kiválasztott irányvonalat vízszintesen mozgatja, 10 pixelt.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "függőlegesen mozgatja a kiválasztott irányvonalat, 10 pixelt.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "törli a kiválasztott irányvonalat.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "kijelölés törölése a kiválasztott irányvonalon.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "távolság mérése az adott irányvonaltól az egér fölétolásával.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "irányelvek láthatóságának kapcsolása.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "vonalzók láthatóságának kapcsolása.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
