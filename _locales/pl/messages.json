@@ -1,0 +1,118 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Umieszczaj linie pomocnicze na stronach internetowych, żeby na przykład wyrównania sprawdzić.",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "Pokaż/ukryj linie",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "Pokaż/ukryj linie pomocnicze",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "Pionowo",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "Poziomo",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "Usuń wszystkie linie pomocnicze",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Wszystkie linie pomocnicze",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Farba",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Pozycja",
+        "description": "Popup table positions."
+    },
+    "POPUP_TOGGLE_ADS": {
+        "message": "Przełącz reklamę",
+        "description": "Link to remove ads (in app purchase)"
+    },
+    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+        "message": "Ja wiem, że reklama może być uciążliwa, ale ja udostępniam ten tool za darmo. Lata rozwoju i konserwacji pomagają tobie w codziennej pracy, co twojom produktywność i efektywność w twojej pracy zwiększa. Nawet jeśli możesz dezaktywować reklamę za darmo: Jeśli Ci zbytnio nie przeszkadza, będę bardzo wdzięczny, jeśli zostawisz reklame włączonom. To nie boli, nic Cię nie kosztuje i daje mi coś w zamian. To brzmi dla mnie jak uczciwy interes. Dziękuję!",
+        "description": "Text that shows up, when the user wants to disable ads.",
+    },
+    "POPUP_BUTTON_REMOVE_ADS": {
+        "message": "Ukryć",
+        "description": "Button which removes ads"
+    },
+    "POPUP_BUTTON_KEEP_ADS": {
+        "message": "Zostawić",
+        "description": "Button which keeps ads"
+    },
+    "POPUP_DONATE": {
+        "message": "Podarować",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Skróty",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Dom",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "dodaje prowadnicę poziomą.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "dodaje prowadnicę pionową.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "dodaje prowadnice poziome i pionowe.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "przesuwa wybraną linię pomocniczą w poziomie o 1px.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "przesuwa wybraną linię pomocniczą w pionie o 1px.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "przesuwa wybraną linię pomocniczą w poziomie o 10px.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "przesuwa wybraną linię pomocniczą w pionie o 10px.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "usuwa wybraną linie pomocniczy.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "usuwa wybór jednej linii pomocniczej.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "mierzy odległość do innej linii pomocniczej.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "przełącza między widocznością linii pomocniczej.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "przełącza między widocznością linii.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
