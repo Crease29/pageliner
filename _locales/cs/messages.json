@@ -1,0 +1,118 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Vytvoří na webových stránkách vodící linky, s kterými lze například zkontrolovat zarovnání.",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "zobrazit/skrýt pravítka",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "zobrazit/skrýt vodítka",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "vertikální",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "horizontální",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "smazat všechna vodítka",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Všechna vodítka",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Barva",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Pozice",
+        "description": "Popup table positions."
+    },
+    "POPUP_TOGGLE_ADS": {
+        "message": "Zobrazování reklam",
+        "description": "Link to remove ads (in app purchase)"
+    },
+    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+        "message": "Vím, že reklamy můžou být otravné, ale poskytuji tento nástroj zdarma. Roky vývoje a údržby vám denně pomáhají, zvyšují vaši produktivitu a efektivitu při práci. Přesto můžete reklamy bezplatně vypnout: Pokud vás příliš neobtěžují, velmi ocením, pokud si je necháte zapnuté. Vám to neublíží a mě to něco přinese. To je podle mě férová nabídka. Díky!",
+        "description": "Text that shows up, when the user wants to disable ads."
+    },
+    "POPUP_BUTTON_REMOVE_ADS": {
+        "message": "Skrýt reklamy",
+        "description": "Button which removes ads"
+    },
+    "POPUP_BUTTON_KEEP_ADS": {
+        "message": "Ponechat reklamy",
+        "description": "Button which keeps ads"
+    },
+    "POPUP_DONATE": {
+        "message": "Poslat malou odměnu",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Klávesové zkratky",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Home",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "přidá horizontální vodící linku.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "přidá vertikální vodící linku.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "přidá horizontální a vertikální vodící linku.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "posune vybranou vodící linku horizontálně o 1px.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "posune vybranou vodící linku vertikálně o 1px.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "posune vybranou vodící linku horizontálně o 10px.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "posune vybranou vodící linku vertikálně o 10px.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "vymaže vybrané vodící linky.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "zruší výběr vodící linky.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "změří vzdálenost k vodící lince, na kterou najedete myší.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "přepne viditelnost vodících linek.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "přepne viditelnost pravítek.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
