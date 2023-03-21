@@ -1,0 +1,118 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Създавай навигационни линии в уеб страници и провери тяхното подравняване.",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "Покажи/Скрий линеали",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "Покажи/Скрий направляващи линии",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "Вертикална линия",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "Хоризонтална линия",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "Изтрии всички направляващи линии",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Всички направляващи линии",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Цвят",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Позиция",
+        "description": "Popup table positions."
+    },
+    "POPUP_TOGGLE_ADS": {
+        "message": "Включи/Изключи реклами",
+        "description": "Link to remove ads (in app purchase)"
+    },
+    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+        "message": "Наясно съм с факта че рекламите могат да бъдат досадни, въпреки това предоставям това приложението безплатно. Години на разработка и поддръжка са това което Ви помогат в ежедневната Ви работа, което от своя страна повишава Вашата продуктивност и ефективност. Въпреки че може да премахнете рекламите абсолютно безплатно: Стига това да не Ви притеснява, апелирам към Вас и бих бил много благодарен ако не изключвате рекламите. Те не вредят на Вас, но за сметка на това помагат на мен да поддържам приложението. За мен това звучи като честна сделка. Благодаря!",
+        "description": "Text that shows up, when the user wants to disable ads."
+    },
+    "POPUP_BUTTON_REMOVE_ADS": {
+        "message": "Премахни реклами",
+        "description": "Button which removes ads"
+    },
+    "POPUP_BUTTON_KEEP_ADS": {
+        "message": "Остави реклами",
+        "description": "Button which keeps ads"
+    },
+    "POPUP_DONATE": {
+        "message": "Изпрати дарение",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Преки пътища",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Начало",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "Добавя хоризонтална направляваща линия.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "Добавя вертикална направляваща линия.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "Добавя хоризонтални и вертикални направляващи линии.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "Премества избраната направляваща линия хоризонтално с 1 пиксел.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "Премества избраната направляваща линия вертикално с 1 пиксел.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "Премества избраната направляваща линия хоризонтално с 10 пиксела.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "Премества избраната направляваща линия вертикално с 10 пиксела.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "Изтрива избраната направляваща линия.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "Демаркира избраната направляваща линия.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "Измерва дистанцията до посочената (с мишка) направляваща линия.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "Показва/Скрива направляващите линии.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "Показва/Скрива линеалите.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
