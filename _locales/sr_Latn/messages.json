@@ -1,0 +1,118 @@
+{
+    "GLOBAL_APP_NAME": {
+        "message": "PageLiner",
+        "description": "Extension name."
+    },
+    "GLOBAL_APP_DESCRIPTION": {
+        "message": "Kreirajte linije za navođenje na web sajtu, kako biste, na primer, proverili poravnanje.",
+        "description": "Extension description."
+    },
+    "POPUP_TOGGLE_RULERS": {
+        "message": "prikaži/sakrij lenjire",
+        "description": "Popup action."
+    },
+    "POPUP_TOGGLE_HELPLINES": {
+        "message": "prikaži/sakrij pomoćne linije",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_X": {
+        "message": "vertikalna",
+        "description": "Popup action."
+    },
+    "POPUP_NEW_HELPLINE_Y": {
+        "message": "horizontalna",
+        "description": "Popup action."
+    },
+    "POPUP_CLEAR_ALL_HELPLINES": {
+        "message": "obriši sve pomoćne linije",
+        "description": "Popup action."
+    },
+    "POPUP_ALL_HELPLINES_HEADING": {
+        "message": "Sve pomoćne linije",
+        "description": "Popup table head."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_COLOR": {
+        "message": "Boje",
+        "description": "Popup table colors."
+    },
+    "POPUP_ALL_HELPLINES_TABLE_POSITION": {
+        "message": "Pozicije",
+        "description": "Popup table positions."
+    },
+    "POPUP_TOGGLE_ADS": {
+        "message": "Uključi/isključi reklame",
+        "description": "Link to remove ads (in app purchase)"
+    },
+    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
+        "message": "Znam da reklame mogu biti dosadne, ali ipak, ova alatka je besplatna. Godine razvoja i održavanja su ono što Vam pomaže u svakodnevnom poslu, ono što povećava Vašu produktivnost i efektivnost. Uprkos tome, možete besplatno i isključiti reklame. Ako Vam previše ne smetaju, zamolio bih Vas da ostvite uključene reklame, mnogo bi mi značilo. Vama ne škodi, a meni znači. Meni to zvuči kao fer odnos. Hvala!",
+        "description": "Text that shows up, when the user wants to disable ads."
+    },
+    "POPUP_BUTTON_REMOVE_ADS": {
+        "message": "Isključi reklame",
+        "description": "Button which removes ads"
+    },
+    "POPUP_BUTTON_KEEP_ADS": {
+        "message": "Zadrži reklame",
+        "description": "Button which keeps ads"
+    },
+    "POPUP_DONATE": {
+        "message": "Pošalji nam mali bakšiš",
+        "description": "Donate link."
+    },
+    "SHOW_SHORTCUTS": {
+        "message": "Prečice",
+        "description": "Show shortcuts view link title."
+    },
+    "SHOW_HOME": {
+        "message": "Početak",
+        "description": "Show home/default view link title."
+    },
+    "SHORTCUT_ADD_H_LINE": {
+        "message": "dodaje horizontalnu pomoćnu liniju.",
+        "description": "Shortcut description for Alt+H."
+    },
+    "SHORTCUT_ADD_V_LINE": {
+        "message": "dodaje vertikalnu pomoćnu liniju.",
+        "description": "Shortcut description for Alt+V."
+    },
+    "SHORTCUT_ADD_LINES": {
+        "message": "dodaje horizontalne i vertikalne pomoćne linije.",
+        "description": "Shortcut description for Alt+A."
+    },
+    "SHORTCUT_MOVE_H_1PX": {
+        "message": "pomera selektovanu liniju horizontalno 1px.",
+        "description": "Shortcut description for ▲/▼."
+    },
+    "SHORTCUT_MOVE_V_1PX": {
+        "message": "pomera selektovanu liniju vertikalno 1px.",
+        "description": "Shortcut description for ◄/►."
+    },
+    "SHORTCUT_MOVE_H_10PX": {
+        "message": "pomera selektovanu liniju horizontalno 10px.",
+        "description": "Shortcut description for Shift+▲/▼."
+    },
+    "SHORTCUT_MOVE_V_10PX": {
+        "message": "pomera selektovanu liniju vertikalno 10px.",
+        "description": "Shortcut description for Shift+◄/►."
+    },
+    "SHORTCUT_DELETE_LINE": {
+        "message": "briše selektovanu liniju.",
+        "description": "Shortcut description for Del."
+    },
+    "SHORTCUT_DESELECT_LINE": {
+        "message": "poništi odabir linije.",
+        "description": "Shortcut description for Esc."
+    },
+    "SHORTCUT_MEASURE_DISTANCE": {
+        "message": "meri razdaljinu do linije na kojoj je kursor.",
+        "description": "Shortcut description for Ctrl."
+    },
+    "SHORTCUT_TOGGLE_LINES": {
+        "message": "uključi ili isključi prikaz linija.",
+        "description": "Shortcut description for Alt+G."
+    },
+    "SHORTCUT_TOGGLE_RULERS": {
+        "message": "uključi ili isključi prikaz lenjira.",
+        "description": "Shortcut description for Alt+R."
+    }
+}
