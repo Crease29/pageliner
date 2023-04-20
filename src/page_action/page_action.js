@@ -92,26 +92,6 @@ $(function () {
         refreshHelpLineListing();
     });
 
-    if ((localStorage.getItem('showAds') || 'true') !== 'true') {
-        $('.add-display iframe').hide();
-    }
-
-    $('[data-toggle-remove-ads-modal="true"]').click(function () {
-        if ((localStorage.getItem('showAds') || 'true') !== 'true') {
-            localStorage.setItem('showAds', 'true');
-            $('.add-display iframe').show();
-
-            return;
-        }
-
-        $('#disable-ads-modal').toggle();
-    });
-
-    $('[data-remove-ads="true"]').click(function () {
-        localStorage.setItem('showAds', 'false');
-        $('.add-display iframe').hide();
-    });
-
     function toggleRulerButton(forceShow) {
         var $oIcon = $('#toggle-ruler').find('.glyphicon'),
             forceShow = forceShow || false;

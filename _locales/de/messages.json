@@ -39,22 +39,6 @@
         "message": "Position",
         "description": "Popup table positions."
     },
-    "POPUP_TOGGLE_ADS": {
-        "message": "Werbung umschalten",
-        "description": "Link to remove ads (in app purchase)"
-    },
-    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "Ich weiß, dass Werbung lästig sein kann, aber ich gebe dieses Tool kostenlos heraus. Jahrelange Entwicklung und Pflege helfen Dir bei Deiner täglichen Arbeit, was Deine Produktivität und Effektivität in Deinem Job steigert. Auch wenn Du die Werbung kostenlos deaktivieren kannst: Wenn es Dich nicht zu sehr stört, würde ich es sehr schätzen, wenn Du die Werbung einfach nicht aktiviert lässt. Das tut nicht weh, kostet Dich nichts und gibt mir etwas zurück. Für mich klingt das nach einem fairen Deal. Danke!",
-        "description": "Text that shows up, when the user wants to disable ads."
-    },
-    "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Ausblenden",
-        "description": "Button which removes ads"
-    },
-    "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Behalten",
-        "description": "Button which keeps ads"
-    },
     "POPUP_DONATE": {
         "message": "Spenden",
         "description": "Donate link."

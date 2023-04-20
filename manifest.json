@@ -1,6 +1,6 @@
 {
     "name": "__MSG_GLOBAL_APP_NAME__",
-    "version": "1.6.6",
+    "version": "1.6.7",
     "manifest_version": 2,
     "description": "__MSG_GLOBAL_APP_DESCRIPTION__",
     "icons": {
@@ -48,7 +48,6 @@
         }
     ],
     "web_accessible_resources": [
-        "/js/jquery/jquery.min.map",
-        "https://ad.a-ads.com/1868211?size=320x50&background_color=dfdfdf"
+        "/js/jquery/jquery.min.map"
     ]
 }

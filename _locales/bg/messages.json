@@ -39,22 +39,6 @@
         "message": "Позиция",
         "description": "Popup table positions."
     },
-    "POPUP_TOGGLE_ADS": {
-        "message": "Включи/Изключи реклами",
-        "description": "Link to remove ads (in app purchase)"
-    },
-    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "Наясно съм с факта че рекламите могат да бъдат досадни, въпреки това предоставям това приложението безплатно. Години на разработка и поддръжка са това което Ви помогат в ежедневната Ви работа, което от своя страна повишава Вашата продуктивност и ефективност. Въпреки че може да премахнете рекламите абсолютно безплатно: Стига това да не Ви притеснява, апелирам към Вас и бих бил много благодарен ако не изключвате рекламите. Те не вредят на Вас, но за сметка на това помагат на мен да поддържам приложението. За мен това звучи като честна сделка. Благодаря!",
-        "description": "Text that shows up, when the user wants to disable ads."
-    },
-    "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Премахни реклами",
-        "description": "Button which removes ads"
-    },
-    "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Остави реклами",
-        "description": "Button which keeps ads"
-    },
     "POPUP_DONATE": {
         "message": "Изпрати дарение",
         "description": "Donate link."

@@ -39,22 +39,6 @@
         "message": "Pozice",
         "description": "Popup table positions."
     },
-    "POPUP_TOGGLE_ADS": {
-        "message": "Zobrazování reklam",
-        "description": "Link to remove ads (in app purchase)"
-    },
-    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "Vím, že reklamy můžou být otravné, ale poskytuji tento nástroj zdarma. Roky vývoje a údržby vám denně pomáhají, zvyšují vaši produktivitu a efektivitu při práci. Přesto můžete reklamy bezplatně vypnout: Pokud vás příliš neobtěžují, velmi ocením, pokud si je necháte zapnuté. Vám to neublíží a mě to něco přinese. To je podle mě férová nabídka. Díky!",
-        "description": "Text that shows up, when the user wants to disable ads."
-    },
-    "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Skrýt reklamy",
-        "description": "Button which removes ads"
-    },
-    "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Ponechat reklamy",
-        "description": "Button which keeps ads"
-    },
     "POPUP_DONATE": {
         "message": "Poslat malou odměnu",
         "description": "Donate link."

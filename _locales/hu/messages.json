@@ -39,22 +39,6 @@
         "message": "Pozíció",
         "description": "Popup table positions."
     },
-    "POPUP_TOGGLE_ADS": {
-        "message": "Hirdetések be/kikapcsolása",
-        "description": "Link to remove ads (in app purchase)"
-    },
-    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "Tudom, hogy a hirdetések bosszantóak lehetnek, de ezt a programot ingyenesen adom. Az évekig tartó fejlesztés és karbantartás az, ami segít téged a mindennapi üzletben, ami növeli a termelőképességet és a munka hatékonyságát. Ennek ellenére ingyenesen letilthatod a hirdetést: Ha nem nagyon zavar, persze nagyon hálás lennék, ha nem tiltod le. Nem bánt téged, és visszaad nekem valamit. Számomra ez korrekt üzletnek hangzik. Kösz!",
-        "description": "Text that shows up, when the user wants to disable ads."
-    },
-    "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Hirdetések kikapcsolása",
-        "description": "Button which removes ads"
-    },
-    "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Hirdetések megtartása",
-        "description": "Button which keeps ads"
-    },
     "POPUP_DONATE": {
         "message": "Egy kevés borravaló küldése",
         "description": "Donate link."

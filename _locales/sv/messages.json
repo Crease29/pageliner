@@ -39,22 +39,6 @@
         "message": "Position",
         "description": "Popup table positions."
     },
-    "POPUP_TOGGLE_ADS": {
-        "message": "Växla annonser",
-        "description": "Link to remove ads (in app purchase)"
-    },
-    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "Jag vet att annonser kan vara irriterande, men jag ger ut det här verktyget gratis. År av utveckling och underhåll är det som hjälper dig i din dagliga verksamhet, vilket ökar din produktivitet och effektivitet i ditt arbete. Även om du kan inaktivera annonsen utan kostnad: Om det inte stör dig alltför mycket skulle jag uppskatta mycket om du bara inte inaktiverar annonsen. Det skadar inte dig och ger något tillbaka till mig. För mig låter det som ett rättvist avtal. Tack!",
-        "description": "Text that shows up, when the user wants to disable ads."
-    },
-    "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Växla annonser",
-        "description": "Button which removes ads"
-    },
-    "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Behåll annonser",
-        "description": "Button which keeps ads"
-    },
     "POPUP_DONATE": {
         "message": "Skicka lite tips",
         "description": "Donate link."

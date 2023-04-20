@@ -39,22 +39,6 @@
     "message": "الموقع",
     "description": "Popup table positions."
   },
-  "POPUP_TOGGLE_ADS": {
-    "message": "تبديل الإعلانات",
-    "description": "Link to remove ads (in app purchase)"
-  },
-  "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-    "message": "أعلم أن الإعلانات يمكن أن تكون مزعجة ، ومع ذلك ، فإنني أقدم هذه الأداة مجانًا. سنوات من التطوير والصيانة هي ما يساعدك في عملك اليومي ، مما يزيد من إنتاجيتك وفعاليتك في وظيفتك. على الرغم من ذلك ، يمكنك تعطيل الإعلان بدون تكلفة: إذا لم يزعجك كثيرًا ، سأكون ممتنًا للغاية ، إذا لم تقم بتعطيل الإعلان. لا يؤذيك ويعيد لي شيئًا. بالنسبة لي ، هذا يبدو وكأنه صفقة عادلة. شكرا!",
-    "description": "Text that shows up, when the user wants to disable ads."
-  },
-  "POPUP_BUTTON_REMOVE_ADS": {
-    "message": "تبديل الإعلانات",
-    "description": "Button which removes ads"
-  },
-  "POPUP_BUTTON_KEEP_ADS": {
-    "message": "إبقاء الإعلانات",
-    "description": "Button which keeps ads"
-  },
   "POPUP_DONATE": {
     "message": "أرسل إكرامية صغيرة",
     "description": "Donate link."

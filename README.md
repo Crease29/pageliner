@@ -67,14 +67,17 @@ If you'd like to contribute to this repository, here is a guide on [how to set u
 Please make sure to include your changes in the Changelog below and consider changing the version in the [manifest.json](manifest.json).
 
 ## Changelog
-- **UPCOMING**
-    -  Added Polish translations. Thanks to [@IrisKolobom](https://github.com/IrisKolobom)
-    -  Added Hungarian translations. Thanks to [@poky1084](https://github.com/poky1084)
-    -  Added Japanese translations. Thanks to [@MizuhoOkimoto](https://github.com/MizuhoOkimoto)
-    -  Added Italian translations. Thanks to [@github4maninder](https://github.com/github4maninder)
-    -  Added Swedish translations.
-    -  Added Arabic translations. Thanks to [@omarelweshy](https://github.com/omarelweshy)
-    -  Added Czech translations. Thanks to [@Fluik](https://github.com/Fluik)
+- **v1.6.7 (2023-04-20)**
+    - Removed advertisement block
+    - Added Bulgarian translations. Thanks to [@KaiserDMC](https://github.com/KaiserDMC)
+    - Added Serbian translations. Thanks to [@ajakov](https://github.com/ajakov)
+    - Added Polish translations. Thanks to [@IrisKolobom](https://github.com/IrisKolobom)
+    - Added Hungarian translations. Thanks to [@poky1084](https://github.com/poky1084)
+    - Added Japanese translations. Thanks to [@MizuhoOkimoto](https://github.com/MizuhoOkimoto)
+    - Added Italian translations. Thanks to [@github4maninder](https://github.com/github4maninder)
+    - Added Swedish translations.
+    - Added Arabic translations. Thanks to [@omarelweshy](https://github.com/omarelweshy)
+    - Added Czech translations. Thanks to [@Fluik](https://github.com/Fluik)
 - **v1.6.6 (2021-12-14)**
     - A bit of cleanup in the code style
     - Added advertisement

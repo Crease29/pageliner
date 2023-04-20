@@ -39,22 +39,6 @@
         "message": "Position",
         "description": "Popup table positions."
     },
-    "POPUP_TOGGLE_ADS": {
-        "message": "Toggle ads",
-        "description": "Link to remove ads (in app purchase)"
-    },
-    "POPUP_REMOVE_ADS_MODAL_CONTENT": {
-        "message": "I know that ads can be annoying, however I'm giving this tool out for free. Years of development and maintenance are what helps you in your daily business, which increases your productivity and effectiveness in your job. Even though, you can disable the ad for no cost: If it doesn't bother you too much, I'd highly appreciate, if you just don't disable the advertisement. It doesn't hurt you and gives something back to me. For me that sounds like a fair deal. Thanks!",
-        "description": "Text that shows up, when the user wants to disable ads."
-    },
-    "POPUP_BUTTON_REMOVE_ADS": {
-        "message": "Toggle ads",
-        "description": "Button which removes ads"
-    },
-    "POPUP_BUTTON_KEEP_ADS": {
-        "message": "Keep ads",
-        "description": "Button which keeps ads"
-    },
     "POPUP_DONATE": {
         "message": "Send a small tip",
         "description": "Donate link."
